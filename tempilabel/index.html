@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempilabel® | Nhãn Chỉ Thị Nhiệt Tự Dính | Series 4, Series 21 | tempil.vn</title>
+  <meta name="description" content="Tempilabel® nhãn tự dính chỉ thị nhiệt độ. Series 4 (4 mức/nhãn), Series 21 (1 mức), Reversible. Chính hãng Mỹ, có C/O C/Q VAT. Xem part numbers. Hotline: 0938 888 958">
+  <link rel="canonical" href="https://tempil.vn/tempilabel/">
+  <meta property="og:title" content="Tempilabel® — Nhãn Chỉ Thị Nhiệt Tự Dính | tempil.vn">
+  <meta property="og:description" content="Tempilabel® Series 4, Series 21, Reversible. Nhãn tự dính chỉ thị nhiệt độ chính hãng USA. Xem bảng part numbers đầy đủ.">
+  <meta property="og:url" content="https://tempil.vn/tempilabel/">
+  <meta property="og:image" content="https://tempil.vn/assets/images/tempilabels.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <style>
+    .trust-bar{background:#1a0a0a;padding:0.75rem 2rem;display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;border-bottom:1px solid rgba(200,16,46,0.3);}
+    .trust-item{display:flex;align-items:center;gap:0.5rem;color:#F4F1DE;font-size:0.82rem;font-weight:600;font-family:var(--font-body);}
+    .trust-item .icon{width:22px;height:22px;background:#c8102e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#fff;font-weight:900;flex-shrink:0;}
+
+    .page-hero{background:linear-gradient(135deg,#1a0a0a 0%,#8b1a1a 100%);padding:clamp(2.5rem,5vw,4rem) clamp(2rem,5vw,4rem);color:#fff;}
+    .page-hero__breadcrumb{font-size:0.78rem;color:rgba(244,241,222,0.5);margin-bottom:1rem;}
+    .page-hero__breadcrumb a{color:rgba(244,241,222,0.5);text-decoration:none;}
+    .page-hero__breadcrumb a:hover{color:#c8102e;}
+    .page-hero h1{font-family:var(--font-heading);font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;margin-bottom:0.75rem;}
+    .page-hero h1 span{color:#c8102e;}
+    .page-hero .lead{color:rgba(244,241,222,0.75);font-size:0.95rem;max-width:620px;margin-bottom:0;}
+
+    .page-section{padding:clamp(2.5rem,5vw,4rem) clamp(2rem,5vw,4rem);}
+    .section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c8102e;margin-bottom:0.5rem;}
+    .section-title{font-family:var(--font-heading);font-size:clamp(1.4rem,3vw,1.9rem);font-weight:600;color:#3D405B;margin-bottom:1.5rem;}
+
+    .series-card{background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden;margin-bottom:2.5rem;}
+    .series-card__header{background:#c8102e;padding:1.25rem 1.5rem;display:flex;align-items:center;gap:1rem;}
+    .series-card__header h3{font-family:var(--font-heading);font-size:1.2rem;color:#fff;margin:0;}
+    .series-card__header .badge-series{background:rgba(255,255,255,0.2);color:#fff;font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:4px;letter-spacing:0.08em;}
+    .series-card__body{padding:1.5rem;}
+    .series-card__img{background:#f8f8f8;display:flex;align-items:center;justify-content:center;padding:1rem;min-height:160px;}
+    .series-card__img img{max-height:140px;max-width:100%;object-fit:contain;}
+
+    .feature-list{list-style:none;padding:0;margin:0;}
+    .feature-list li{display:flex;gap:0.75rem;align-items:flex-start;padding:0.5rem 0;border-bottom:1px solid #f0f0f0;font-size:0.88rem;color:#555;}
+    .feature-list li:last-child{border-bottom:none;}
+    .feature-list li .check{color:#c8102e;font-weight:900;flex-shrink:0;font-size:0.8rem;}
+
+    .part-table-wrap{overflow-x:auto;}
+    .part-table{width:100%;border-collapse:collapse;font-family:var(--font-body);font-size:0.82rem;}
+    .part-table thead th{background:#c8102e;color:#fff;padding:0.6rem 0.85rem;text-align:left;font-weight:700;font-size:0.75rem;letter-spacing:0.05em;white-space:nowrap;}
+    .part-table tbody tr:nth-child(even){background:#fafafa;}
+    .part-table tbody tr:hover{background:#fff0f2;}
+    .part-table td{padding:0.45rem 0.85rem;border-bottom:1px solid #f0f0f0;color:#3D405B;white-space:nowrap;}
+    .part-table td.part-no{font-weight:700;font-family:'Courier New',monospace;color:#c8102e;font-size:0.85rem;}
+    .part-table td.temp-range{font-weight:600;font-size:0.82rem;}
+    .badge-roll{display:inline-block;background:rgba(61,64,91,0.08);color:#3D405B;font-size:0.65rem;font-weight:700;padding:0.1rem 0.4rem;border-radius:3px;}
+
+    .cta-box{background:linear-gradient(135deg,#1a0a0a,#3a1010);border-radius:14px;padding:1.75rem;color:#fff;position:sticky;top:2rem;}
+    .cta-box h3{font-family:var(--font-heading);font-size:1.1rem;color:#fff;margin-bottom:0.5rem;}
+    .cta-box p{font-size:0.82rem;color:rgba(244,241,222,0.7);margin-bottom:1.25rem;}
+    .btn-red{display:block;background:#c8102e;color:#fff;border:none;padding:0.75rem 1rem;border-radius:8px;font-weight:700;font-size:0.85rem;text-align:center;text-decoration:none;margin-bottom:0.5rem;transition:background 0.2s;font-family:var(--font-body);}
+    .btn-red:hover{background:#a50e26;color:#fff;}
+    .btn-dark-outline{display:block;background:transparent;color:rgba(244,241,222,0.7);border:1.5px solid rgba(244,241,222,0.25);padding:0.75rem 1rem;border-radius:8px;font-weight:600;font-size:0.85rem;text-align:center;text-decoration:none;transition:all 0.2s;font-family:var(--font-body);margin-top:0.5rem;}
+    .btn-dark-outline:hover{border-color:rgba(244,241,222,0.5);color:#fff;}
+
+    .backlink-box{margin-top:1.5rem;padding:1.25rem 1.5rem;background:#f0f4f8;border-left:4px solid #c8102e;border-radius:0 10px 10px 0;}
+
+    .float-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:#1a0a0a;padding:0.75rem 1rem;gap:0.5rem;border-top:2px solid #c8102e;}
+    .float-cta a{flex:1;text-align:center;padding:0.65rem;border-radius:6px;font-size:0.82rem;font-weight:700;text-decoration:none;font-family:var(--font-body);}
+    @media(max-width:1024px){.float-cta{display:flex;}}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Tempilabel® Temperature Indicating Labels",
+    "description":"Nhãn tự dính chỉ thị nhiệt độ Tempilabel®. Series 4 (4 mức/nhãn), Series 21 (1 mức/nhãn), Reversible. Độ chính xác ±2% °F. Nhập khẩu chính hãng từ Mỹ.",
+    "brand":{"@type":"Brand","name":"Tempil"},
+    "manufacturer":{"@type":"Organization","name":"Tempil / ITW","address":{"@type":"PostalAddress","addressCountry":"US"}},
+    "offers":{"@type":"Offer","seller":{"@type":"Organization","name":"Fast Group Engineering","url":"https://tempil.vn"},"priceCurrency":"VND","availability":"https://schema.org/InStock","url":"https://tempil.vn/tempilabel/"},
+    "url":"https://tempil.vn/tempilabel/",
+    "image":"https://tempil.vn/assets/images/tempilabels.png",
+    "additionalProperty":[
+      {"@type":"PropertyValue","name":"Độ chính xác","value":"±2% °F"},
+      {"@type":"PropertyValue","name":"Series","value":"Series 4 (4 mức), Series 21 (1 mức), Reversible"},
+      {"@type":"PropertyValue","name":"Đặc tính","value":"Chống dầu, nước, hơi nước"},
+      {"@type":"PropertyValue","name":"Xuất xứ","value":"Made in USA"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Tempilabel Series 4 và Series 21 khác nhau như thế nào?",
+        "acceptedAnswer":{"@type":"Answer","text":"Series 4 có 4 mức nhiệt độ trên mỗi nhãn (45mm x 23mm), cho phép theo dõi khoảng nhiệt độ rộng với 1 nhãn duy nhất. Series 21 có 1 mức nhiệt độ trên mỗi nhãn (13mm x 12mm), nhỏ gọn hơn, phù hợp khi cần giám sát chính xác 1 ngưỡng nhiệt. Cả hai đều không thể đảo ngược và chống dầu, nước, hơi nước."}
+      },
+      {
+        "@type":"Question",
+        "name":"Tempilabel có thể dùng lại không?",
+        "acceptedAnswer":{"@type":"Answer","text":"Series 4 và Series 21 không thể đảo ngược (irreversible) — khi đã đổi màu thì lưu lại vĩnh viễn. Có dòng Tempilabel Reversible dùng công nghệ LCD, hiển thị nhiệt độ thực tế và có thể đọc lại khi nhiệt độ thay đổi."}
+      },
+      {
+        "@type":"Question",
+        "name":"Mua Tempilabel® ở đâu tại Việt Nam?",
+        "acceptedAnswer":{"@type":"Answer","text":"Fast Group Engineering (tempil.vn) là nhà phân phối chính hãng Tempilabel® tại Việt Nam. Sẵn kho TPHCM và Vũng Tàu. Hotline 0938 888 958. Xuất hóa đơn VAT, kèm C/O C/Q."}
+      },
+      {
+        "@type":"Question",
+        "name":"Tempilabel Part# 26700 dùng để làm gì?",
+        "acceptedAnswer":{"@type":"Answer","text":"Tempilabel® Series 4 Part# 26700 là nhãn 4 mức nhiệt 100/110/120/130°F (38/43/49/54°C), đóng gói 10 nhãn/pack. Dùng để giám sát nhiệt độ trong vận chuyển, bảo quản, hoặc kiểm soát nhiệt độ thiết bị điện tử."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://tempil.vn/"},
+      {"@type":"ListItem","position":2,"name":"Tempilabel®","item":"https://tempil.vn/tempilabel/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<button class="hamburger" id="hamburger" aria-label="Menu">
+  <div class="hamburger__lines"><span></span><span></span><span></span></div>
+</button>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar__brand">
+    <a href="/"><img src="/assets/logo.png" alt="Tempil Việt Nam" class="logo" style="height:40px;width:auto;"></a>
+    <p class="sidebar__tagline" style="margin-top:0.5rem">Nhà phân phối chính hãng</p>
+    <p class="sidebar__tagline" style="color:#c8102e;font-weight:700">Made in USA</p>
+  </div>
+  <nav class="sidebar__nav">
+    <ul>
+      <li><a href="/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Trang chủ</a></li>
+      <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Sản phẩm</li>
+      <li><a href="/tempilstik/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></span> Tempilstik®</a></li>
+      <li><a href="/tempilaq/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></span> Tempilaq® Advanced</a></li>
+      <li><a href="/tempilabel/" class="active"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> Tempilabel®</a></li>
+      <li><a href="/#san-pham"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span> Xem tất cả SP</a></li>
+      <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Liên hệ</li>
+      <li><a href="/bao-gia/" style="background:rgba(200,16,46,0.15);border-left:3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Báo giá ngay</a></li>
+      <li><a href="/contact.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> Liên hệ</a></li>
+      <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Tài nguyên</li>
+      <li><a href="https://tempil.com.vn" target="_blank" rel="noopener"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> Blog kỹ thuật</a></li>
+      <li><a href="https://markal.com.vn" target="_blank" rel="noopener"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></span> markal.com.vn</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar__footer">
+    <div class="sidebar__hours">
+      <strong>Hotline</strong><br>
+      <a href="tel:0938888958" style="color:#c8102e;font-weight:700;font-size:0.9rem;">0938 888 958</a><br><br>
+      <strong>Email</strong><br>
+      <a href="mailto:sales@tempil.vn" style="color:rgba(244,241,222,0.7)">sales@tempil.vn</a>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+
+  <div class="trust-bar">
+    <div class="trust-item"><div class="icon">✓</div> Chính hãng USA</div>
+    <div class="trust-item"><div class="icon">✓</div> Có C/O &amp; C/Q</div>
+    <div class="trust-item"><div class="icon">✓</div> VAT đầy đủ</div>
+    <div class="trust-item"><div class="icon">✓</div> Chống dầu · nước · hơi nước</div>
+    <div class="trust-item"><div class="icon">✓</div> Không cần hiệu chuẩn</div>
+  </div>
+
+  <div class="page-hero">
+    <div class="page-hero__breadcrumb"><a href="/">Trang chủ</a> &rsaquo; Tempilabel®</div>
+    <h1><span>Tempilabel®</span> — Nhãn Tự Dính Chỉ Thị Nhiệt Độ</h1>
+    <p class="lead">Giải pháp kinh tế để giám sát nhiệt độ — dán lên bề mặt, đổi màu vĩnh viễn khi đạt nhiệt độ. Ba dòng sản phẩm: Series 4, Series 21 và Reversible. Chính hãng Mỹ, có C/O, C/Q, hóa đơn VAT.</p>
+  </div>
+
+  <div class="page-section">
+    <div class="row g-5">
+
+      <!-- LEFT -->
+      <div class="col-lg-8">
+
+        <!-- Common features -->
+        <p class="section-label">Đặc điểm chung tất cả series</p>
+        <h2 class="section-title">Tại sao dùng Tempilabel®?</h2>
+        <ul class="feature-list mb-5">
+          <li><span class="check">✓</span> Dán lên hầu hết bề mặt — dễ lắp đặt, không cần công cụ</li>
+          <li><span class="check">✓</span> Độ chính xác ±2% °F — đáng tin cậy cho kiểm soát chất lượng</li>
+          <li><span class="check">✓</span> Không cần hiệu chuẩn (calibration-free)</li>
+          <li><span class="check">✓</span> Chống dầu, nước và hơi nước</li>
+          <li><span class="check">✓</span> Hồ sơ nhiệt độ vĩnh viễn (Series 4 và 21) — lý tưởng cho kiểm toán</li>
+          <li><span class="check">✓</span> Ứng dụng: bảo trì phòng ngừa, logistics, kiểm soát chất lượng, sản xuất</li>
+          <li><span class="check">✓</span> Nhập khẩu chính hãng Mỹ — kèm C/O, C/Q, hóa đơn VAT</li>
+        </ul>
+
+        <!-- SERIES 4 -->
+        <div class="series-card">
+          <div class="series-card__header">
+            <div style="color:#fff;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            </div>
+            <div>
+              <h3>Series 4 Tempilabel®</h3>
+              <div style="color:rgba(255,255,255,0.75);font-size:0.8rem;">4 mức nhiệt / nhãn · Không đảo ngược · Kích thước 45mm x 23mm</div>
+            </div>
+            <span class="badge-series">IRREVERSIBLE</span>
+          </div>
+          <div class="series-card__body">
+            <div class="row g-4 mb-3">
+              <div class="col-md-4">
+                <div class="series-card__img">
+                  <img src="/assets/images/series_4_tempilabel_0.webp" alt="Tempilabel Series 4" onerror="this.style.display='none'">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <ul class="feature-list">
+                  <li><span class="check">✓</span> 4 mức nhiệt độ trên 1 nhãn — theo dõi khoảng nhiệt rộng</li>
+                  <li><span class="check">✓</span> Vòng tròn chuyển đen không thể đảo ngược khi đạt nhiệt độ</li>
+                  <li><span class="check">✓</span> Đóng gói: 10 nhãn/pack và cuộn 500 nhãn</li>
+                </ul>
+              </div>
+            </div>
+            <p class="section-label" style="margin-top:1rem;">Bảng part numbers — Series 4</p>
+            <div class="part-table-wrap">
+              <table class="part-table">
+                <thead><tr><th>Part Number</th><th>Dải nhiệt độ (°F)</th><th>Dải nhiệt độ (°C)</th><th>Đóng gói</th></tr></thead>
+                <tbody>
+                  <tr><td class="part-no">26700</td><td class="temp-range">100 · 110 · 120 · 130°F</td><td>38 · 43 · 49 · 54°C</td><td>10 nhãn/pack</td></tr>
+                  <tr><td class="part-no">26709</td><td class="temp-range">120 · 130 · 140 · 150°F</td><td>49 · 54 · 60 · 66°C</td><td>10 nhãn/pack</td></tr>
+                  <tr><td class="part-no">26701</td><td class="temp-range">130 · 140 · 150 · 160°F</td><td>54 · 60 · 66 · 71°C</td><td>10 nhãn/pack</td></tr>
+                  <tr><td class="part-no">26702</td><td class="temp-range">170 · 180 · 190 · 200°F</td><td>77 · 82 · 88 · 93°C</td><td>10 nhãn/pack</td></tr>
+                  <tr><td class="part-no">26703</td><td class="temp-range">190 · 200 · 210 · 220°F</td><td>88 · 93 · 99 · 104°C</td><td>10 nhãn/pack</td></tr>
+                  <tr><td class="part-no">26705</td><td class="temp-range">330 · 340 · 350 · 360°F</td><td>166 · 171 · 177 · 182°C</td><td>10 nhãn/pack</td></tr>
+                  <tr><td class="part-no">26706</td><td class="temp-range">125 · 150 · 175 · 200°F</td><td>52 · 66 · 79 · 93°C</td><td>10 nhãn/pack</td></tr>
+                  <tr><td class="part-no">26707</td><td class="temp-range">100 · 150 · 200 · 250°F</td><td>38 · 66 · 93 · 121°C</td><td>10 nhãn/pack</td></tr>
+                  <tr><td class="part-no">26708</td><td class="temp-range">200 · 250 · 300 · 350°F</td><td>93 · 121 · 149 · 177°C</td><td>10 nhãn/pack</td></tr>
+                  <tr style="background:#f8f8f8;"><td class="part-no">26750</td><td class="temp-range">100 · 110 · 120 · 130°F</td><td>38 · 43 · 49 · 54°C</td><td><span class="badge-roll">Cuộn 500</span></td></tr>
+                  <tr style="background:#f8f8f8;"><td class="part-no">26751</td><td class="temp-range">170 · 180 · 190 · 200°F</td><td>77 · 82 · 88 · 93°C</td><td><span class="badge-roll">Cuộn 500</span></td></tr>
+                  <tr style="background:#f8f8f8;"><td class="part-no">26752</td><td class="temp-range">200 · 250 · 300 · 350°F</td><td>93 · 121 · 149 · 177°C</td><td><span class="badge-roll">Cuộn 500</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERIES 21 -->
+        <div class="series-card">
+          <div class="series-card__header" style="background:#3D405B;">
+            <div style="color:#fff;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div>
+              <h3>Series 21 Tempilabel®</h3>
+              <div style="color:rgba(255,255,255,0.75);font-size:0.8rem;">1 mức nhiệt / nhãn · Không đảo ngược · Kích thước 13mm x 12mm</div>
+            </div>
+            <span class="badge-series">IRREVERSIBLE</span>
+          </div>
+          <div class="series-card__body">
+            <div class="row g-4 mb-3">
+              <div class="col-md-4">
+                <div class="series-card__img">
+                  <img src="/assets/images/series_21_tempilabel_2.webp" alt="Tempilabel Series 21" onerror="this.style.display='none'">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <ul class="feature-list">
+                  <li><span class="check">✓</span> 1 mức nhiệt độ chính xác trên mỗi nhãn nhỏ gọn</li>
+                  <li><span class="check">✓</span> Thay đổi màu một chiều khi đạt nhiệt độ</li>
+                  <li><span class="check">✓</span> Đóng gói: 210 nhãn/pack và cuộn 1.000 nhãn</li>
+                  <li><span class="check">✓</span> Dải rộng 100°F đến 500°F — 26 mức nhiệt có sẵn</li>
+                </ul>
+              </div>
+            </div>
+            <p class="section-label" style="margin-top:1rem;">Bảng part numbers — Series 21</p>
+            <div class="part-table-wrap">
+              <table class="part-table">
+                <thead><tr><th>Part# (210 pack)</th><th>Part# (Cuộn 1.000)</th><th>Nhiệt độ °F</th><th>Nhiệt độ °C</th></tr></thead>
+                <tbody>
+                  <tr><td class="part-no">26250</td><td class="part-no">26275</td><td class="temp-range">100°F</td><td>38°C</td></tr>
+                  <tr><td class="part-no">26251</td><td class="part-no">26276</td><td class="temp-range">110°F</td><td>43°C</td></tr>
+                  <tr><td class="part-no">26252</td><td class="part-no">26277</td><td class="temp-range">120°F</td><td>49°C</td></tr>
+                  <tr><td class="part-no">26254</td><td class="part-no">26278</td><td class="temp-range">130°F</td><td>54°C</td></tr>
+                  <tr><td class="part-no">26255</td><td class="part-no">26279</td><td class="temp-range">140°F</td><td>60°C</td></tr>
+                  <tr><td class="part-no">26256</td><td class="part-no">26280</td><td class="temp-range">160°F</td><td>71°C</td></tr>
+                  <tr><td class="part-no">26257</td><td class="part-no">—</td><td class="temp-range">170°F</td><td>77°C</td></tr>
+                  <tr><td class="part-no">26258</td><td class="part-no">26282</td><td class="temp-range">180°F</td><td>82°C</td></tr>
+                  <tr><td class="part-no">26259</td><td class="part-no">26283</td><td class="temp-range">190°F</td><td>88°C</td></tr>
+                  <tr><td class="part-no">26260</td><td class="part-no">26284</td><td class="temp-range">200°F</td><td>93°C</td></tr>
+                  <tr><td class="part-no">26261</td><td class="part-no">26285</td><td class="temp-range">210°F</td><td>99°C</td></tr>
+                  <tr><td class="part-no">26262</td><td class="part-no">26286</td><td class="temp-range">220°F</td><td>104°C</td></tr>
+                  <tr><td class="part-no">26263</td><td class="part-no">26287</td><td class="temp-range">230°F</td><td>110°C</td></tr>
+                  <tr><td class="part-no">26264</td><td class="part-no">26295</td><td class="temp-range">240°F</td><td>116°C</td></tr>
+                  <tr><td class="part-no">26265</td><td class="part-no">26288</td><td class="temp-range">250°F</td><td>121°C</td></tr>
+                  <tr><td class="part-no">26266</td><td class="part-no">26289</td><td class="temp-range">260°F</td><td>127°C</td></tr>
+                  <tr><td class="part-no">26267</td><td class="part-no">26290</td><td class="temp-range">270°F</td><td>132°C</td></tr>
+                  <tr><td class="part-no">26268</td><td class="part-no">26291</td><td class="temp-range">280°F</td><td>138°C</td></tr>
+                  <tr><td class="part-no">26269</td><td class="part-no">26292</td><td class="temp-range">290°F</td><td>143°C</td></tr>
+                  <tr><td class="part-no">26270</td><td class="part-no">26293</td><td class="temp-range">300°F</td><td>149°C</td></tr>
+                  <tr><td class="part-no">26271</td><td class="part-no">26294</td><td class="temp-range">400°F</td><td>204°C</td></tr>
+                  <tr><td class="part-no">26272</td><td class="part-no">26296</td><td class="temp-range">500°F</td><td>260°C</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reversible -->
+        <div class="series-card">
+          <div class="series-card__header" style="background:#1a0a0a;">
+            <div style="color:#c8102e;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+            </div>
+            <div>
+              <h3>Tempilabel® Reversible</h3>
+              <div style="color:rgba(255,255,255,0.75);font-size:0.8rem;">Đọc nhiệt độ thực tế · Công nghệ LCD · Kích thước 13mm x 4mm</div>
+            </div>
+            <span class="badge-series">REVERSIBLE</span>
+          </div>
+          <div class="series-card__body">
+            <div class="row g-4 mb-3">
+              <div class="col-md-4">
+                <div class="series-card__img">
+                  <img src="/assets/images/tempilabel_reversible_0.webp" alt="Tempilabel Reversible" onerror="this.style.display='none'">
+                </div>
+              </div>
+              <div class="col-md-8">
+                <ul class="feature-list">
+                  <li><span class="check">✓</span> Công nghệ LCD — hiển thị nhiệt độ thực tế khi thay đổi</li>
+                  <li><span class="check">✓</span> Có thể đảo ngược — đọc lại khi nhiệt độ thay đổi</li>
+                  <li><span class="check">✓</span> Độ chính xác ±2% °F</li>
+                  <li><span class="check">✓</span> Đóng gói: 10 nhãn/pack · 7 mức nhiệt trên mỗi nhãn</li>
+                </ul>
+              </div>
+            </div>
+            <div class="part-table-wrap">
+              <table class="part-table">
+                <thead><tr><th>Part Number</th><th>Dải nhiệt độ (°F)</th><th>Dải nhiệt độ (°C)</th><th>Đóng gói</th></tr></thead>
+                <tbody>
+                  <tr><td class="part-no">26901</td><td class="temp-range">86·95·104·113·122·131·140°F</td><td>30·35·40·45·50·55·60°C</td><td>10 nhãn/pack</td></tr>
+                  <tr><td class="part-no">26903</td><td class="temp-range">140·149·158·167·176·185·194°F</td><td>60·65·70·75·80·85·90°C</td><td>10 nhãn/pack</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backlinks -->
+        <div class="backlink-box">
+          <p style="font-size:0.85rem;color:#3D405B;margin:0;">
+            <strong>Tài nguyên kỹ thuật:</strong> Xem hướng dẫn chọn nhãn chỉ thị nhiệt phù hợp theo ứng dụng tại
+            <a href="https://tempil.com.vn" target="_blank" rel="noopener" style="color:#c8102e;font-weight:700;">tempil.com.vn</a>
+            — blog kỹ thuật hàn và kiểm soát nhiệt độ chuyên sâu.
+          </p>
+        </div>
+        <div class="backlink-box" style="margin-top:0.75rem;border-left-color:#3D405B;">
+          <p style="font-size:0.85rem;color:#3D405B;margin:0;">
+            <strong>Danh mục rộng hơn:</strong> Xem đầy đủ danh mục marking tools và sản phẩm công nghiệp tại
+            <a href="https://markal.com.vn" target="_blank" rel="noopener" style="color:#c8102e;font-weight:700;">markal.com.vn</a>.
+          </p>
+        </div>
+
+        <!-- Related -->
+        <div style="margin-top:2.5rem;">
+          <p class="section-label">Sản phẩm liên quan</p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <a href="/tempilstik/" style="text-decoration:none;">
+                <div style="padding:1.25rem;background:#fff;border:1px solid #eee;border-radius:10px;display:flex;gap:1rem;align-items:center;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+                  <div style="color:#c8102e;flex-shrink:0;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></div>
+                  <div><div style="font-weight:700;color:#3D405B;font-size:0.9rem;">Tempilstik®</div><div style="font-size:0.78rem;color:#888;">Que chỉ thị nhiệt · 100–2000°F</div></div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="/tempilaq/" style="text-decoration:none;">
+                <div style="padding:1.25rem;background:#fff;border:1px solid #eee;border-radius:10px;display:flex;gap:1rem;align-items:center;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+                  <div style="color:#c8102e;flex-shrink:0;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></div>
+                  <div><div style="font-weight:700;color:#3D405B;font-size:0.9rem;">Tempilaq® Advanced</div><div style="font-size:0.78rem;color:#888;">Sơn lỏng chỉ thị nhiệt · 300–1500°F</div></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: CTA -->
+      <div class="col-lg-4">
+        <div class="cta-box">
+          <h3>Yêu cầu báo giá</h3>
+          <p>Cho biết series, mức nhiệt độ và số lượng cần — chúng tôi báo giá trong ngày.</p>
+          <a href="/bao-gia/?part=26707" class="btn-red">Báo giá ngay</a>
+          <a href="tel:0938888958" class="btn-dark-outline">Gọi: 0938 888 958</a>
+          <a href="https://zalo.me/0938888958" target="_blank" class="btn-dark-outline">Zalo tư vấn</a>
+          <a href="mailto:sales@tempil.vn" class="btn-dark-outline">sales@tempil.vn</a>
+          <hr style="border-color:rgba(244,241,222,0.1);margin:1.5rem 0;">
+          <div style="font-size:0.78rem;color:rgba(244,241,222,0.6);line-height:1.9;">
+            <div>— Chính hãng Tempil® / ITW, Mỹ</div>
+            <div>— Kèm C/O &amp; C/Q</div>
+            <div>— Hóa đơn VAT đầy đủ</div>
+            <div>— Sẵn kho TPHCM &amp; Vũng Tàu</div>
+            <div>— Giao hàng toàn quốc</div>
+          </div>
+          <hr style="border-color:rgba(244,241,222,0.1);margin:1.5rem 0;">
+          <div style="font-size:0.8rem;color:rgba(244,241,222,0.6);">
+            <strong style="color:rgba(244,241,222,0.85);">Chọn nhanh theo ứng dụng:</strong><br>
+            <span style="color:rgba(244,241,222,0.5);font-size:0.75rem;">— Giám sát max/min: Series 4<br>— Ngưỡng đơn: Series 21<br>— Đọc thực tế: Reversible</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__col">
+        <img src="/assets/logo.png" alt="Tempil Việt Nam" class="logo" style="height:36px;margin-bottom:1rem;">
+        <p class="footer__desc" style="font-size:0.85rem;">Nhà phân phối chính hãng Tempil® / ITW tại Việt Nam.</p>
+        <div class="footer__contact">
+          <a href="tel:0938888958" style="color:#c8102e;">0938 888 958</a><br>
+          <a href="mailto:sales@tempil.vn" style="color:rgba(203,213,225,0.8)">sales@tempil.vn</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="/tempilstik/">Tempilstik®</a></li>
+          <li><a href="/tempilaq/">Tempilaq® Advanced</a></li>
+          <li><a href="/tempilabel/">Tempilabel®</a></li>
+          <li><a href="/bao-gia/">Báo giá</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Part Numbers phổ biến</h4>
+        <ul>
+          <li><a href="/tempilabel/">26707 — 100·150·200·250°F</a></li>
+          <li><a href="/tempilabel/">26708 — 200·250·300·350°F</a></li>
+          <li><a href="/tempilabel/">26260 — Series 21, 200°F</a></li>
+          <li><a href="/tempilabel/">26265 — Series 21, 250°F</a></li>
+          <li><a href="/tempilabel/">26901 — Reversible 86-140°F</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Tài nguyên</h4>
+        <ul>
+          <li><a href="https://tempil.com.vn" target="_blank">Blog kỹ thuật hàn</a></li>
+          <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+          <li><a href="/contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p style="margin:0;">© 2025 Công ty TNHH Fast Group · <a href="https://tempil.vn" style="color:#c8102e;">tempil.vn</a> · Nhà phân phối chính hãng Tempil® Made in USA</p>
+    </div>
+  </footer>
+
+</main>
+
+<div class="float-cta">
+  <a href="tel:0938888958" style="background:#c8102e;color:#fff;">Gọi ngay</a>
+  <a href="https://zalo.me/0938888958" target="_blank" style="background:#0068ff;color:#fff;">Zalo</a>
+  <a href="/bao-gia/" style="background:#2d2d2d;color:#fff;">Báo giá</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const hamburger=document.getElementById('hamburger'),sidebar=document.getElementById('sidebar'),overlay=document.getElementById('sidebarOverlay');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('is-active');sidebar.classList.toggle('is-open');overlay.style.display=sidebar.classList.contains('is-open')?'block':'none';setTimeout(()=>overlay.classList.toggle('is-visible',sidebar.classList.contains('is-open')),10);});
+overlay.addEventListener('click',()=>{hamburger.classList.remove('is-active');sidebar.classList.remove('is-open');overlay.classList.remove('is-visible');setTimeout(()=>overlay.style.display='none',300);});
+</script>
+</body>
+</html>
