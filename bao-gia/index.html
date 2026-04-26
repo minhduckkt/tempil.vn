@@ -341,9 +341,8 @@ const pTemp = params.get('temp') || '';
 addRow(pPart, pTemp);
 if (!pPart) addRow(); // second empty row
 
-// Submit form
-// TODO: When Oracle API is ready, replace mailto with fetch POST to https://api.tempil.vn/bao-gia
-function submitForm() {
+// Submit form — gửi đến Oracle API
+async function submitForm() {
   const company = document.getElementById('company').value.trim();
   const name = document.getElementById('contact_name').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -373,30 +372,43 @@ function submitForm() {
   const timeline = document.getElementById('timeline').value;
   const notes = document.getElementById('notes').value;
 
-  const body = [
-    'YÊU CẦU BÁO GIÁ — tempil.vn',
-    '─────────────────────────────',
-    'Công ty: ' + company,
-    'Liên hệ: ' + name + (jobTitle ? ' — ' + jobTitle : ''),
-    'Điện thoại: ' + phone,
-    'Email: ' + email,
-    '',
-    'SẢN PHẨM CẦN BÁO GIÁ:',
-    parts.join('\n'),
-    '',
-    'Tiêu chuẩn: ' + (standard || 'Chưa ghi'),
-    'Thời gian: ' + (timeline || 'Chưa xác định'),
-    'Ghi chú: ' + (notes || 'Không'),
-  ].join('\n');
+  // Disable button, show loading
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Đang gửi...';
 
-  const subject = 'Báo giá Tempilstik® — ' + company;
-  window.location.href = 'mailto:sales@tempil.vn?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  try {
+    const res = await fetch('http://129.146.147.142:3000/bao-gia', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        company,
+        contact_name: name + (jobTitle ? ' — ' + jobTitle : ''),
+        phone,
+        email,
+        parts: parts.join('\n'),
+        standard: standard || 'Chưa ghi',
+        timeline: timeline || 'Chưa xác định',
+        notes: notes || 'Không',
+        source: 'tempil.vn/bao-gia'
+      })
+    });
 
-  // Show success message
-  document.getElementById('successMsg').style.display = 'block';
-  document.getElementById('quoteForm').style.opacity = '0.5';
-  document.getElementById('submitBtn').disabled = true;
-  window.scrollTo({top: 0, behavior: 'smooth'});
+    const data = await res.json();
+
+    if (data.success) {
+      document.getElementById('successMsg').style.display = 'block';
+      document.getElementById('quoteForm').style.opacity = '0.5';
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    } else {
+      throw new Error(data.error || 'Lỗi không xác định');
+    }
+  } catch (err) {
+    console.error(err);
+    btn.disabled = false;
+    btn.textContent = 'Gửi yêu cầu báo giá';
+    alert('Gửi thất bại. Vui lòng gọi trực tiếp: 0938 888 958 hoặc email sales@tempil.vn');
+  }
 }
 </script>
 </body>
