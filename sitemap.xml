@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Trang chủ -->
+  <url>
+    <loc>https://tempil.vn/</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Sản phẩm chính -->
+  <url>
+    <loc>https://tempil.vn/tempilstik/</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://tempil.vn/tempilstik/#test-kit</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tempil.vn/tempilaq/</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://tempil.vn/tempilabel/</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Báo giá & Liên hệ -->
+  <url>
+    <loc>https://tempil.vn/bao-gia/</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tempil.vn/contact.html</loc>
+    <lastmod>2025-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
