@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempil Việt Nam | Nhà Phân Phối Chính Hãng Tempilstik® Made in USA</title>
+  <meta name="description" content="Nhà phân phối chính hãng Tempil tại Việt Nam. Tempilstik®, Tempilaq®, Tempilabel® nhập khẩu từ Mỹ. Có C/O, C/Q, hóa đơn VAT. Sẵn kho TPHCM & Vũng Tàu. Hotline: 0938 888 958">
+  <link rel="canonical" href="https://tempil.vn/">
+  <meta property="og:title" content="Tempil Việt Nam — Nhà Phân Phối Chính Hãng Made in USA">
+  <meta property="og:description" content="Que chỉ thị nhiệt Tempilstik®, Tempilaq® nhập khẩu chính hãng từ Mỹ. C/O · C/Q · VAT đầy đủ.">
+  <meta property="og:url" content="https://tempil.vn/">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <style>
+    /* ── Trust Badges ── */
+    .trust-bar {
+      background: #1a0a0a;
+      padding: 0.75rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      border-bottom: 1px solid rgba(200,16,46,0.3);
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #F4F1DE;
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+    }
+    .trust-item .icon {
+      width: 22px;
+      height: 22px;
+      background: #c8102e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+    }
+
+    /* ── Hero Override for commerce ── */
+    .hero-commerce {
+      background: linear-gradient(135deg, #1a0a0a 0%, #8b1a1a 100%);
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 4rem);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-commerce::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8102e' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    .hero-commerce .badge-usa {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(200,16,46,0.25);
+      border: 1px solid rgba(200,16,46,0.5);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-commerce h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .hero-commerce h1 span {
+      color: #c8102e;
+    }
+    .hero-commerce .lead {
+      color: rgba(244,241,222,0.75);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .btn-primary-red {
+      background: #c8102e;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      font-family: var(--font-body);
+    }
+    .btn-primary-red:hover { background: #a50e26; color: #fff; }
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      padding: 0.8rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-family: var(--font-body);
+    }
+    .btn-outline-white:hover { border-color: #fff; color: #fff; background: rgba(255,255,255,0.08); }
+
+    /* ── Products Section ── */
+    .section-products {
+      padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+      background: #fafafa;
+    }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #c8102e;
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 600;
+      color: #3D405B;
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    /* Product cards */
+    .product-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      box-shadow: 0 8px 32px rgba(61,64,91,0.12);
+      transform: translateY(-4px);
+    }
+    .product-card__badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #c8102e;
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+    .product-card__img {
+      position: relative;
+      height: 200px;
+      background: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .product-card__img img {
+      max-height: 160px;
+      max-width: 90%;
+      object-fit: contain;
+    }
+    .product-card__img-placeholder {
+      font-size: 3rem;
+      opacity: 0.2;
+    }
+    .product-card__body {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card__title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #3D405B;
+      margin-bottom: 0.4rem;
+    }
+    .product-card__desc {
+      font-size: 0.85rem;
+      color: #666;
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+    .product-card__part {
+      font-size: 0.75rem;
+      color: #c8102e;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .product-card__link {
+      display: inline-block;
+      color: #c8102e;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .product-card__link:hover { border-color: #c8102e; color: #c8102e; }
+
+    /* ── Trust Section (full) ── */
+    .section-trust {
+      padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+      background: linear-gradient(135deg, #1a0a0a 0%, #3a1010 100%);
+      color: #fff;
+    }
+    .trust-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    .trust-card__icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(200,16,46,0.2);
+      border: 2px solid rgba(200,16,46,0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.4rem;
+    }
+    .trust-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .trust-card p {
+      font-size: 0.82rem;
+      color: rgba(244,241,222,0.65);
+      margin: 0;
+    }
+
+    /* ── CTA Banner ── */
+    .section-cta {
+      padding: clamp(3rem, 6vw, 4rem) clamp(2rem, 5vw, 4rem);
+      background: #c8102e;
+    }
+    .section-cta h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .section-cta p {
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+    .btn-white {
+      background: #fff;
+      color: #c8102e;
+      border: none;
+      padding: 0.8rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      font-family: var(--font-body);
+      white-space: nowrap;
+    }
+    .btn-white:hover { opacity: 0.9; color: #c8102e; }
+    .btn-outline-white2 {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.7);
+      padding: 0.8rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-family: var(--font-body);
+      white-space: nowrap;
+    }
+    .btn-outline-white2:hover { border-color: #fff; color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* Sticky floating CTA on mobile */
+    .float-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      background: #1a0a0a;
+      padding: 0.75rem 1rem;
+      gap: 0.5rem;
+      border-top: 2px solid #c8102e;
+    }
+    .float-cta a {
+      flex: 1;
+      text-align: center;
+      padding: 0.65rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      font-family: var(--font-body);
+    }
+    @media (max-width: 1024px) {
+      .float-cta { display: flex; }
+    }
+  </style>
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fast Group Engineering",
+    "alternateName": "Tempil Việt Nam",
+    "url": "https://tempil.vn",
+    "logo": "https://tempil.vn/assets/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+84938888958",
+      "contactType": "sales",
+      "areaServed": "VN",
+      "availableLanguage": "Vietnamese"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "150 Nguyễn Cư Trinh, P. Cầu Ông Lãnh",
+      "addressLocality": "Quận 1",
+      "addressRegion": "TP. Hồ Chí Minh",
+      "addressCountry": "VN"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Hamburger -->
+<button class="hamburger" id="hamburger" aria-label="Menu">
+  <div class="hamburger__lines">
+    <span></span><span></span><span></span>
+  </div>
+</button>
+
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar__brand">
+    <a href="/">
+      <img src="/assets/logo.png" alt="Tempil Việt Nam" class="logo" style="height:40px; width:auto;">
+    </a>
+    <p class="sidebar__tagline" style="margin-top:0.5rem">Nhà phân phối chính hãng</p>
+    <p class="sidebar__tagline" style="color:#c8102e; font-weight:700">Made in USA</p>
+  </div>
+
+  <nav class="sidebar__nav">
+    <ul>
+      <li><a href="/" class="active"><span class="nav-icon">🏠</span> Trang chủ</a></li>
+      <li style="padding: 0.5rem 1.5rem; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(244,241,222,0.3);">Sản phẩm</li>
+      <li><a href="/tempilstik/"><span class="nav-icon">🌡️</span> Tempilstik®</a></li>
+      <li><a href="/tempilaq/"><span class="nav-icon">🧪</span> Tempilaq® Advanced</a></li>
+      <li><a href="/tempilabel/"><span class="nav-icon">🏷️</span> Tempilabel®</a></li>
+      <li><a href="/#san-pham"><span class="nav-icon">📦</span> Xem tất cả SP</a></li>
+      <li style="padding: 0.5rem 1.5rem; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(244,241,222,0.3);">Liên hệ</li>
+      <li><a href="/bao-gia/" style="background:rgba(200,16,46,0.15); border-left: 3px solid #c8102e;"><span class="nav-icon">💬</span> Báo giá ngay</a></li>
+      <li><a href="/contact.html"><span class="nav-icon">📞</span> Liên hệ</a></li>
+      <li style="padding: 0.5rem 1.5rem; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(244,241,222,0.3);">Tài nguyên</li>
+      <li><a href="https://tempil.com.vn" target="_blank" rel="noopener"><span class="nav-icon">📚</span> Blog kỹ thuật</a></li>
+      <li><a href="https://markal.com.vn" target="_blank" rel="noopener"><span class="nav-icon">🏭</span> markal.com.vn</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar__footer">
+    <div class="sidebar__hours">
+      <strong>Hotline</strong><br>
+      <a href="tel:0938888958" style="color:#c8102e; font-weight:700; font-size:0.9rem;">0938 888 958</a><br><br>
+      <strong>Email</strong><br>
+      <a href="mailto:sales@tempil.vn" style="color:rgba(244,241,222,0.7)">sales@tempil.vn</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ── MAIN CONTENT ── -->
+<main class="main">
+
+  <!-- Trust Bar (top) -->
+  <div class="trust-bar">
+    <div class="trust-item"><div class="icon">✓</div> Nhập khẩu chính hãng từ Mỹ</div>
+    <div class="trust-item"><div class="icon">✓</div> Có C/O &amp; C/Q</div>
+    <div class="trust-item"><div class="icon">✓</div> Xuất VAT đầy đủ</div>
+    <div class="trust-item"><div class="icon">✓</div> Sẵn kho TPHCM &amp; Vũng Tàu</div>
+    <div class="trust-item"><div class="icon">✓</div> Hỗ trợ kỹ thuật theo WPS</div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero-commerce">
+    <div style="position:relative; z-index:2; max-width:680px;">
+      <div class="badge-usa">
+        🇺🇸 &nbsp;Made in USA · Tempil® / ITW
+      </div>
+      <h1>
+        Que Chỉ Thị Nhiệt<br>
+        <span>Tempilstik®</span><br>
+        Chính Hãng Việt Nam
+      </h1>
+      <p class="lead">
+        Nhà phân phối độc quyền Tempil® tại Việt Nam. Đầy đủ part numbers,
+        hóa đơn VAT, C/O xuất xứ Mỹ. Giao hàng toàn quốc — tư vấn kỹ thuật
+        theo tiêu chuẩn AWS D1.1, ASME.
+      </p>
+      <div class="hero-cta-group">
+        <a href="/bao-gia/" class="btn-primary-red">📋 Yêu cầu báo giá</a>
+        <a href="/tempilstik/" class="btn-outline-white">🌡️ Xem Part Numbers</a>
+        <a href="tel:0938888958" class="btn-outline-white">📞 0938 888 958</a>
+      </div>
+
+      <!-- Mini trust badges under CTA -->
+      <div style="display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:2rem;">
+        <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:rgba(244,241,222,0.8); padding:0.3rem 0.8rem; border-radius:4px; font-size:0.75rem; font-weight:600;">📜 C/O Mỹ</span>
+        <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:rgba(244,241,222,0.8); padding:0.3rem 0.8rem; border-radius:4px; font-size:0.75rem; font-weight:600;">🧾 Hóa đơn VAT</span>
+        <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:rgba(244,241,222,0.8); padding:0.3rem 0.8rem; border-radius:4px; font-size:0.75rem; font-weight:600;">✅ Sẵn kho</span>
+        <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:rgba(244,241,222,0.8); padding:0.3rem 0.8rem; border-radius:4px; font-size:0.75rem; font-weight:600;">🔧 Hỗ trợ kỹ thuật</span>
+        <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:rgba(244,241,222,0.8); padding:0.3rem 0.8rem; border-radius:4px; font-size:0.75rem; font-weight:600;">🚚 Giao toàn quốc</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="section-products" id="san-pham">
+    <p class="section-label">Danh mục sản phẩm</p>
+    <h2 class="section-title">Sản phẩm Tempil® chính hãng</h2>
+
+    <div class="row g-4">
+
+      <!-- Tempilstik -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="product-card">
+          <div class="product-card__img">
+            <span class="product-card__badge">Bán chạy nhất</span>
+            <img src="/assets/tempilstik_1.webp" alt="Tempilstik que chỉ thị nhiệt" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <div class="product-card__img-placeholder" style="display:none">🌡️</div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__title">Tempilstik®</div>
+            <p class="product-card__desc">Que chỉ thị nhiệt độ bề mặt. Tan chảy tức thời tại nhiệt độ định danh. Độ chính xác ±1% °F. Tuân thủ AWS D1.1, ASME.</p>
+            <div class="product-card__part">100°F → 2000°F · 90+ part numbers · Đóng gói 10 que/hộp</div>
+            <a href="/tempilstik/" class="product-card__link">Xem bảng part numbers →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tempilstik Test Kit -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="product-card">
+          <div class="product-card__img">
+            <img src="/assets/tempilstik_test_kit_0.webp" alt="Tempilstik Test Kit" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <div class="product-card__img-placeholder" style="display:none">🧰</div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__title">Tempilstik® Test Kit</div>
+            <p class="product-card__desc">Bộ 20 que chỉ thị nhiệt từ 125°F đến 800°F, bước nhảy hệ thống. Dùng cho kiểm định, đào tạo, kiểm tra thiết bị.</p>
+            <div class="product-card__part">Part# 28600 · 20 que/bộ · 125°F → 800°F</div>
+            <a href="/tempilstik/#test-kit" class="product-card__link">Xem chi tiết →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tempilaq Advanced -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="product-card">
+          <div class="product-card__img">
+            <img src="/assets/tempilaq_advanced_0.webp" alt="Tempilaq Advanced sơn lỏng chỉ thị nhiệt" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <div class="product-card__img-placeholder" style="display:none">🧪</div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__title">Tempilaq® Advanced</div>
+            <p class="product-card__desc">Sơn lỏng chỉ thị nhiệt. Phủ dễ dàng lên bề mặt ngang và đứng. Thay đổi màu rõ rệt khi đạt nhiệt độ. Độ chính xác ±1%.</p>
+            <div class="product-card__part">300°F → 1500°F · Chai 2oz &amp; 1 quart</div>
+            <a href="/tempilaq/" class="product-card__link">Xem part numbers →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tempilabel -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="product-card">
+          <div class="product-card__img">
+            <img src="/assets/tempilabels.png" alt="Tempilabel nhãn chỉ thị nhiệt" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <div class="product-card__img-placeholder" style="display:none">🏷️</div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__title">Tempilabel®</div>
+            <p class="product-card__desc">Nhãn tự dính chỉ thị nhiệt độ. Series 4 (4 mức/nhãn), Series 21 (1 mức), dạng đảo ngược. Không cần hiệu chuẩn.</p>
+            <div class="product-card__part">Series 4 · Series 21 · Reversible</div>
+            <a href="/tempilabel/" class="product-card__link">Xem series →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thermomelt -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="product-card">
+          <div class="product-card__img">
+            <img src="/assets/thermomelt_0.webp" alt="Thermomelt que chỉ thị nhiệt" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <div class="product-card__img-placeholder" style="display:none">🔥</div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__title">Thermomelt®</div>
+            <p class="product-card__desc">Que chỉ thị nhiệt độ bề mặt. Que dài hơn 33% so với đối thủ. NIST Traceable. Đáp ứng AWS D1.1, ASME.</p>
+            <div class="product-card__part">100°F → 650°F · Series 86xxx &amp; 89xxx</div>
+            <a href="/bao-gia/" class="product-card__link">Yêu cầu báo giá →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Temp-Alarm -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="product-card">
+          <div class="product-card__img">
+            <img src="/assets/temp-alarm_1.webp" alt="Temp-Alarm sơn tín hiệu nhiệt" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <div class="product-card__img-placeholder" style="display:none">🚨</div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__title">Temp-Alarm®</div>
+            <p class="product-card__desc">Sơn tín hiệu nhiệt/thời gian. Đổi màu trong 5 phút tại nhiệt độ quy định. Hồ sơ kiểm tra vĩnh viễn.</p>
+            <div class="product-card__part">Part# 24601 · 24603 · Bình 1 gallon</div>
+            <a href="/bao-gia/" class="product-card__link">Yêu cầu báo giá →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trust Section (full) -->
+  <section class="section-trust">
+    <div class="text-center mb-5">
+      <p class="section-label" style="color:rgba(200,16,46,0.8)">Tại sao chọn chúng tôi</p>
+      <h2 style="font-family:var(--font-heading); color:#fff; font-size:clamp(1.6rem,3vw,2.2rem)">Cam kết chất lượng & dịch vụ</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="trust-card">
+          <div class="trust-card__icon">🇺🇸</div>
+          <h4>Chính hãng</h4>
+          <p>Nhập khẩu trực tiếp từ Tempil® / ITW, Mỹ</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="trust-card">
+          <div class="trust-card__icon">📜</div>
+          <h4>C/O & C/Q</h4>
+          <p>Giấy chứng nhận xuất xứ và chất lượng đầy đủ</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="trust-card">
+          <div class="trust-card__icon">🧾</div>
+          <h4>Hóa đơn VAT</h4>
+          <p>Xuất hóa đơn VAT theo yêu cầu doanh nghiệp</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="trust-card">
+          <div class="trust-card__icon">📦</div>
+          <h4>Sẵn kho</h4>
+          <p>Kho tại TPHCM & Vũng Tàu, giao nhanh toàn quốc</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="trust-card">
+          <div class="trust-card__icon">🔧</div>
+          <h4>Kỹ thuật</h4>
+          <p>Tư vấn chọn mức nhiệt theo WPS / dự án của bạn</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="trust-card">
+          <div class="trust-card__icon">⚡</div>
+          <h4>Báo giá nhanh</h4>
+          <p>Phản hồi trong ngày làm việc, báo giá rõ ràng</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients / Industries -->
+  <section style="padding: clamp(3rem,6vw,5rem) clamp(2rem,5vw,4rem); background:#fff;">
+    <div class="text-center mb-4">
+      <p class="section-label">Phục vụ các ngành</p>
+      <h2 class="section-title" style="margin-bottom:1rem">Khách hàng tiêu biểu</h2>
+    </div>
+    <div class="row g-3 text-center">
+      <div class="col-6 col-md-4 col-lg-2">
+        <div style="padding:1.5rem 1rem; border:1px solid #eee; border-radius:12px; height:100%;">
+          <div style="font-size:2rem; margin-bottom:0.5rem">⚓</div>
+          <div style="font-size:0.82rem; font-weight:600; color:#3D405B;">Đóng tàu</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div style="padding:1.5rem 1rem; border:1px solid #eee; border-radius:12px; height:100%;">
+          <div style="font-size:2rem; margin-bottom:0.5rem">🛢️</div>
+          <div style="font-size:0.82rem; font-weight:600; color:#3D405B;">Dầu khí</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div style="padding:1.5rem 1rem; border:1px solid #eee; border-radius:12px; height:100%;">
+          <div style="font-size:2rem; margin-bottom:0.5rem">⚙️</div>
+          <div style="font-size:0.82rem; font-weight:600; color:#3D405B;">Cơ khí</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div style="padding:1.5rem 1rem; border:1px solid #eee; border-radius:12px; height:100%;">
+          <div style="font-size:2rem; margin-bottom:0.5rem">🔥</div>
+          <div style="font-size:0.82rem; font-weight:600; color:#3D405B;">Nồi hơi</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div style="padding:1.5rem 1rem; border:1px solid #eee; border-radius:12px; height:100%;">
+          <div style="font-size:2rem; margin-bottom:0.5rem">⚡</div>
+          <div style="font-size:0.82rem; font-weight:600; color:#3D405B;">Nhà máy điện</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div style="padding:1.5rem 1rem; border:1px solid #eee; border-radius:12px; height:100%;">
+          <div style="font-size:2rem; margin-bottom:0.5rem">🏗️</div>
+          <div style="font-size:0.82rem; font-weight:600; color:#3D405B;">Nhà thầu xây dựng</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-cta">
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-4">
+      <div>
+        <h2>Cần báo giá hoặc tư vấn kỹ thuật?</h2>
+        <p>Gửi yêu cầu ngay — chúng tôi phản hồi trong ngày làm việc.</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="/bao-gia/" class="btn-white">📋 Yêu cầu báo giá</a>
+        <a href="tel:0938888958" class="btn-outline-white2">📞 0938 888 958</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__col">
+        <img src="/assets/logo.png" alt="Tempil Việt Nam" class="logo" style="height:36px; margin-bottom:1rem;">
+        <p class="footer__desc" style="font-size:0.85rem;">Nhà phân phối chính hãng Tempil® / ITW tại Việt Nam. Nhập khẩu trực tiếp từ Mỹ — C/O, C/Q, VAT đầy đủ.</p>
+        <div class="footer__contact">
+          📞 <a href="tel:0938888958" style="color:#c8102e;">0938 888 958</a><br>
+          ✉️ <a href="mailto:sales@tempil.vn" style="color:rgba(203,213,225,0.8)">sales@tempil.vn</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="/tempilstik/">Tempilstik®</a></li>
+          <li><a href="/tempilaq/">Tempilaq® Advanced</a></li>
+          <li><a href="/tempilabel/">Tempilabel®</a></li>
+          <li><a href="/bao-gia/">Xem tất cả &amp; báo giá</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="https://tempil.com.vn" target="_blank">Blog kỹ thuật hàn</a></li>
+          <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+          <li><a href="/contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Địa chỉ</h4>
+        <p style="font-size:0.82rem; color:#cbd5e1;">
+          150 Nguyễn Cư Trinh, P. Cầu Ông Lãnh, Q.1, TP.HCM<br><br>
+          51 Lê Văn Lộc, P. Vũng Tàu, TP. Vũng Tàu<br><br>
+          MST: 0315555189
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p style="margin:0;">© 2025 Công ty TNHH Fast Group · <a href="https://tempil.vn" style="color:#c8102e;">tempil.vn</a> · Nhà phân phối chính hãng Tempil® Made in USA</p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Floating mobile CTA -->
+<div class="float-cta">
+  <a href="tel:0938888958" style="background:#c8102e; color:#fff;">📞 Gọi ngay</a>
+  <a href="https://zalo.me/0938888958" target="_blank" style="background:#0068ff; color:#fff;">💬 Zalo</a>
+  <a href="/bao-gia/" style="background:#2d2d2d; color:#fff;">📋 Báo giá</a>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Sidebar toggle
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-active');
+    sidebar.classList.toggle('is-open');
+    overlay.style.display = sidebar.classList.contains('is-open') ? 'block' : 'none';
+    setTimeout(() => overlay.classList.toggle('is-visible', sidebar.classList.contains('is-open')), 10);
+  });
+  overlay.addEventListener('click', () => {
+    hamburger.classList.remove('is-active');
+    sidebar.classList.remove('is-open');
+    overlay.classList.remove('is-visible');
+    setTimeout(() => overlay.style.display = 'none', 300);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }});
+  }, { threshold: 0.1 });
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
