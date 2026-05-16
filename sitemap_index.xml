@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Sitemap 1: Trang chủ, danh mục, liên hệ -->
+  <sitemap>
+    <loc>https://tempil.vn/sitemap.xml</loc>
+    <lastmod>2025-05-16</lastmod>
+  </sitemap>
+
+  <!-- Sitemap 2: 116 trang sản phẩm Tempilstik -->
+  <sitemap>
+    <loc>https://tempil.vn/sitemap_tempilstik.xml</loc>
+    <lastmod>2025-05-16</lastmod>
+  </sitemap>
+
+</sitemapindex>

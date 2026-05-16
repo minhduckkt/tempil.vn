@@ -217,7 +217,7 @@
       {"@type":"ListItem","position":12,"name":"Tempilstik® 28051 — 800°F / 427°C","url":"https://tempil.vn/tempilstik/"},
       {"@type":"ListItem","position":13,"name":"Tempilstik® 28056 — 1000°F / 538°C","url":"https://tempil.vn/tempilstik/"},
       {"@type":"ListItem","position":14,"name":"Tempilstik® 28061 — 1200°F / 649°C","url":"https://tempil.vn/tempilstik/"},
-      {"@type":"ListItem","position":15,"name":"Tempilstik® 28600 — Test Kit 20 sticks","url":"https://tempil.vn/tempilstik/#test-kit"}
+      {"@type":"ListItem","position":15,"name":"Tempilstik® 28600 — Test Kit 20 sticks","url":"https://tempil.vn/tempilstik/28600-test-kit/"}
     ]
   }
   </script>
@@ -398,6 +398,7 @@
                 <th>°F</th>
                 <th>°C</th>
                 <th>Ghi chú</th>
+                  <th>Trang sản phẩm</th>
               </tr>
             </thead>
             <tbody id="partTableBody">
@@ -675,11 +676,19 @@ function renderTable(data) {
     return;
   }
   tbody.innerHTML = data.map(p => `
-    <tr onclick="window.location='/bao-gia/?part=${p.pn}&temp=${p.f}F'" title="Nhấn để báo giá Part# ${p.pn}">
-      <td class="part-no">${p.pn}${p.popular ? ' <span class="badge-popular">Phổ biến</span>' : ''}</td>
+    <tr onclick="window.location='/tempilstik/${p.pn}-${p.f}f-${p.c}c/'" title="Xem chi tiết Part# ${p.pn} — ${p.f}°F" style="cursor:pointer;">
+      <td class="part-no">
+        <a href="/tempilstik/${p.pn}-${p.f}f-${p.c}c/" onclick="event.stopPropagation()" style="color:#c8102e;text-decoration:none;font-weight:700;">${p.pn}</a>
+        ${p.popular ? ' <span class="badge-popular">Phổ biến</span>' : ''}
+      </td>
       <td class="temp-f">${p.f}°F</td>
       <td>${p.c}°C</td>
-      <td style="font-size:0.78rem;color:#999;">${p.f}°F / ${p.c}°C &nbsp;·&nbsp; 10 que/hộp</td>
+      <td style="font-size:0.78rem;color:#999;">10 que/hộp &nbsp;·&nbsp; Bán lẻ/que</td>
+      <td>
+        <a href="/tempilstik/${p.pn}-${p.f}f-${p.c}c/" onclick="event.stopPropagation()" style="color:#c8102e;font-size:0.82rem;font-weight:700;text-decoration:none;white-space:nowrap;">
+          Xem chi tiết →
+        </a>
+      </td>
     </tr>
   `).join('');
   count.textContent = `${data.length} mã`;

@@ -4,25 +4,20 @@
   <!-- Trang chủ -->
   <url>
     <loc>https://tempil.vn/</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2025-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Sản phẩm chính -->
+  <!-- Sản phẩm chính — trang danh mục -->
   <url>
     <loc>https://tempil.vn/tempilstik/</loc>
-    <lastmod>2025-04-26</lastmod>
+    <lastmod>2025-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <url>
-    <loc>https://tempil.vn/tempilstik/#test-kit</loc>
-    <lastmod>2025-04-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- ❌ ĐÃ XOÁ: tempilstik/#test-kit (hash URL — Google không index) -->
 
   <url>
     <loc>https://tempil.vn/tempilaq/</loc>
