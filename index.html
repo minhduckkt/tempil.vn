@@ -58,11 +58,34 @@
     .hero-commerce {
       background: linear-gradient(135deg, #1a0a0a 0%, #8b1a1a 100%);
       min-height: 88vh;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
       padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 4rem);
       position: relative;
       overflow: hidden;
+      gap: 2rem;
+    }
+    .hero-commerce__img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      z-index: 2;
+    }
+    .hero-commerce__img img {
+      width: 100%;
+      max-width: 600px;
+      height: 500px;
+      object-fit: cover;
+      object-position: center left;
+      border-radius: 12px;
+      mask-image: linear-gradient(to left, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0) 100%);
+    }
+    @media (max-width: 900px) {
+      .hero-commerce { grid-template-columns: 1fr; }
+      .hero-commerce__img { display: none; }
     }
     .hero-commerce::before {
       content: '';
@@ -465,6 +488,18 @@
         <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:rgba(244,241,222,0.8); padding:0.3rem 0.8rem; border-radius:4px; font-size:0.75rem; font-weight:600;">Giao toàn quốc</span>
       </div>
     </div>
+
+    <!-- Hero image -->
+    <div class="hero-commerce__img">
+      <img
+        src="/assets/images/tempilstik_context_1.webp"
+        alt="Kỹ thuật viên dùng bút thử nhiệt độ mối hàn Tempilstik® kiểm tra preheat trên thép"
+        width="600" height="500"
+        loading="eager"
+        fetchpriority="high"
+      >
+    </div>
+
   </section>
 
   <!-- Products Grid -->
