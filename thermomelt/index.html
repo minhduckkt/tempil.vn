@@ -320,10 +320,10 @@
       <div class="footer__col">
         <h4>Thermomelt® phổ biến</h4>
         <ul>
-          <li><a href="/thermomelt/thermomelt/86625-300f-149c/">86625 — 300°F Standard</a></li>
-          <li><a href="/thermomelt/thermomelt/86733-400f-204c/">86733 — 400°F Standard</a></li>
-          <li><a href="/thermomelt/thermomelt-certified/89300-300f-148c/">89300 — 300°F Certified</a></li>
-          <li><a href="/thermomelt/thermomelt-certified/89400-400f-204c/">89400 — 400°F Certified</a></li>
+          <li><a href="/thermomelt/86625-300f-149c/">86625 — 300°F Standard</a></li>
+          <li><a href="/thermomelt/86733-400f-204c/">86733 — 400°F Standard</a></li>
+          <li><a href="/thermomelt/89300-300f-148c/">89300 — 300°F Certified</a></li>
+          <li><a href="/thermomelt/89400-400f-204c/">89400 — 400°F Certified</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -418,7 +418,7 @@ const certified = [
 let currentSeries = 'standard';
 
 function buildURL(pn, f, c, folder) {
-  return `/thermomelt/${folder}/${pn}-${f}f-${c}c/`;
+  return `/thermomelt/${pn}-${f}f-${c}c/`;
 }
 
 function renderTable(data) {
