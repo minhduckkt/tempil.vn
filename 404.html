@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Không tìm thấy trang — Tempil Việt Nam</title>
+  <style>
+    body{font-family:system-ui,-apple-system,sans-serif;background:#f8f9fa;color:#222;
+      display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;text-align:center}
+    .box{max-width:560px;padding:40px}
+    h1{font-size:4rem;color:#e65c00;margin:0}
+    h2{font-size:1.3rem;margin:8px 0 16px}
+    p{color:#555;line-height:1.6}
+    a.btn{display:inline-block;margin:8px;padding:12px 24px;border-radius:6px;
+      background:#e65c00;color:#fff;text-decoration:none;font-weight:700}
+    a.btn.alt{background:#fff;color:#e65c00;border:2px solid #e65c00}
+    .links{margin-top:24px}
+  </style>
+  <script>
+    // Auto-redirect old /san-pham/ structure URLs to new structure
+    (function(){
+      var p = window.location.pathname;
+      var m = p.match(/^\/san-pham\/(tempilstik|tempilaq|tempilabel|thermomelt)\/(.*)$/);
+      if(m){ window.location.replace('/' + m[1] + '/' + m[2]); return; }
+    })();
+  </script>
+</head>
+<body>
+  <div class="box">
+    <h1>404</h1>
+    <h2>Không tìm thấy trang</h2>
+    <p>Trang bạn tìm có thể đã được di chuyển. Là <strong>nhà phân phối chính hãng Tempil® tại Việt Nam</strong>,
+       Fast Group cung cấp đầy đủ Tempilstik®, Tempilaq®, Tempilabel® chính hãng Made in USA.</p>
+    <div class="links">
+      <a class="btn" href="/">Về trang chủ</a>
+      <a class="btn alt" href="/tempilstik/">Sản phẩm Tempilstik</a>
+      <a class="btn alt" href="/bao-gia/">Yêu cầu báo giá</a>
+    </div>
+    <p style="margin-top:24px">📞 Hotline: <a href="tel:+84938888958">0938 888 958</a></p>
+  </div>
+</body>
+</html>
