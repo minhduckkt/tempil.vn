@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <meta name="theme-color" content="#cc0000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASME B31.3 Preheat Hàn Ống Công Nghệ: Hướng Dẫn Thực Hành P-Number | tempil.vn</title>
+  <meta name="description" content="ASME B31.3 Process Piping: phân loại P-Number, yêu cầu preheat thực tế, case study ống A106 Gr.B hàn flange class 600, và phân biệt B31.1 vs B31.3. Chọn Tempilstik® đúng part number.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tempil.vn/en/blog/asme-b31-3-preheat-process-piping/">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <meta property="og:title" content="ASME B31.3 Preheat Hàn Ống Công Nghệ: Hướng Dẫn Thực Hành P-Number">
+  <meta property="og:description" content="ASME B31.3 Process Piping: phân loại P-Number, yêu cầu preheat thực tế, case study ống A106 Gr.B hàn flange class 600, và phân biệt B31.1 vs B31.3. Chọn Tempilstik® đúng part number.">
+  <meta property="og:image" content="https://tempil.vn/assets/images/tempilstik_but_do_nhiet_do_han_1.webp">
+  <meta property="og:url" content="https://tempil.vn/blog/asme-b31-3-nhiet-do-preheat-ong-ap-luc/">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-02-24T08:00:00+07:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ống A106 Gr.B dày dưới 25mm có cần preheat không theo ASME B31.3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Theo ASME B31.3 Table 330.1.1, P-No.1 với chiều dày dưới 25mm yêu cầu preheat 10°C tối thiểu — thực chất là đảm bảo bề mặt không có độ ẩm và nhiệt độ không thấp hơn 10°C. Trong điều kiện khí hậu Việt Nam, yêu cầu này thường được đáp ứng tự nhiên nhưng vẫn phải ghi nhận vào hồ sơ QA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Khi hàn ống P-No.1 vào flange P-No.1, preheat tính theo chi tiết nào?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Theo chiều dày lớn hơn tại vị trí mối hàn (không phải chiều dày trung bình). Đây là quy tắc conservative đảm bảo chi tiết dày hơn được gia nhiệt đầy đủ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tại sao phải đo preheat cách mép hàn 75mm thay vì đo ngay tại mép?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Đo cách mép 75mm đảm bảo phần kim loại sẽ trở thành HAZ cũng đã đủ nhiệt — không chỉ bề mặt tiếp xúc trực tiếp với nguồn nhiệt. Nhiệt độ tại mép bevel phản ánh nhiệt bề mặt tức thời, không phải nhiệt độ thẩm thấu qua toàn bộ chiều dày."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ASME B31.3 có yêu cầu ghi chép preheat vào hồ sơ QA không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASME B31.3 không quy định cụ thể format ghi chép preheat, nhưng trong thực tế dự án O&G và EPC tại Việt Nam, Preheat Record là tài liệu bắt buộc — ghi thời gian, nhiệt độ đo, phương pháp đo (Tempilstik® part number), vị trí đo và tên người kiểm tra."
+      }
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://tempil.vn/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog kỹ thuật", "item": "https://tempil.vn/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "ASME B31.3 — Preheat Hàn Ống Công Nghệ", "item": "https://tempil.vn/en/blog/asme-b31-3-preheat-process-piping/"}
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ống A106 Gr.B dày dưới 25mm có cần preheat không theo ASME B31.3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Theo ASME B31.3 Table 330.1.1, P-No.1 với chiều dày dưới 25mm yêu cầu preheat 10°C tối thiểu — thực chất là đảm bảo bề mặt không có độ ẩm và nhiệt độ không thấp hơn 10°C. Trong điều kiện khí hậu Việt Nam, yêu cầu này thường được đáp ứng tự nhiên nhưng vẫn phải ghi nhận vào hồ sơ QA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Khi hàn ống P-No.1 vào flange P-No.1, preheat tính theo chi tiết nào?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Theo chiều dày lớn hơn tại vị trí mối hàn (không phải chiều dày trung bình). Đây là quy tắc conservative đảm bảo chi tiết dày hơn được gia nhiệt đầy đủ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tại sao phải đo preheat cách mép hàn 75mm thay vì đo ngay tại mép?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Đo cách mép 75mm đảm bảo phần kim loại sẽ trở thành HAZ cũng đã đủ nhiệt — không chỉ bề mặt tiếp xúc trực tiếp với nguồn nhiệt. Nhiệt độ tại mép bevel phản ánh nhiệt bề mặt tức thời, không phải nhiệt độ thẩm thấu qua toàn bộ chiều dày."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ASME B31.3 có yêu cầu ghi chép preheat vào hồ sơ QA không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASME B31.3 không quy định cụ thể format ghi chép preheat, nhưng trong thực tế dự án O&G và EPC tại Việt Nam, Preheat Record là tài liệu bắt buộc — ghi thời gian, nhiệt độ đo, phương pháp đo (Tempilstik® part number), vị trí đo và tên người kiểm tra."
+      }
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://tempil.vn/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog kỹ thuật", "item": "https://tempil.vn/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "ASME B31.3 — Preheat Hàn Ống Công Nghệ", "item": "https://tempil.vn/en/blog/asme-b31-3-preheat-process-piping/"}
+  ]
+}
+</script>
+  <style>
+        /* ── Layout ── */
+        .blog-hero{background:linear-gradient(135deg,#1a0a0a 0%,#8b1a1a 100%);padding:60px 0 40px;color:#fff}
+        .blog-hero h1{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;line-height:1.35;margin-bottom:12px}
+        .blog-meta{font-size:13px;opacity:.75}
+        .breadcrumb-blog{font-size:13px;padding:10px 0 0;color:rgba(255,255,255,.7)}
+        .breadcrumb-blog a{color:rgba(255,255,255,.85);text-decoration:none}
+        .blog-body{max-width:800px;margin:0 auto;padding:48px 20px}
+
+        /* ── Typography ── */
+        .blog-body h2{font-size:1.35rem;font-weight:600;margin:2.5rem 0 1rem;color:#1a0a0a;border-left:4px solid #c8102e;padding-left:14px}
+        .blog-body h3{font-size:1.1rem;font-weight:600;margin:1.8rem 0 .8rem;color:#c8102e}
+        .blog-body p{font-size:1rem;line-height:1.85;color:#333;margin-bottom:1rem}
+        .blog-body ul,.blog-body ol{padding-left:1.4rem;margin-bottom:1.2rem}
+        .blog-body li{font-size:1rem;line-height:1.85;color:#333;margin-bottom:6px}
+        .blog-body a{color:#c8102e;text-decoration:none;border-bottom:1px solid rgba(200,16,46,.3);transition:border-color .2s}
+        .blog-body a:hover{color:#a50e26;border-color:#c8102e}
+
+        /* ── Images ── */
+        .blog-img-full{width:100%;border-radius:10px;margin:1.5rem 0;object-fit:cover;max-height:360px;display:block}
+        .blog-img-caption{font-size:13px;color:#888;text-align:center;margin-top:-10px;margin-bottom:1.5rem}
+        .blog-img-wrap{margin:1.8rem 0}
+        .blog-img-wrap figcaption{font-size:13px;color:#888;text-align:center;margin-top:6px}
+        .img-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:1.5rem 0}
+        .img-row-item img{width:100%;border-radius:8px;object-fit:contain;background:#f8f9fb;padding:10px;border:1px solid #e5e8f0;max-height:150px}
+        .img-row-item p{font-size:12px;color:#666;margin:6px 0 0;text-align:center}
+
+        /* ── Callout / Highlight boxes ── */
+        .callout,.highlight-box{background:#fff0f0;border-left:4px solid #c8102e;border-radius:0 8px 8px 0;padding:18px 22px;margin:1.8rem 0}
+        .callout p,.highlight-box p{margin:0;font-size:.95rem}
+        .callout strong{color:#c8102e}
+        .callout--info{background:#f0f4ff;border-left-color:#3a5bd9}
+        .callout--info strong{color:#3a5bd9}
+        .callout--warn{background:#fffbf0;border-left-color:#e0a800}
+        .callout--warn strong{color:#b07800}
+        .callout--green{background:#f0fff4;border-left-color:#22a05a}
+        .callout--green strong{color:#176b3a}
+        .warning-box{background:#fffbf0;border:1px solid #f0c040;border-left:4px solid #e0a800;border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1.5rem 0}
+        .warning-box strong{color:#b07800}
+
+        /* ── Tables ── */
+        .table-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+        .info-table,.table-wrap table{width:100%;border-collapse:collapse;font-size:.92rem}
+        .info-table th,.table-wrap table th{background:#1a0a0a;color:#fff;padding:10px 14px;text-align:left;font-weight:600;white-space:nowrap;font-size:.82rem;letter-spacing:.03em}
+        .info-table td,.table-wrap table td{padding:10px 14px;border-bottom:1px solid #e5e5e5;color:#333;vertical-align:middle}
+        .info-table tr:nth-child(even) td,.table-wrap table tr:nth-child(even) td{background:#fff8f8}
+        .info-table tr:hover td,.table-wrap table tr:hover td{background:#fff0f2}
+        td.td-part{font-family:'Courier New',monospace;color:#c8102e;font-weight:700;font-size:.85rem}
+        td.td-temp{font-weight:700;color:#1a0a0a}
+        td.td-ok{color:#176b3a;font-weight:600}
+        td.td-warn{color:#b07800;font-weight:600}
+        td.td-na{color:#999}
+        td.td-highlight{background:#fff0f0!important;font-weight:600}
+        td.td-ir{background:#f0f4ff!important}
+        td.td-tempilstik{background:#fff8f8!important}
+        .table-label{font-size:.78rem;color:#888;margin:-.5rem 0 .5rem;font-style:italic}
+        .bilingual-note{background:#f8f9fb;border:1px solid #e5e8f0;border-radius:8px;padding:14px 18px;margin:1.2rem 0;font-size:.88rem}
+        .bilingual-note__en{font-style:italic;color:#555;margin-bottom:4px}
+        .bilingual-note__vi{color:#1a0a0a;font-weight:500}
+
+        /* ── FAQ ── */
+        .faq-item{border-bottom:1px solid #f0f0f0;padding:1.25rem 0}
+        .faq-item:last-child{border-bottom:none}
+        .faq-q{font-size:1rem;font-weight:600;color:#1a0a0a;margin-bottom:.5rem}
+        .faq-a{color:#555;font-size:.93rem;margin-bottom:0}
+
+        /* ── CTA ── */
+        .cta-block,.cta-box{background:#1a0a0a;color:#fff;border-radius:12px;padding:32px 28px;text-align:center;margin:2.5rem 0}
+        .cta-block h3,.cta-box h3{color:#fff;font-size:1.25rem;margin:0 0 10px}
+        .cta-block p,.cta-box p{color:rgba(255,255,255,.8);margin:0 0 18px;font-size:.95rem}
+        .btn-primary-red,.cta-btn{display:inline-block;background:#c8102e;color:#fff;font-weight:600;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:.95rem;margin:4px;border:none;transition:background .2s}
+        .btn-primary-red:hover,.cta-btn:hover{background:#8b1a1a;color:#fff}
+        .btn-outline-dark,.cta-btn.secondary,.btn-outline{display:inline-block;background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.5);padding:12px 24px;border-radius:8px;text-decoration:none;font-size:.95rem;margin:4px;transition:border-color .2s}
+        .btn-outline-dark:hover,.cta-btn.secondary:hover,.btn-outline:hover{border-color:#fff;color:#fff}
+        .btn-red{display:inline-block;background:#c8102e;color:#fff;font-weight:600;padding:11px 22px;border-radius:8px;text-decoration:none;font-size:.93rem;margin:4px;transition:background .2s}
+        .btn-red:hover{background:#8b1a1a;color:#fff}
+
+        /* ── Steps ── */
+        .step-block{background:#fff;border:1px solid #eee;border-radius:10px;padding:1.25rem 1.5rem;margin:1rem 0}
+        .step-block__num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#c8102e;color:#fff;border-radius:50%;font-weight:700;font-size:.9rem;margin-bottom:.65rem}
+        .step-block__title{font-size:1rem;font-weight:600;color:#1a0a0a;margin-bottom:.5rem}
+        .step-block p{font-size:.9rem;color:#575A78;margin-bottom:0}
+
+        /* ── Formula ── */
+        .formula-box{background:#f8f9fb;border:1px solid #e5e8f0;border-radius:8px;padding:16px 20px;margin:1.5rem 0;font-family:'Courier New',monospace;font-size:.92rem;color:#1a0a0a;overflow-x:auto}
+
+        /* ── Section divider ── */
+        .section-divider{border:none;border-top:2px solid #f0f0f0;margin:2.5rem 0}
+
+        /* ── Product cards ── */
+        .product-card{display:flex;align-items:center;gap:1rem;background:#f9f8f5;border:1px solid #eee;border-left:3px solid #c8102e;border-radius:0 8px 8px 0;padding:.85rem 1.1rem;margin:.65rem 0;text-decoration:none}
+        .product-card:hover{background:#fff0f2;border-color:#c8102e}
+        .product-card__part{font-family:'Courier New',monospace;font-size:.85rem;font-weight:700;color:#c8102e;white-space:nowrap;min-width:60px}
+        .product-card__info{flex:1}
+        .product-card__name{font-weight:600;color:#1a0a0a;font-size:.9rem}
+        .product-card__desc{font-size:.78rem;color:#575A78}
+        .product-card__arrow{color:#c8102e;font-weight:700;font-size:.85rem}
+
+        /* ── Checklists ── */
+        .checklist{list-style:none;padding:0;margin:1rem 0 1.25rem}
+        .checklist li{padding:.5rem 0 .5rem 1.8rem;position:relative;border-bottom:1px solid #f0f0f0;font-size:.95rem}
+        .checklist li:last-child{border-bottom:none}
+        .check-ok::before{content:'✓';position:absolute;left:0;color:#22a05a;font-weight:700}
+        .check-warn::before{content:'⚠';position:absolute;left:0;color:#e0a800}
+
+        /* ── Doc cards ── */
+        .doc-card{background:#f9f8f5;border:1px solid #eee;border-radius:8px;padding:14px 18px;margin:.65rem 0}
+        .doc-card__tag{font-size:.75rem;font-weight:700;color:#c8102e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+        .doc-card__title{font-weight:600;color:#1a0a0a;font-size:.93rem;margin-bottom:4px}
+        .doc-card__desc{font-size:.83rem;color:#666}
+
+        /* ── Risk grid ── */
+        .risk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:1.5rem 0}
+        .risk-card{background:#fff;border:1px solid #eee;border-radius:10px;padding:16px 18px}
+        .risk-card--bad{border-left:4px solid #c8102e}
+        .risk-card__title{font-weight:700;font-size:.9rem;color:#1a0a0a;margin-bottom:6px}
+
+        /* ── Verdict cards ── */
+        .verdict-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:1.5rem 0}
+        .verdict-card{border-radius:10px;padding:18px 20px;border:1px solid #eee}
+        .verdict-card--tempilstik{border-left:4px solid #c8102e;background:#fff8f8}
+        .verdict-card--ir{border-left:4px solid #3a5bd9;background:#f0f4ff}
+        .verdict-card__title{font-weight:700;font-size:.95rem;margin-bottom:8px}
+
+        /* ── Scenario blocks ── */
+        .scenario-block{background:#f9f8f5;border:1px solid #eee;border-radius:10px;padding:18px 20px;margin:1rem 0}
+        .scenario-block__label{font-size:.75rem;font-weight:700;color:#c8102e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+        .scenario-block__title{font-weight:600;color:#1a0a0a;font-size:.97rem;margin-bottom:6px}
+
+        /* ── Timeline ── */
+        .timeline{display:flex;gap:0;margin:2rem 0;flex-wrap:wrap}
+        .tl-phase{flex:1;min-width:140px;padding:16px 14px;border-top:4px solid #ddd;background:#f8f9fb;position:relative}
+        .tl-phase.pre{border-top-color:#3a5bd9}
+        .tl-phase.inter{border-top-color:#c8102e}
+        .tl-phase.post{border-top-color:#22a05a}
+        .tl-type{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#888;margin-bottom:4px}
+        .tl-title{font-size:.9rem;font-weight:700;color:#1a0a0a;margin-bottom:4px}
+        .tl-temp{font-size:1.1rem;font-weight:700;color:#c8102e;margin-bottom:4px}
+        .tl-label{font-size:.78rem;color:#555}
+        .tl-desc{font-size:.78rem;color:#888;margin-top:4px}
+
+        /* ── Stick cards ── */
+        .two-stick{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.5rem 0}
+        .stick-card{border-radius:10px;padding:16px 18px;border:2px solid #eee;background:#fff;text-align:center}
+        .stick-card.min{border-color:#3a5bd9}
+        .stick-card.max{border-color:#c8102e}
+        .stick-part{font-family:'Courier New',monospace;font-size:.82rem;color:#c8102e;font-weight:700;margin-bottom:6px}
+
+        /* ── Three-col layout ── */
+        .three-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1.5rem 0}
+        .col-card{background:#f9f8f5;border:1px solid #eee;border-radius:10px;padding:16px 18px}
+    </style>
+        <link rel="alternate" hreflang="en" href="https://tempil.vn/en/blog/asme-b31-3-preheat-process-piping/">
+  <link rel="alternate" hreflang="vi" href="https://tempil.vn/blog/asme-b31-3-nhiet-do-preheat-ong-ap-luc/">
+  <link rel="alternate" hreflang="x-default" href="https://tempil.vn/en/blog/asme-b31-3-preheat-process-piping/">
+</head>
+<body>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="hamburger__lines"><span></span><span></span><span></span></div>
+  </button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="sidebar__brand">
+      <a href="/en/" class="navbar-brand d-flex align-items-center">
+        <img src="/assets/logo.png" alt="Tempil Việt Nam" class="logo" style="max-height:40px;width:auto" width="160" height="40">
+      </a>
+      <div class="sidebar__tagline">TEMPIL VIET NAM</div>
+      <div class="sidebar__tagline">Fast Group Engineering</div>
+    </div>
+  <nav class="sidebar__nav">
+    <ul>
+      <li><a href="/en/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Trang chủ</a></li>
+      <li style="padding: 0.5rem 1.5rem; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(244,241,222,0.3);">Sản phẩm</li>
+      <li><a href="/en/tempilstik/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></span> Tempilstik®</a></li>
+      <li><a href="/en/tempilaq/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></span> Tempilaq® Advanced</a></li>
+      <li><a href="/en/tempilabel/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> Tempilabel®</a></li>
+      <li><a href="/en/thermomelt/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0c0-6-6-8-6-14z"/></svg></span> Thermomelt®</a></li>
+      <li><a href="/en/#san-pham"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span> Xem tất cả SP</a></li>
+      <li style="padding: 0.5rem 1.5rem; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(244,241,222,0.3);">Tài nguyên</li>
+      <li><a href="/en/blog/" style="background:rgba(200,16,46,0.15); border-left: 3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> Blog kỹ thuật</a></li>
+      <li style="padding: 0.5rem 1.5rem; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(244,241,222,0.3);">Liên hệ</li>
+      <li><a href="/en/quote/" style="background:rgba(200,16,46,0.15); border-left: 3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Báo giá ngay</a></li>
+      <li><a href="/contact.html"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> Liên hệ</a></li>
+    </ul>
+  </nav>
+  
+  
+  <!-- Language Switcher -->
+  <div class="lang-switcher" style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(244,241,222,0.15);text-align:center;">
+    <a href="/blog/asme-b31-3-nhiet-do-preheat-ong-ap-luc/" style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;color:rgba(244,241,222,0.9);text-decoration:none;">VI</a>
+    <span style="color:rgba(244,241,222,0.3);margin:0 4px;">|</span>
+    <span style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;background:#c8102e;color:#fff;cursor:default;" aria-current="true">EN</span>
+  </div>
+
+</aside>
+<main class="main">
+
+
+        <section class="blog-hero">
+            <div class="container">
+                <div class="breadcrumb-blog">
+                    <a href="/en/">Trang chủ</a> / <a href="/en/blog/">Blog</a> / <span>ASME B31.3 — Preheat Hàn Ống Công Nghệ...</span>
+                </div>
+                <div style="max-width:760px;margin-top:20px">
+                    <h1>ASME B31.3 — Preheat Hàn Ống Công Nghệ: P-Number, Thực Hành và Chọn Tempilstik®</h1>
+                    <p class="blog-meta">Đăng ngày 24/02/2025 · Fast Group Engineering · 9 phút đọc</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="blog-body">
+<p>ASME B31.3 Process Piping là tiêu chuẩn hàn ống chi phối phần lớn công việc lắp đặt đường ống trong nhà máy lọc dầu, nhà máy khí, nhà máy hóa chất và các cụm xử lý công nghiệp tại Việt Nam. Không giống AWS D1.1 (phân nhóm thép theo Carbon Equivalent và chiều dày), ASME B31.3 phân loại vật liệu theo <strong>P-Number</strong> — hệ thống phân nhóm riêng của ASME dựa trên thành phần hóa học và cơ tính. Hiểu P-Number và yêu cầu preheat tương ứng là kỹ năng cơ bản của welding engineer, welding inspector và QA/QC trong ngành process piping.</p>
+
+  
+<figure class="blog-img-wrap" style="margin:1.8rem 0">
+  <img src="/assets/images/tempilstik_but_do_nhiet_do_han_1.webp" alt="Que Tempilstik® kiểm tra preheat theo P-Number trong ASME B31.3" class="blog-img-full" loading="lazy" width="800" height="450">
+  <figcaption class="blog-img-caption">Mỗi P-Number trong ASME B31.3 có yêu cầu preheat khác nhau. Chọn đúng mức Tempilstik® theo P-Number vật liệu và chiều dày để đảm bảo tuân thủ.</figcaption>
+</figure>
+
+
+  <h2>Phân Biệt ASME B31.1 và ASME B31.3</h2>
+
+  <p>Hai tiêu chuẩn này thường bị nhầm lẫn, đặc biệt trong các dự án nhà máy điện kết hợp với hệ thống xử lý công nghiệp:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Tiêu chí</th>
+          <th>ASME B31.1 — Power Piping</th>
+          <th>ASME B31.3 — Process Piping</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Phạm vi áp dụng</td>
+          <td>Nhà máy điện: ống hơi chính, ống xả hơi, ống cấp nước</td>
+          <td>Nhà máy lọc dầu, hóa chất, khí công nghiệp, LNG</td>
+        </tr>
+        <tr>
+          <td>Giám sát</td>
+          <td>Yêu cầu Authorized Inspector (AI) theo B31.1</td>
+          <td>Yêu cầu Owner's Inspector theo B31.3</td>
+        </tr>
+        <tr>
+          <td>Yêu cầu PWHT</td>
+          <td>Nghiêm ngặt hơn — chiều dày thấp hơn đã yêu cầu PWHT</td>
+          <td>Ngưỡng chiều dày PWHT thường cao hơn B31.1</td>
+        </tr>
+        <tr>
+          <td>Ứng dụng điển hình tại VN</td>
+          <td>Vận hành ống hơi turbine nhà máy điện</td>
+          <td>Refinery, petrochemical, gas plant (BSR, PVFCCo, GPP)</td>
+        </tr>
+        <tr>
+          <td>P-Number system</td>
+          <td colspan="2">Cùng hệ thống P-Number — ASME Section IX quản lý</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Hệ Thống P-Number Trong ASME B31.3</h2>
+
+  <p>P-Number là số nhóm vật liệu theo ASME Section IX — cơ sở để xây dựng WPS và xác định yêu cầu preheat/PWHT. Các P-Number phổ biến nhất trong process piping tại Việt Nam:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>P-Number</th>
+          <th>Nhóm vật liệu</th>
+          <th>Grade điển hình</th>
+          <th>Preheat tối thiểu (B31.3)</th>
+          <th>Tempilstik® Part No.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>P-No.1</strong></td>
+          <td>Thép carbon</td>
+          <td>A106 Gr.B, A53 Gr.B, API 5L Gr.B</td>
+          <td class="td-temp">10°C (t &lt; 25mm) / 79°C (t ≥ 25mm)</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28009-175f-79c/" target="_blank" rel="noopener">#28009</a> (79°C)</td>
+        </tr>
+        <tr class="td-highlight">
+          <td><strong>P-No.1</strong></td>
+          <td>Thép carbon cao hơn</td>
+          <td>A106 Gr.C, chiều dày lớn</td>
+          <td class="td-temp">79°C / 121°C</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28009-175f-79c/" target="_blank" rel="noopener">#28009</a> / <a href="https://tempil.vn/tempilstik/28019-250f-121c/" target="_blank" rel="noopener">#28019</a></td>
+        </tr>
+        <tr>
+          <td><strong>P-No.3</strong></td>
+          <td>Thép hợp kim thấp (0.5Mo)</td>
+          <td>A335 P1, A161 T1</td>
+          <td class="td-temp">79°C</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28009-175f-79c/" target="_blank" rel="noopener">#28009</a></td>
+        </tr>
+        <tr>
+          <td><strong>P-No.4</strong></td>
+          <td>Cr-Mo thấp (1.25Cr-0.5Mo)</td>
+          <td>A335 P11, A213 T11</td>
+          <td class="td-temp">150°C / 302°F</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28318-302f-150c/" target="_blank" rel="noopener">#28318</a></td>
+        </tr>
+        <tr>
+          <td><strong>P-No.5A</strong></td>
+          <td>Cr-Mo trung bình (2.25–3Cr)</td>
+          <td>A335 P22, A335 P21</td>
+          <td class="td-temp">200°C / 392°F</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28327-392f-200c/" target="_blank" rel="noopener">#28327</a></td>
+        </tr>
+        <tr>
+          <td><strong>P-No.5B</strong></td>
+          <td>Cr-Mo cao (5–9Cr), bao gồm P91</td>
+          <td>A335 P91, A335 P9</td>
+          <td class="td-temp">200°C / 392°F</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28327-392f-200c/" target="_blank" rel="noopener">#28327</a></td>
+        </tr>
+        <tr>
+          <td><strong>P-No.8</strong></td>
+          <td>Austenitic stainless steel</td>
+          <td>A312 TP304, TP316, TP321</td>
+          <td class="td-na">—</td>
+          <td class="td-na">Không cần preheat</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <strong>Lưu ý:</strong> Bảng trên là giá trị tham chiếu theo ASME B31.3 Table 330.1.1. Preheat thực tế phụ thuộc vào chiều dày thành ống, thành phần hóa học cụ thể từ Mill Certificate và điều kiện hàn. Luôn tra từ bản gốc tiêu chuẩn và tham chiếu thêm tại <a href="https://tempil.vn/blog/bang-tra-nhiet-do-preheat-theo-loai-thep/">bảng tra nhiệt độ preheat chi tiết</a>.
+  </div>
+
+  <h2>Case Study: Hàn Ống A106 Gr.B 6" Sch.80 Vào Flange Class 600</h2>
+
+  <p>Đây là tình huống thực tế phổ biến tại các dự án process piping — hàn ống vào flange dày hơn nhiều so với thành ống. Bài toán preheat phức tạp vì hai chi tiết hàn có chiều dày khác nhau đáng kể.</p>
+
+  <h3>Thông số kỹ thuật</h3>
+
+  <div class="formula-box">
+Ống: ASTM A106 Gr.B — DN 6" (168.3mm OD) — Schedule 80
+  Thành ống (wall thickness): 10.97mm
+  Thành phần: C ≤ 0.30%, Mn ≤ 1.06%
+
+Flange: ASTM A105 — Class 600 — DN 6"
+  Hub thickness tại weld bevel: ~38mm (tùy manufacturer)
+  Flange face thickness: ~75mm tổng thể
+  Thành phần: C ≤ 0.35%, tương đương P-No.1
+  </div>
+
+  <h3>Xác định P-Number</h3>
+
+  <p>Cả A106 Gr.B và A105 đều thuộc <strong>P-No.1</strong> (thép carbon, không hợp kim). WPS sẽ dùng P-No.1 to P-No.1.</p>
+
+  <h3>Xác định chiều dày để tra preheat</h3>
+
+  <p>Theo ASME B31.3, khi hai chi tiết có chiều dày khác nhau, chiều dày để tra preheat là <strong>chiều dày lớn hơn</strong> tại vị trí mối hàn. Trong trường hợp này: hub flange Class 600 DN 6" có chiều dày tại weld bevel xấp xỉ 38mm.</p>
+
+  <div class="callout--info callout">
+    <strong>Vận dụng thực tế:</strong> Chiều dày 38mm vượt ngưỡng 25mm của P-No.1. Theo ASME B31.3 Table 330.1.1: preheat tối thiểu cho P-No.1 khi t ≥ 25mm là <strong>79°C (175°F)</strong>. Tempilstik® cần dùng: <strong>Part <a href="https://tempil.vn/tempilstik/28009-175f-79c/" target="_blank" rel="noopener">#28009</a> (175°F / 79°C)</strong>.
+  </div>
+
+  <h3>Trình tự kiểm tra preheat tại công trường</h3>
+
+  <ol class="article-ol">
+    <li>Gia nhiệt bằng dây điện trở hoặc đèn khí propane, toàn chu vi ống và cả mặt flange hub</li>
+    <li>Chạm Tempilstik® <a href="https://tempil.vn/tempilstik/28009-175f-79c/" target="_blank" rel="noopener">#28009</a> vào bề mặt tại vị trí cách mép bevel ≥ 75mm về phía ống, đo ít nhất 4 điểm theo chu vi (0°, 90°, 180°, 270°)</li>
+    <li>Đo thêm tại mặt flange hub — điểm dày nhất, xa nguồn nhiệt nhất</li>
+    <li>Chỉ bắt đầu hàn khi TẤT CẢ điểm đo đều tan que → xác nhận đồng đều nhiệt</li>
+    <li>Ghi nhận vào Preheat Record của hồ sơ QA: thời gian, vị trí đo, kết quả (pass/fail), người kiểm tra</li>
+  </ol>
+
+  <p>Về kiểm soát <a href="https://tempil.vn/blog/interpass-temperature-la-gi/">interpass temperature</a> giữa các lớp hàn: với P-No.1, interpass tối đa thường 250–300°C theo WPS. Nếu WPS quy định interpass ≤ 250°C, dùng thêm Part <a href="https://tempil.vn/tempilstik/28039-450f-232c/" target="_blank" rel="noopener">#28039</a> (450°F/232°C) để spot-check.</p>
+
+  
+<figure class="blog-img-wrap" style="margin:1.8rem 0">
+  <img src="/assets/images/tempilstik_do_nhiet_do_preheat_han_ong_cong_truong.webp" alt="Kỹ thuật viên kiểm tra preheat bằng Tempilstik® trên mối hàn ống áp lực ASME B31.3" class="blog-img-full" loading="lazy" width="800" height="450">
+  <figcaption class="blog-img-caption">Chạm Tempilstik® lên mặt flange hoặc ống đang gia nhiệt — xác nhận đạt yêu cầu preheat theo ASME B31.3 trước khi bắt đầu hàn.</figcaption>
+</figure>
+
+
+  <h2>Yêu Cầu PWHT Theo ASME B31.3</h2>
+
+  <p>ASME B31.3 quy định ngưỡng chiều dày bắt buộc PWHT cho từng P-Number. Đây là thông số quan trọng thứ hai sau preheat:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>P-Number</th>
+          <th>Chiều dày bắt buộc PWHT (B31.3)</th>
+          <th>Nhiệt độ PWHT</th>
+          <th>Tempilstik® spot check</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>P-No.1</strong></td>
+          <td>t &gt; 19mm (3/4")</td>
+          <td class="td-temp">595–650°C</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28047-600f-316c/" target="_blank" rel="noopener">#28047</a> (316°C) — xác nhận đã vượt ngưỡng dưới</td>
+        </tr>
+        <tr>
+          <td><strong>P-No.4</strong></td>
+          <td>Tất cả chiều dày</td>
+          <td class="td-temp">675–760°C</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28057-1022f-550c/" target="_blank" rel="noopener">#28057</a> (550°C)</td>
+        </tr>
+        <tr>
+          <td><strong>P-No.5A</strong></td>
+          <td>Tất cả chiều dày</td>
+          <td class="td-temp">675–760°C</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28057-1022f-550c/" target="_blank" rel="noopener">#28057</a> (550°C)</td>
+        </tr>
+        <tr>
+          <td><strong>P-No.5B (P91)</strong></td>
+          <td>Tất cả chiều dày</td>
+          <td class="td-temp">730–760°C</td>
+          <td class="td-part"><a href="https://tempil.vn/tempilstik/28065-1450f-788c/" target="_blank" rel="noopener">#28065</a> (788°C)</td>
+        </tr>
+        <tr>
+          <td><strong>P-No.8</strong></td>
+          <td class="td-na">—</td>
+          <td class="td-na">Không yêu cầu</td>
+          <td class="td-na">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Chi tiết về PWHT và cách Tempilstik® hỗ trợ kiểm soát nhiệt độ PWHT: xem bài <a href="https://tempil.vn/blog/pwht-xu-ly-nhiet-sau-han/">PWHT Là Gì? Xử Lý Nhiệt Sau Hàn</a>.</p>
+
+  
+<figure class="blog-img-wrap" style="margin:1.8rem 0">
+  <img src="/assets/images/tempilabel_4series_nhan_dan_chi_thi_nhiet_do_tren_kim_loai_1.webp" alt="Tempilabel® 4 dải dán trên ống áp lực — theo dõi nhiệt độ hàn theo ASME B31.3" class="blog-img-full" loading="lazy" width="800" height="450">
+  <figcaption class="blog-img-caption">Tempilabel® dán trực tiếp trên ống, ghi lại nhiệt độ cực đại — phù hợp cho preheat record theo ASME B31.3 và tài liệu nghiệm thu.</figcaption>
+</figure>
+
+
+  <h2>Câu Hỏi Thường Gặp</h2>
+
+  <div class="faq-item">
+    <p class="faq-q">Ống A106 Gr.B dày dưới 25mm có cần preheat không theo ASME B31.3?</p>
+    <p class="faq-a">Theo ASME B31.3 Table 330.1.1, P-No.1 với chiều dày dưới 25mm yêu cầu preheat <strong>10°C tối thiểu</strong> — thực chất là đảm bảo bề mặt không có độ ẩm và nhiệt độ không thấp hơn 10°C. Trong điều kiện khí hậu Việt Nam (nhiệt độ thường ≥ 25°C), yêu cầu này thường được đáp ứng tự nhiên — nhưng vẫn phải ghi nhận vào hồ sơ QA. Một số WPS chặt hơn yêu cầu 50–79°C ngay cả với ống mỏng để đảm bảo loại bỏ độ ẩm hoàn toàn.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">Khi hàn ống P-No.1 vào flange P-No.1, preheat tính theo chi tiết nào?</p>
+    <p class="faq-a">Theo chiều dày <strong>lớn hơn</strong> tại vị trí mối hàn (không phải chiều dày trung bình). Đây là quy tắc conservative đảm bảo chi tiết dày hơn — nguội chậm hơn, dễ tích ứng suất hơn — được gia nhiệt đầy đủ. Trong ví dụ ống Sch.80 (10.97mm) hàn vào hub flange (~38mm): tra preheat theo 38mm.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">Tại sao phải đo preheat cách mép hàn 75mm thay vì đo ngay tại mép?</p>
+    <p class="faq-a">Nhiệt độ ngay tại mép bevel phản ánh nhiệt bề mặt tức thời, không phải nhiệt độ thẩm thấu qua toàn bộ chiều dày. Đo cách mép 75mm đảm bảo phần kim loại ngay dưới vùng hàn (sẽ trở thành HAZ) cũng đã đủ nhiệt — không chỉ bề mặt tiếp xúc trực tiếp với ngọn lửa. Xem thêm nguyên lý preheat tại <a href="https://tempil.vn/blog/nhiet-do-preheat-khi-han-thep-carbon/">bài giải thích preheat theo AWS D1.1</a>.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">ASME B31.3 có yêu cầu ghi chép preheat vào hồ sơ QA không?</p>
+    <p class="faq-a">ASME B31.3 không quy định cụ thể format ghi chép preheat, nhưng yêu cầu WPS phải được tuân thủ và Owner's Inspector có quyền yêu cầu evidence. Thực tế trong các dự án O&G và EPC tại Việt Nam, Preheat Record (thường theo format ITR — Inspection Test Record) là tài liệu bắt buộc — ghi thời gian, nhiệt độ đo, phương pháp đo (Tempilstik® part number), vị trí đo và tên người kiểm tra.</p>
+  </div>
+
+  <div class="cta-block">
+    <p>Cần Tempilstik® cho dự án ASME B31.3 tại nhà máy lọc dầu, hóa chất hoặc gas plant? tempil.vn phân phối chính hãng — C/O, C/Q, hóa đơn VAT. Tư vấn part number theo P-Number miễn phí.</p>
+    <a href="https://tempil.vn/bao-gia/" class="btn-primary-red">Yêu cầu báo giá</a>
+    <a href="tel:0938888958" class="btn-outline-dark">0938 888 958</a>
+  </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ống A106 Gr.B dày dưới 25mm có cần preheat không theo ASME B31.3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Theo ASME B31.3 Table 330.1.1, P-No.1 với chiều dày dưới 25mm yêu cầu preheat 10°C tối thiểu — thực chất là đảm bảo bề mặt không có độ ẩm và nhiệt độ không thấp hơn 10°C. Trong điều kiện khí hậu Việt Nam, yêu cầu này thường được đáp ứng tự nhiên nhưng vẫn phải ghi nhận vào hồ sơ QA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Khi hàn ống P-No.1 vào flange P-No.1, preheat tính theo chi tiết nào?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Theo chiều dày lớn hơn tại vị trí mối hàn (không phải chiều dày trung bình). Đây là quy tắc conservative đảm bảo chi tiết dày hơn được gia nhiệt đầy đủ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Tại sao phải đo preheat cách mép hàn 75mm thay vì đo ngay tại mép?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Đo cách mép 75mm đảm bảo phần kim loại sẽ trở thành HAZ cũng đã đủ nhiệt — không chỉ bề mặt tiếp xúc trực tiếp với nguồn nhiệt. Nhiệt độ tại mép bevel phản ánh nhiệt bề mặt tức thời, không phải nhiệt độ thẩm thấu qua toàn bộ chiều dày."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ASME B31.3 có yêu cầu ghi chép preheat vào hồ sơ QA không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASME B31.3 không quy định cụ thể format ghi chép preheat, nhưng trong thực tế dự án O&G và EPC tại Việt Nam, Preheat Record là tài liệu bắt buộc — ghi thời gian, nhiệt độ đo, phương pháp đo (Tempilstik® part number), vị trí đo và tên người kiểm tra."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://tempil.vn/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog kỹ thuật", "item": "https://tempil.vn/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "ASME B31.3 — Preheat Hàn Ống Công Nghệ", "item": "https://tempil.vn/en/blog/asme-b31-3-preheat-process-piping/"}
+  ]
+}
+</script>
+
+        </div><!-- /blog-body -->
+
+<footer class="footer">
+    <div class="footer__top">
+      <div class="footer__col footer__about">
+        <a href="/en/" class="d-block mb-3">
+          <img src="/assets/images/logo.png" alt="Tempil Việt Nam" width="160" height="40">
+        </a>
+        <p class="footer__desc">Fast Group Engineering là nhà phân phối chính thức Tempil tại Việt Nam — Tempilstik, Tempilaq, Tempilabel và toàn bộ dòng sản phẩm đo nhiệt độ Tempil.</p>
+        <ul class="footer__contact" style="list-style:none;padding:0;margin:0">
+          <li>▶ VP1: 150 Nguyễn Cư Trinh, P. Cầu Ông Lãnh, TP.HCM</li>
+          <li>▶ VP2: 51 Lê Văn Lộc, P. Vũng Tàu, TP.HCM</li>
+          <li>▶ Kho: 41 Trần Văn Giàu, KĐT Sao Mai – Bến Đình, TP.HCM</li>
+          <li>▶ Tel: <a href="tel:+84938888958">0938 888 958</a> | Email: <a href="mailto:sales@tempil.vn">sales@tempil.vn</a></li>
+          <li>▶ Mua hàng: <a href="https://tempil.vn" target="_blank">tempil.vn</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Sản phẩm Tempil</h4>
+        <ul>
+          <li><a href="/en/tempilstik/">Tempilstik®</a></li>
+          <li><a href="/en/tempilaq/">Tempilaq® Advanced</a></li>
+          <li><a href="/en/tempilabel/">Tempilabel®</a></li>
+          <li><a href="/en/thermomelt/">Thermomelt®</a></li>
+          <li><a href="/san-pham/temp-alarm/">Temp-Alarm®</a></li>
+          <li><a href="/en/#san-pham">Xem tất cả →</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Blog kỹ thuật</h4>
+        <ul>
+          <li><a href="/blog/tempilstik-la-gi-huong-dan-su-dung/">Tempilstik là gì?</a></li>
+          <li><a href="/blog/nhiet-do-tien-han-theo-aws-d1-1/">Bảng nhiệt độ tiền hàn</a></li>
+          <li><a href="/blog/tempilstik-vs-nhiet-ke-laser/">Tempilstik vs Nhiệt kế laser</a></li>
+          <li><a href="/en/blog/">Xem tất cả bài viết →</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="https://tempil.vn" target="_blank">🛒 tempil.vn (Mua hàng)</a></li>
+          <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+          <li><a href="/contact.html">Liên hệ & Báo giá</a></li>
+          <li><a href="/en/blog/">Blog & Kiến thức</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Công ty TNHH Fast Group (Fast Group Engineering) | MST: 0315555189 | Est. 08/03/2019</p>
+    </div>
+  </footer>
+
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  if(hamburger){
+    hamburger.addEventListener('click', () => {
+      const open = sidebar.classList.toggle('sidebar--open');
+      hamburger.setAttribute('aria-expanded', open);
+      overlay.style.display = open ? 'block' : 'none';
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('sidebar--open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      overlay.style.display = 'none';
+    });
+  }
+</script>
+</body>
+</html>
