@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <meta name="theme-color" content="#cc0000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tempilstik® vs Infrared Thermometer — Technical Comparison for Industrial Preheat Inspection | tempil.vn</title>
+  <meta name="description" content="Tempilstik® vs IR thermometer for welding preheat: emissivity error table by steel surface condition, 14-criterion comparison, scenario guide for O&G and structural QC engineers.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tempil.vn/en/blog/tempilstik-vs-infrared-thermometer/">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <meta property="og:title" content="Tempilstik® vs Infrared Thermometer — Technical Comparison for Industrial Preheat Inspection">
+  <meta property="og:description" content="Emissivity error table by steel surface, 14-criterion comparison, scenario decision guide for O&G and structural QC engineers.">
+  <meta property="og:image" content="https://tempil.vn/assets/images/tempilaq_ket_hop_tempilstik_kiem_soat_nhiet_dong_thoi.webp">
+  <meta property="og:url" content="https://tempil.vn/en/blog/tempilstik-vs-infrared-thermometer/">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-01-20T08:00:00+07:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can an IR thermometer be adjusted for accurate emissivity on steel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically yes — but it requires knowing the exact emissivity for that surface at that temperature, which varies by surface condition. To determine it accurately, a thermocouple reference is needed at the same point, and the emissivity dial adjusted until both readings agree. This process is too time-consuming for high-throughput preheat inspection on a construction site."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does AWS D1.1 permit infrared thermometers for preheat measurement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AWS D1.1 does not prohibit IR thermometers but requires that temperature measurement devices be calibrated and accurate. When emissivity is set incorrectly, the device may be fully calibrated yet still give an inaccurate reading — and the inspector has no way to detect this on site. Many O&G owner specifications explicitly prefer or require temperature indicating crayons (sticks) for the final preheat sign-off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Tempilstik® be used for high-temperature PWHT above 600°C (1112°F)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — Tempilstik® is available up to 2000°F (1093°C). For PWHT of carbon steel at 600–650°C (1112–1202°F) or P91 at 730–760°C (1346–1400°F), Tempilstik® remains accurate. In furnace or resistance-heating PWHT operations it is typically used as a supplementary spot-check alongside thermocouple dataloggers."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tempil.vn/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Technical Blog", "item": "https://tempil.vn/en/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "Tempilstik® vs Infrared Thermometer", "item": "https://tempil.vn/en/blog/tempilstik-vs-infrared-thermometer/"}
+  ]
+}
+</script>
+  <style>
+        .blog-hero{background:linear-gradient(135deg,#1a0a0a 0%,#8b1a1a 100%);padding:60px 0 40px;color:#fff}
+        .blog-hero h1{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;line-height:1.35;margin-bottom:12px}
+        .blog-meta{font-size:13px;opacity:.75}
+        .breadcrumb-blog{font-size:13px;padding:10px 0 0;color:rgba(255,255,255,.7)}
+        .breadcrumb-blog a{color:rgba(255,255,255,.85);text-decoration:none}
+        .blog-body{max-width:800px;margin:0 auto;padding:48px 20px}
+        .blog-body h2{font-size:1.35rem;font-weight:600;margin:2.5rem 0 1rem;color:#1a0a0a;border-left:4px solid #c8102e;padding-left:14px}
+        .blog-body h3{font-size:1.1rem;font-weight:600;margin:1.8rem 0 .8rem;color:#c8102e}
+        .blog-body p{font-size:1rem;line-height:1.85;color:#333;margin-bottom:1rem}
+        .blog-body ul,.blog-body ol{padding-left:1.4rem;margin-bottom:1.2rem}
+        .blog-body li{font-size:1rem;line-height:1.85;color:#333;margin-bottom:6px}
+        .blog-body a{color:#c8102e;text-decoration:none;border-bottom:1px solid rgba(200,16,46,.3);transition:border-color .2s}
+        .blog-body a:hover{color:#a50e26;border-color:#c8102e}
+        .blog-img-full{width:100%;border-radius:10px;margin:1.5rem 0;object-fit:cover;max-height:360px;display:block}
+        .blog-img-caption{font-size:13px;color:#888;text-align:center;margin-top:-10px;margin-bottom:1.5rem}
+        .blog-img-wrap{margin:1.8rem 0}
+        .blog-img-wrap figcaption{font-size:13px;color:#888;text-align:center;margin-top:6px}
+        .callout,.highlight-box{background:#fff0f0;border-left:4px solid #c8102e;border-radius:0 8px 8px 0;padding:18px 22px;margin:1.8rem 0}
+        .callout p,.highlight-box p{margin:0;font-size:.95rem}
+        .callout strong{color:#c8102e}
+        .callout--info{background:#f0f4ff;border-left-color:#3a5bd9}
+        .callout--info strong{color:#3a5bd9}
+        .callout--green{background:#f0fff4;border-left-color:#22a05a}
+        .callout--green strong{color:#176b3a}
+        .table-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+        .table-wrap table{width:100%;border-collapse:collapse;font-size:.92rem}
+        .table-wrap table th{background:#1a0a0a;color:#fff;padding:10px 14px;text-align:left;font-weight:600;white-space:nowrap;font-size:.82rem;letter-spacing:.03em}
+        .table-wrap table td{padding:10px 14px;border-bottom:1px solid #e5e5e5;color:#333;vertical-align:middle}
+        .table-wrap table tr:nth-child(even) td{background:#fff8f8}
+        .table-wrap table tr:hover td{background:#fff0f2}
+        td.td-ok{color:#176b3a;font-weight:600}
+        td.td-warn{color:#b07800;font-weight:600}
+        td.td-na{color:#999}
+        td.td-tempilstik{background:#fff8f8!important}
+        td.td-ir{background:#f0f4ff!important}
+        .formula-box{background:#f8f9fb;border:1px solid #e5e8f0;border-radius:8px;padding:16px 20px;margin:1.5rem 0;font-family:'Courier New',monospace;font-size:.88rem;color:#1a0a0a;overflow-x:auto}
+        .scenario-block{background:#f9f8f5;border:1px solid #eee;border-radius:10px;padding:18px 20px;margin:1rem 0}
+        .scenario-block__label{font-size:.75rem;font-weight:700;color:#c8102e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+        .scenario-block__title{font-weight:600;color:#1a0a0a;font-size:.97rem;margin-bottom:6px}
+        .scenario-block p{font-size:.9rem;color:#555;margin-bottom:0}
+        .verdict-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:1.5rem 0}
+        .verdict-card{border-radius:10px;padding:18px 20px;border:1px solid #eee}
+        .verdict-card--tempilstik{border-left:4px solid #c8102e;background:#fff8f8}
+        .verdict-card--ir{border-left:4px solid #3a5bd9;background:#f0f4ff}
+        .verdict-card__title{font-weight:700;font-size:.95rem;margin-bottom:8px}
+        .faq-item{border-bottom:1px solid #f0f0f0;padding:1.25rem 0}
+        .faq-item:last-child{border-bottom:none}
+        .faq-q{font-size:1rem;font-weight:600;color:#1a0a0a;margin-bottom:.5rem}
+        .faq-a{color:#555;font-size:.93rem;margin-bottom:0}
+        .cta-block{background:#1a0a0a;color:#fff;border-radius:12px;padding:32px 28px;text-align:center;margin:2.5rem 0}
+        .cta-block p{color:rgba(255,255,255,.8);margin:0 0 18px;font-size:.95rem}
+        .btn-primary-red{display:inline-block;background:#c8102e;color:#fff;font-weight:600;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:.95rem;margin:4px;border:none;transition:background .2s}
+        .btn-primary-red:hover{background:#8b1a1a;color:#fff}
+        .btn-outline-dark{display:inline-block;background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.5);padding:12px 24px;border-radius:8px;text-decoration:none;font-size:.95rem;margin:4px;transition:border-color .2s}
+        .btn-outline-dark:hover{border-color:#fff;color:#fff}
+  </style>
+</head>
+<body>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="hamburger__lines"><span></span><span></span><span></span></div>
+  </button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="sidebar__brand">
+      <a href="/en/" class="navbar-brand d-flex align-items-center">
+        <img src="/assets/logo.png" alt="Tempil Vietnam" class="logo" style="max-height:40px;width:auto" width="160" height="40">
+      </a>
+      <div class="sidebar__tagline">TEMPIL VIET NAM</div>
+      <div class="sidebar__tagline">Fast Group Engineering</div>
+    </div>
+    <nav class="sidebar__nav">
+      <ul>
+        <li><a href="/en/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Home</a></li>
+        <li style="padding: 0.5rem 1.5rem; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(244,241,222,0.3);">Products</li>
+        <li><a href="/en/tempilstik/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></span> Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></span> Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0c0-6-6-8-6-14z"/></svg></span> Thermomelt®</a></li>
+        <li><a href="/en/#san-pham"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span> All Products</a></li>
+        <li style="padding: 0.5rem 1.5rem; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(244,241,222,0.3);">Resources</li>
+        <li><a href="/en/blog/" style="background:rgba(200,16,46,0.15); border-left: 3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> Technical Blog</a></li>
+        <li style="padding: 0.5rem 1.5rem; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(244,241,222,0.3);">Contact</li>
+        <li><a href="/en/quote/" style="background:rgba(200,16,46,0.15); border-left: 3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Request a Quote</a></li>
+        <li><a href="/en/contact/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Language Switcher -->
+    <div class="lang-switcher" style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(244,241,222,0.15);text-align:center;">
+      <a href="/blog/tempilstik-vs-sung-hong-ngoai/" style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;color:rgba(244,241,222,0.9);text-decoration:none;">VI</a>
+      <span style="color:rgba(244,241,222,0.3);margin:0 4px;">|</span>
+      <span style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;background:#c8102e;color:#fff;cursor:default;" aria-current="true">EN</span>
+    </div>
+  </aside>
+
+<main class="main">
+  <section class="blog-hero">
+    <div class="container">
+      <div class="breadcrumb-blog">
+        <a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / <span>Tempilstik® vs Infrared Thermometer</span>
+      </div>
+      <div style="max-width:760px;margin-top:20px">
+        <h1>Tempilstik® vs Infrared Thermometer — Technical Comparison for Industrial Preheat Inspection</h1>
+        <p class="blog-meta">Published 20 Jan 2025 · Fast Group Engineering · 7 min read</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="blog-body">
+
+<p>When a QC inspector has two options in hand — a Tempilstik® temperature indicating crayon and an infrared (IR) thermometer — the question is not which one cost more. It is <strong>which one is more trustworthy under the actual conditions on this site</strong>. Both instruments measure surface temperature, but through completely different physical mechanisms, and that difference has significant implications for structural steel and O&amp;G pipeline welding. This article is a technical analysis — not a sales pitch — to help QA/QC engineers and welding inspectors make the right choice for each specific situation.</p>
+
+<figure class="blog-img-wrap" style="margin:1.8rem 0">
+  <img src="/assets/images/tempilaq_ket_hop_tempilstik_kiem_soat_nhiet_dong_thoi.webp" alt="Tempilaq® and Tempilstik® used together for direct-contact temperature measurement — independent of emissivity" class="blog-img-full" loading="lazy" width="800" height="450">
+  <figcaption class="blog-img-caption">Tempilaq® and Tempilstik® measure temperature by direct contact — independent of surface emissivity, no batteries, no calibration drift. These are the core advantages over IR thermometers.</figcaption>
+</figure>
+
+<h2>Operating Principles — the Fundamental Difference</h2>
+
+<h3>Infrared Thermometer</h3>
+<p>An IR thermometer measures the infrared radiation emitted from an object's surface and converts it to a temperature reading via the Stefan–Boltzmann relationship. More precisely, the device measures <strong>radiation from the surface</strong> — not the actual temperature of the material. Accuracy depends entirely on the emissivity value (ε) programmed into the device.</p>
+
+<div class="formula-box">
+Simplified IR thermometer relationship:
+T_measured = f(ε, E_measured)
+
+Where:
+  ε      = surface emissivity (0.00 to 1.00)
+  E_meas = measured infrared radiation
+
+Temperature error from incorrect emissivity setting:
+Each 0.1 unit error in ε → approximately 5–15°C error
+(varies with temperature and wavelength band)
+</div>
+
+<h3>Tempilstik® Temperature Indicating Crayon</h3>
+<p>Tempilstik® operates through pure physical chemistry: a wax compound formulated to melt at a precisely defined temperature. When the surface reaches that temperature, the crayon mark melts immediately — <strong>with no dependence on any surface parameter</strong>. No emissivity setting, no measurement angle, no spot-size factor, no background radiation.</p>
+
+<h2>Emissivity — the Primary Error Source for IR Thermometers</h2>
+
+<p>The emissivity of steel varies substantially with surface condition. This is the core vulnerability of IR thermometers in industrial welding applications:</p>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Steel Surface Condition</th>
+        <th>Actual Emissivity (ε)</th>
+        <th>Temperature Error if ε Set to 0.95</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Mirror-polished steel</td><td>0.07–0.10</td><td class="td-ir">Very large: 40–80°C (72–144°F)</td></tr>
+      <tr><td>Hot-rolled steel with mill scale</td><td>0.70–0.80</td><td class="td-ir">5–15°C (9–27°F)</td></tr>
+      <tr><td>Lightly rusted steel</td><td>0.80–0.85</td><td class="td-ir">3–8°C (5–14°F)</td></tr>
+      <tr><td>Epoxy primer-coated steel</td><td>0.85–0.90</td><td class="td-ir">2–5°C (4–9°F)</td></tr>
+      <tr><td>Brushed stainless steel</td><td>0.15–0.35</td><td class="td-ir">Large: 20–50°C (36–90°F)</td></tr>
+      <tr><td>Blast-cleaned steel (SSPC SP10)</td><td>0.90–0.95</td><td class="td-tempilstik">Small: &lt; 2°C (4°F)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>On a typical offshore construction or fabrication site, steel surfaces are in a mix of states — mill scale, light rust, and primer — with actual emissivity in the range 0.70–0.90. A standard IR thermometer shipped with a factory default of ε = 0.95 will read <strong>5–15°C low on the most common construction-site surfaces</strong>.</p>
+
+<div class="callout">
+  <strong>Field example:</strong> WPS requires a minimum preheat of 150°C (302°F) for 30 mm SM490 plate. Inspector uses an IR thermometer with ε set to 0.95 on a mill-scale surface (actual ε ≈ 0.78). Display reads 150°C — but actual surface temperature is approximately 138°C (280°F), 12°C below the WPS minimum. The inspector signs off "passed" — but the joint has not reached the required preheat. This is the origin of many invisible preheat deficiencies in the field.
+</div>
+
+<h2>Comprehensive 14-Criterion Comparison</h2>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Criterion</th><th>Tempilstik®</th><th>IR Thermometer</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Measurement mechanism</strong></td><td class="td-tempilstik">Direct contact — physical chemistry</td><td>Infrared radiation — optical</td></tr>
+      <tr><td><strong>Affected by emissivity</strong></td><td class="td-tempilstik">No — completely independent</td><td class="td-ir">Yes — primary error source</td></tr>
+      <tr><td><strong>Accuracy (ideal conditions)</strong></td><td>±1%°F / ±3%°C</td><td>±1–2°C (with correct ε)</td></tr>
+      <tr><td><strong>Accuracy (mill-scale surface)</strong></td><td class="td-tempilstik">±1%°F — unchanged</td><td class="td-ir">±5–15°C — surface dependent</td></tr>
+      <tr><td><strong>Outdoor wind / rain effect</strong></td><td class="td-tempilstik">No effect on measurement</td><td class="td-ir">Background radiation and moisture can affect reading</td></tr>
+      <tr><td><strong>Reflected heat interference</strong></td><td class="td-tempilstik">None</td><td class="td-ir">Furnaces or flames nearby cause false high readings</td></tr>
+      <tr><td><strong>Calibration requirement</strong></td><td class="td-tempilstik">None — chemical mechanism is inherently stable</td><td>Periodic calibration required (typically annual)</td></tr>
+      <tr><td><strong>QA/QC documentation</strong></td><td class="td-tempilstik">Visible melt mark — photographable evidence</td><td>Number on a display — requires separate logging</td></tr>
+      <tr><td><strong>Accepted by standards</strong></td><td class="td-tempilstik">AWS D1.1, ASME, API 1104, EN 1011-2</td><td>AWS D1.1, ASME, API 1104 (with correct ε)</td></tr>
+      <tr><td><strong>Initial cost</strong></td><td>Low — purchase by grade</td><td class="td-tempilstik">High — electronic instrument</td></tr>
+      <tr><td><strong>Cost per measurement</strong></td><td class="td-ir">Consumable (each stick)</td><td class="td-tempilstik">Near zero (reusable device)</td></tr>
+      <tr><td><strong>Power requirement</strong></td><td class="td-tempilstik">None</td><td>Battery — fails at remote sites without spares</td></tr>
+      <tr><td><strong>Equipment failure risk</strong></td><td class="td-tempilstik">No electronics → no failure modes</td><td>Drop damage, moisture, extreme heat affect accuracy</td></tr>
+      <tr><td><strong>Non-contact measurement</strong></td><td class="td-ir">No — must touch surface</td><td class="td-tempilstik">Yes — useful for inaccessible surfaces</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<figure class="blog-img-wrap" style="margin:1.8rem 0">
+  <img src="/assets/images/tempilaq_vet_son_doi_mau_dat_nhiet_do_chi_thi.webp" alt="Tempilaq® colour change on metal surface — unambiguous visual confirmation of temperature reached" class="blog-img-full" loading="lazy" width="800" height="450">
+  <figcaption class="blog-img-caption">A clear colour change when the rated temperature is reached — unambiguous visual evidence that cannot be disputed, at a time when an IR thermometer may be reading 5–20°C low due to surface emissivity.</figcaption>
+</figure>
+
+<h2>When to Use Tempilstik® — When to Use an IR Thermometer</h2>
+
+<div class="scenario-block">
+  <div class="scenario-block__label">✅ Use Tempilstik® for:</div>
+  <div class="scenario-block__title">Final preheat confirmation at the weld joint per WPS</div>
+  <p>This is the primary application. Tempilstik® delivers an unambiguous, physically verifiable result confirming that a specific joint has reached the exact WPS-required temperature before the arc is struck. The melt mark is visible evidence that can be photographed and recorded in the QA/QC file without ambiguity. Reliable in outdoor conditions — wind, rain, uneven surfaces.</p>
+</div>
+
+<div class="scenario-block">
+  <div class="scenario-block__label">✅ Use Tempilstik® for:</div>
+  <div class="scenario-block__title">Preheat of high-alloy steels — P22, P91, duplex stainless</div>
+  <p>For steels with low or variable emissivity (blast-cleaned Cr-Mo, stainless steel), IR thermometer error can reach 20–40°C. For P91 with a mandatory minimum preheat of 200°C (392°F) where ±10°C means the difference between pass and fail, the risk of relying on an IR thermometer alone is unacceptable on a strictly-monitored project.</p>
+</div>
+
+<div class="scenario-block">
+  <div class="scenario-block__label">✅ Use IR thermometer for:</div>
+  <div class="scenario-block__title">Rapid screening of the heating zone before final confirmation</div>
+  <p>An IR thermometer is very useful for observing which parts of the heating zone are reaching temperature and which still need more heat input — before the definitive Tempilstik® check. Use the IR to guide heating, then Tempilstik® to confirm before welding.</p>
+</div>
+
+<div class="scenario-block">
+  <div class="scenario-block__label">✅ Use IR thermometer for:</div>
+  <div class="scenario-block__title">Inaccessible surfaces or remote measurement</div>
+  <p>For welds in narrow gaps, small-bore pipe below DN 50, or areas where personal safety prevents close approach, an IR thermometer may be the only practical option. In these cases, emissivity must be carefully corrected or emissivity tape applied to the measurement point to improve accuracy.</p>
+</div>
+
+<h2>Conclusions — Choosing by Actual Field Conditions</h2>
+
+<div class="verdict-grid">
+  <div class="verdict-card verdict-card--tempilstik">
+    <div class="verdict-card__title">Tempilstik® is the better choice when:</div>
+    <ul>
+      <li>Steel surface has mill scale, rust, or primer coating</li>
+      <li>Outdoor conditions — wind, rain, high humidity</li>
+      <li>High-alloy steel: P11, P22, P91, duplex SS</li>
+      <li>Visual, photographable QA/QC evidence is required</li>
+      <li>No batteries available at the work location</li>
+      <li>Absolute reliability is needed for each individual joint</li>
+      <li>Third-party inspector is witnessing preheat sign-off</li>
+    </ul>
+  </div>
+  <div class="verdict-card verdict-card--ir">
+    <div class="verdict-card__title">IR thermometer is the better choice when:</div>
+    <ul>
+      <li>Clean surface with accurately known emissivity</li>
+      <li>Rapid scanning of multiple points in sequence</li>
+      <li>Remote measurement — surface is inaccessible</li>
+      <li>Controlled indoor fab shop environment</li>
+      <li>Continuous furnace temperature monitoring</li>
+      <li>Preliminary screening to guide heating operations</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout callout--green">
+  <strong>Recommended practice for O&amp;G and offshore projects:</strong> Use both tools together — the IR thermometer for rapid observation during heating, Tempilstik® for the definitive threshold confirmation at each weld location per WPS before striking the arc. This is standard practice on EPCi projects in Vietnam, including work by PTSC, Technip, and international contractors at major offshore facilities. The cost of Tempilstik® per weld joint is negligible compared with the cost of a repair weld caused by insufficient preheat.
+</div>
+
+<figure class="blog-img-wrap" style="margin:1.8rem 0">
+  <img src="/assets/images/tempilstik_do_nhiet_do_preheat_han_ong_cong_truong.webp" alt="Inspector using Tempilstik® to confirm preheat at a pipe weld on an offshore construction site" class="blog-img-full" loading="lazy" width="800" height="450">
+  <figcaption class="blog-img-caption">On an offshore site, Tempilstik® delivers an immediate, reliable result — unaffected by strong light, reflective surfaces, or mill scale, conditions where an IR thermometer routinely gives errors of 5–20°C.</figcaption>
+</figure>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+  <p class="faq-q">Can an IR thermometer be accurately adjusted for steel emissivity in the field?</p>
+  <p class="faq-a">Technically yes — but to do so correctly requires knowing the exact emissivity for that specific surface condition at that temperature. The only reliable method is to place a thermocouple at the same point, heat the surface, and adjust the emissivity dial until both readings agree. This is too time-consuming for high-throughput preheat inspection on a construction site. On a surface that is half mill scale and half rust, the emissivity also varies across the measurement spot, adding a further uncertainty that cannot be corrected with a single ε setting.</p>
+</div>
+
+<div class="faq-item">
+  <p class="faq-q">Does AWS D1.1 permit infrared thermometers for preheat measurement?</p>
+  <p class="faq-a">AWS D1.1 does not prohibit IR thermometers but requires that temperature measurement devices be calibrated and accurate. The problem is that a device can be fully calibrated yet still give an inaccurate reading when the emissivity is set incorrectly — and the inspector has no way to detect this on site. Many owner QA procedures for O&amp;G projects explicitly require temperature indicating crayons (sticks) for the final preheat pass/fail decision, precisely because of this limitation.</p>
+</div>
+
+<div class="faq-item">
+  <p class="faq-q">Can Tempilstik® be used for high-temperature PWHT checks above 600°C (1112°F)?</p>
+  <p class="faq-a">Yes — Tempilstik® is available up to 2000°F (1093°C). For carbon steel PWHT at 600–650°C (1112–1202°F) or P91 PWHT at 730–760°C (1346–1400°F), Tempilstik® remains accurate and is routinely used as a supplementary spot-check alongside thermocouple dataloggers — confirming that specific locations on the weld actually reached the required temperature rather than relying solely on thermocouple placement.</p>
+</div>
+
+  <div class="cta-block">
+    <p>Need technical guidance on choosing the right preheat measurement tool for your project? Contact the Fast Group technical team — tempil.vn is the authorised Tempil® distributor in Vietnam, with over a decade of O&amp;G welding support experience.</p>
+    <a href="/en/tempilstik/" class="btn-primary-red">View Tempilstik® Part Numbers</a>
+    <a href="tel:0938888958" class="btn-outline-dark">+84 938 888 958</a>
+  </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can an IR thermometer be accurately adjusted for steel emissivity in the field?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technically yes, but it requires a thermocouple reference at the same point and is too time-consuming for high-throughput preheat inspection on a construction site. Surface emissivity also varies across the measurement spot when the surface condition is mixed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does AWS D1.1 permit infrared thermometers for preheat measurement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AWS D1.1 does not prohibit IR thermometers but requires calibrated and accurate devices. A device can be fully calibrated yet read incorrectly when emissivity is wrong. Many O&G owner QA procedures explicitly require temperature indicating crayons for the final preheat pass/fail decision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Tempilstik® be used for PWHT checks above 600°C?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — Tempilstik® is available up to 2000°F (1093°C) and is routinely used as a supplementary spot-check at P91 PWHT temperatures of 730–760°C alongside thermocouple dataloggers."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tempil.vn/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Technical Blog", "item": "https://tempil.vn/en/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "Tempilstik® vs Infrared Thermometer", "item": "https://tempil.vn/en/blog/tempilstik-vs-infrared-thermometer/"}
+  ]
+}
+</script>
+
+  </div><!-- /blog-body -->
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__col footer__about">
+      <a href="/en/" class="d-block mb-3"><img src="/assets/images/logo.png" alt="Tempil Vietnam" width="160" height="40"></a>
+      <p class="footer__desc">Fast Group Engineering is the authorised Tempil® distributor in Vietnam — Tempilstik®, Tempilaq®, Tempilabel®, and the full Tempil temperature measurement product range.</p>
+      <ul class="footer__contact" style="list-style:none;padding:0;margin:0">
+        <li>▶ Office 1: 150 Nguyen Cu Trinh, Cau Ong Lanh Ward, Ho Chi Minh City</li>
+        <li>▶ Office 2: 51 Le Van Loc, Vung Tau City</li>
+        <li>▶ Tel: <a href="tel:+84938888958">+84 938 888 958</a> | Email: <a href="mailto:sales@tempil.vn">sales@tempil.vn</a></li>
+        <li>▶ Shop: <a href="https://tempil.vn" target="_blank">tempil.vn</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Tempil Products</h4>
+      <ul>
+        <li><a href="/en/tempilstik/">Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/">Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/">Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/">Thermomelt®</a></li>
+        <li><a href="/en/#san-pham">All Products →</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Technical Blog</h4>
+      <ul>
+        <li><a href="/en/blog/what-is-tempilstik/">What is Tempilstik®?</a></li>
+        <li><a href="/en/blog/tempilstik-vs-laser-pyrometer/">vs Laser Pyrometer</a></li>
+        <li><a href="/en/blog/tempilstik-vs-thermomelt-comparison/">vs Thermomelt®</a></li>
+        <li><a href="/en/blog/">All Articles →</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://tempil.vn" target="_blank">tempil.vn (Vietnamese)</a></li>
+        <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+        <li><a href="/en/contact/">Contact &amp; Quote</a></li>
+        <li><a href="/en/blog/">Blog &amp; Resources</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 Fast Group Company Limited (Fast Group Engineering) | Tax ID: 0315555189 | Est. 08 Mar 2019</p>
+  </div>
+</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const hamburger=document.getElementById('hamburger'),sidebar=document.getElementById('sidebar'),overlay=document.getElementById('sidebarOverlay');
+  if(hamburger){hamburger.addEventListener('click',()=>{const o=sidebar.classList.toggle('sidebar--open');hamburger.setAttribute('aria-expanded',o);overlay.style.display=o?'block':'none';});overlay.addEventListener('click',()=>{sidebar.classList.remove('sidebar--open');hamburger.setAttribute('aria-expanded','false');overlay.style.display='none';});}
+</script>
+</body>
+</html>

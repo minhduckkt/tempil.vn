@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <meta name="theme-color" content="#cc0000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Is PWHT? Post Weld Heat Treatment and the Role of Tempilstik® | tempil.vn</title>
+  <meta name="description" content="PWHT (Post Weld Heat Treatment) definition, ASME P-Number temperature requirements, soaking time rules, and how Tempilstik® temperature indicating crayons are used for spot-check verification alongside thermocouple records.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tempil.vn/en/blog/what-is-pwht/">
+  <meta property="og:title" content="What Is PWHT? Post Weld Heat Treatment and the Role of Tempilstik®">
+  <meta property="og:description" content="PWHT definition, ASME soaking temperatures, P-Number classification, and how Tempilstik® supports QA documentation in post-weld heat treatment operations.">
+  <meta property="og:image" content="https://tempil.vn/assets/images/tempilstik_test_kit_su_dung_tai_cong_truong_nha_may_3.webp">
+  <meta property="og:url" content="https://tempil.vn/en/blog/what-is-pwht/">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-01-27T08:00:00+07:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="en" href="https://tempil.vn/en/blog/what-is-pwht/">
+  <link rel="alternate" hreflang="vi" href="https://tempil.vn/blog/pwht-post-weld-heat-treatment/">
+  <link rel="alternate" hreflang="x-default" href="https://tempil.vn/en/blog/what-is-pwht/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is PWHT mandatory for all welds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. PWHT requirements depend on material P-Number, base metal thickness, and the applicable code. P-No.1 carbon steel below certain thickness thresholds may not require PWHT per ASME B31.3. P91 (P-No.15E) requires PWHT without exception regardless of thickness."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Tempilstik® replace thermocouples in PWHT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Thermocouples and data loggers are mandatory primary instruments for PWHT — they provide the continuous time-at-temperature record required by ASME codes. Tempilstik® is used as a supplementary spot-check tool to verify actual surface temperature at locations not directly monitored by thermocouples."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the PWHT temperature for P91 steel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ASME B31.1 and B31.3 require PWHT for A335 P91 (P-No.15E) at 730–760°C (1350–1400°F), with a minimum soaking time of 1 hour per 25 mm of wall thickness. This is mandatory without exception."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tempil.vn/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Technical Blog", "item": "https://tempil.vn/en/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "What Is PWHT?", "item": "https://tempil.vn/en/blog/what-is-pwht/"}
+  ]
+}
+</script>
+  <style>
+    .blog-hero{background:linear-gradient(135deg,#1a0a0a 0%,#8b1a1a 100%);padding:60px 0 40px;color:#fff}
+    .blog-hero h1{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;line-height:1.35;margin-bottom:12px}
+    .blog-meta{font-size:13px;opacity:.75}
+    .breadcrumb-blog{font-size:13px;padding:10px 0 0;color:rgba(255,255,255,.7)}
+    .breadcrumb-blog a{color:rgba(255,255,255,.85);text-decoration:none}
+    .blog-body{max-width:800px;margin:0 auto;padding:48px 20px}
+    .blog-body h2{font-size:1.35rem;font-weight:600;margin:2.5rem 0 1rem;color:#1a0a0a;border-left:4px solid #c8102e;padding-left:14px}
+    .blog-body h3{font-size:1.1rem;font-weight:600;margin:1.8rem 0 .8rem;color:#c8102e}
+    .blog-body p{font-size:1rem;line-height:1.85;color:#333;margin-bottom:1rem}
+    .blog-body ul,.blog-body ol{padding-left:1.4rem;margin-bottom:1.2rem}
+    .blog-body li{font-size:1rem;line-height:1.85;color:#333;margin-bottom:6px}
+    .blog-body a{color:#c8102e;text-decoration:none;border-bottom:1px solid rgba(200,16,46,.3);transition:border-color .2s}
+    .blog-body a:hover{color:#a50e26;border-color:#c8102e}
+    .blog-img-full{width:100%;border-radius:10px;margin:1.5rem 0;object-fit:cover;max-height:360px;display:block}
+    .blog-img-caption{font-size:13px;color:#888;text-align:center;margin-top:-10px;margin-bottom:1.5rem}
+    .blog-img-wrap{margin:1.8rem 0}
+    .blog-img-wrap figcaption{font-size:13px;color:#888;text-align:center;margin-top:6px}
+    .callout,.highlight-box{background:#fff0f0;border-left:4px solid #c8102e;border-radius:0 8px 8px 0;padding:18px 22px;margin:1.8rem 0}
+    .callout p,.highlight-box p{margin:0;font-size:.95rem}
+    .callout strong{color:#c8102e}
+    .callout--info{background:#f0f4ff;border-left-color:#3a5bd9}
+    .callout--info strong{color:#3a5bd9}
+    .callout--warn{background:#fffbf0;border-left-color:#e0a800}
+    .callout--warn strong{color:#b07800}
+    .warning-box{background:#fffbf0;border:1px solid #f0c040;border-left:4px solid #e0a800;border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1.5rem 0}
+    .warning-box strong{color:#b07800}
+    .table-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+    .table-wrap table{width:100%;border-collapse:collapse;font-size:.92rem}
+    .table-wrap table th{background:#1a0a0a;color:#fff;padding:10px 14px;text-align:left;font-weight:600;white-space:nowrap;font-size:.82rem;letter-spacing:.03em}
+    .table-wrap table td{padding:10px 14px;border-bottom:1px solid #e5e5e5;color:#333;vertical-align:middle}
+    .table-wrap table tr:nth-child(even) td{background:#fff8f8}
+    .table-wrap table tr:hover td{background:#fff0f2}
+    td.td-part{font-family:'Courier New',monospace;color:#c8102e;font-weight:700;font-size:.85rem}
+    td.td-temp{font-weight:700;color:#1a0a0a}
+    td.td-ok{color:#176b3a;font-weight:600}
+    .timeline{display:flex;gap:0;margin:2rem 0;flex-wrap:wrap}
+    .tl-phase{flex:1;min-width:140px;padding:16px 14px;border-top:4px solid #ddd;background:#f8f9fb;position:relative}
+    .tl-phase.pre{border-top-color:#3a5bd9}
+    .tl-phase.inter{border-top-color:#c8102e}
+    .tl-phase.post{border-top-color:#22a05a}
+    .tl-type{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#888;margin-bottom:4px}
+    .tl-title{font-size:.9rem;font-weight:700;color:#1a0a0a;margin-bottom:4px}
+    .tl-temp{font-size:1.1rem;font-weight:700;color:#c8102e;margin-bottom:4px}
+    .tl-label{font-size:.78rem;color:#555}
+    .tl-desc{font-size:.78rem;color:#888;margin-top:4px}
+    .faq-item{border-bottom:1px solid #f0f0f0;padding:1.25rem 0}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{font-size:1rem;font-weight:600;color:#1a0a0a;margin-bottom:.5rem}
+    .faq-a{color:#555;font-size:.93rem;margin-bottom:0}
+    .cta-block{background:#1a0a0a;color:#fff;border-radius:12px;padding:32px 28px;text-align:center;margin:2.5rem 0}
+    .cta-block p{color:rgba(255,255,255,.8);margin:0 0 18px;font-size:.95rem}
+    .btn-primary-red{display:inline-block;background:#c8102e;color:#fff;font-weight:600;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:.95rem;margin:4px;transition:background .2s}
+    .btn-primary-red:hover{background:#8b1a1a;color:#fff}
+    .btn-outline-dark{display:inline-block;background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.5);padding:12px 24px;border-radius:8px;text-decoration:none;font-size:.95rem;margin:4px;transition:border-color .2s}
+    .btn-outline-dark:hover{border-color:#fff;color:#fff}
+    .section-divider{border:none;border-top:2px solid #f0f0f0;margin:2.5rem 0}
+    .table-label{font-size:.78rem;color:#888;margin:-.5rem 0 .5rem;font-style:italic}
+  </style>
+</head>
+<body>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="hamburger__lines"><span></span><span></span><span></span></div>
+  </button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="sidebar__brand">
+      <a href="/en/" class="navbar-brand d-flex align-items-center">
+        <img src="/assets/logo.png" alt="Tempil Vietnam" class="logo" style="max-height:40px;width:auto" width="160" height="40">
+      </a>
+      <div class="sidebar__tagline">TEMPIL VIET NAM</div>
+      <div class="sidebar__tagline">Fast Group Engineering</div>
+    </div>
+    <nav class="sidebar__nav">
+      <ul>
+        <li><a href="/en/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Home</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Products</li>
+        <li><a href="/en/tempilstik/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></span> Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></span> Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0c0-6-6-8-6-14z"/></svg></span> Thermomelt®</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Resources</li>
+        <li><a href="/en/blog/" style="background:rgba(200,16,46,0.15);border-left:3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> Technical Blog</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Contact</li>
+        <li><a href="/en/quote/" style="background:rgba(200,16,46,0.15);border-left:3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Request a Quote</a></li>
+        <li><a href="/en/contact/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switcher" style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(244,241,222,0.15);text-align:center;">
+      <a href="/blog/pwht-xu-ly-nhiet-sau-han/" style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;color:rgba(244,241,222,0.9);text-decoration:none;">VI</a>
+      <span style="color:rgba(244,241,222,0.3);margin:0 4px;">|</span>
+      <span style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;background:#c8102e;color:#fff;cursor:default;" aria-current="true">EN</span>
+    </div>
+  </aside>
+  <main class="main">
+    <section class="blog-hero">
+      <div class="container">
+        <div class="breadcrumb-blog">
+          <a href="/en/">Home</a> / <a href="/en/blog/">Technical Blog</a> / <span>What Is PWHT?</span>
+        </div>
+        <div style="max-width:760px;margin-top:20px">
+          <h1>What Is PWHT? Post Weld Heat Treatment — Definition, ASME Requirements, and the Role of Tempilstik®</h1>
+          <p class="blog-meta">Published 27 January 2025 · Fast Group Engineering · 9 min read</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="blog-body">
+
+      <p><strong>Post Weld Heat Treatment (PWHT)</strong> is a controlled thermal cycle applied to welded structures after the weld has cooled to ambient temperature. It is mandatory under ASME and EN codes for many alloy steels and thick-section components. Unlike preheat or interpass temperature control, PWHT is not performed during welding — it is an independent heat treatment cycle: heat to a specified temperature, hold for a defined soaking time, then cool in a controlled manner.</p>
+
+      <p>Thermocouples and data loggers are the primary instruments for recording PWHT. However, Tempilstik® <a href="/en/tempilstik/">temperature indicating crayons</a> play a defined role as a <strong>spot-check tool</strong> — confirming that the actual surface of the component has reached the required temperature at locations where thermocouple coverage does not extend.</p>
+
+      <figure class="blog-img-wrap">
+        <img src="/assets/images/tempilstik_test_kit_su_dung_tai_cong_truong_nha_may_3.webp" alt="Tempilstik® used for PWHT spot-check temperature verification at an industrial facility in Vietnam" class="blog-img-full" loading="lazy" width="800" height="450">
+        <figcaption class="blog-img-caption">In PWHT operations, Tempilstik® is used for spot-check verification of actual surface temperature — supplementing, not replacing, the thermocouple record.</figcaption>
+      </figure>
+
+      <h2>What Is PWHT — Metallurgical Definition and Purpose</h2>
+
+      <p>PWHT is a controlled heating cycle applied to a welded assembly after the weld joint has fully cooled to ambient temperature (or to a specific temperature dictated by the applicable code). The technical purpose of PWHT is not a single objective — it simultaneously addresses three metallurgical problems created by the welding thermal cycle:</p>
+
+      <ul>
+        <li><strong>Stress relief:</strong> Welding creates extreme temperature gradients over very short time intervals. The base metal expands and contracts non-uniformly, generating internal residual stresses — sometimes approaching the yield strength of the material. PWHT at sufficient temperature softens the crystal lattice, permitting limited plastic deformation that releases these stresses.</li>
+        <li><strong>HAZ property restoration for alloy steels:</strong> In Cr-Mo and Cr-Mo-V alloy steels, the welding thermal cycle creates hard, brittle martensite in the HAZ. PWHT tempering transforms martensite into bainite or sorbite — structures with substantially higher impact toughness, suited for high-temperature, high-pressure service conditions.</li>
+        <li><strong>Hydrogen diffusion:</strong> Although preheat supports hydrogen diffusion during welding, PWHT at elevated temperature drives this process more thoroughly, reducing the risk of delayed cold cracking after the joint has cooled.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Critical distinction:</strong> PWHT is not "preheat performed after welding." All three concepts — preheat, interpass temperature, and PWHT — operate at <strong>three different stages of the welding process</strong> and address three different problems. Confusing these concepts is a common error in welding QA/QC work.
+      </div>
+
+      <h2>Preheat vs. Interpass vs. PWHT — The Three-Stage Framework</h2>
+
+      <div class="timeline">
+        <div class="tl-phase pre">
+          <div class="tl-type">Stage 1</div>
+          <div class="tl-title">Preheat</div>
+          <div class="tl-temp">MINIMUM</div>
+          <div class="tl-label">Performed before welding</div>
+          <div class="tl-desc">Slows HAZ cooling rate, prevents hydrogen cracking, reduces thermal shock</div>
+        </div>
+        <div class="tl-phase inter">
+          <div class="tl-type">Stage 2</div>
+          <div class="tl-title">Interpass</div>
+          <div class="tl-temp">MAXIMUM</div>
+          <div class="tl-label">Between weld passes</div>
+          <div class="tl-desc">Must not be exceeded — over-temperature degrades impact toughness and microstructure</div>
+        </div>
+        <div class="tl-phase post">
+          <div class="tl-type">Stage 3</div>
+          <div class="tl-title">PWHT</div>
+          <div class="tl-temp">MANDATORY</div>
+          <div class="tl-label">After welding is complete</div>
+          <div class="tl-desc">Stress relief, HAZ property restoration, hydrogen diffusion — full time-at-temperature record required</div>
+        </div>
+      </div>
+
+      <p>While preheat and interpass temperature can be verified with Tempilstik® throughout welding, PWHT requires a more systematic data recording approach because temperatures are much higher and soaking time must be documented fully to satisfy third-party inspection requirements.</p>
+
+      <h2>PWHT Temperature Requirements — ASME P-Number Classification</h2>
+
+      <p>ASME classifies materials by P-Number to prescribe PWHT requirements. The table below covers the most commonly encountered steel grades in Vietnamese refining, petrochemical, and power generation applications:</p>
+
+      <p class="table-label">ASME PWHT (Stress Relief) — Minimum Soaking Temperature and Hold Time by P-Number</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>P-Number (ASME)</th>
+              <th>Typical Material</th>
+              <th>Common Spec</th>
+              <th>PWHT Temperature Range</th>
+              <th>Minimum Soaking Time</th>
+              <th>Tempilstik® Spot-Check</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-part">P1</td>
+              <td>Carbon steel</td>
+              <td>A106 Gr.B, A53, A516</td>
+              <td class="td-temp">580–620°C (1076–1148°F)</td>
+              <td>1 hr per 25 mm thickness</td>
+              <td class="td-part"><a href="/en/tempilstik/28047-600f-316c/">#28047</a> (600°F / 316°C) — verify temperature reached</td>
+            </tr>
+            <tr>
+              <td class="td-part">P4</td>
+              <td>1¼Cr–½Mo steel</td>
+              <td>A335 P11</td>
+              <td class="td-temp">600–650°C (1112–1202°F)</td>
+              <td>1 hr per 25 mm</td>
+              <td class="td-part"><a href="/en/tempilstik/28047-600f-316c/">#28047</a> + <a href="/en/tempilstik/28057-1022f-550c/">#28057</a> (1022°F / 550°C)</td>
+            </tr>
+            <tr>
+              <td class="td-part">P5A</td>
+              <td>2¼Cr–1Mo steel</td>
+              <td>A335 P22</td>
+              <td class="td-temp">700–760°C (1292–1400°F)</td>
+              <td>2 hr minimum per 25 mm</td>
+              <td class="td-part"><a href="/en/tempilstik/28057-1022f-550c/">#28057</a> + <a href="/en/tempilstik/28065-1450f-788c/">#28065</a> (1450°F / 788°C)</td>
+            </tr>
+            <tr>
+              <td class="td-part">P5B (P91)</td>
+              <td>9Cr–1Mo-V steel</td>
+              <td>A335 P91</td>
+              <td class="td-temp">730–760°C (1350–1400°F)</td>
+              <td>1 hr minimum per 25 mm</td>
+              <td class="td-part"><a href="/en/tempilstik/28065-1450f-788c/">#28065</a> (1450°F / 788°C) — mandatory</td>
+            </tr>
+            <tr>
+              <td class="td-part">P8</td>
+              <td>Austenitic stainless</td>
+              <td>A312 TP304, TP316</td>
+              <td class="td-ok">Solution anneal 1040–1120°C</td>
+              <td>Standard stress relief not applicable</td>
+              <td class="td-part" style="color:#999;">Outside standard Tempilstik® range</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="warning-box">
+        <strong>⚠ P91 steel — PWHT is unconditionally mandatory:</strong> PWHT for A335 P91 (730–760°C / 1350–1400°F) is not optional under ASME B31.1 and B31.3 — there are no thickness or size exceptions. Omitting PWHT on P91 welds is a direct cause of creep failure after thousands of operating hours at elevated temperature. See the dedicated article on <a href="/en/blog/p91-steel-welding-temperature/">P91 steel welding temperature control</a>.
+      </div>
+
+      <h2>The Role of Tempilstik® in PWHT Operations</h2>
+
+      <p>A frequently asked question from QA/QC engineers: <em>"We already have thermocouples and a data logger — what does Tempilstik® add to PWHT?"</em> The answer lies in the fundamental difference between the two measurement methods.</p>
+
+      <p>Thermocouples measure temperature at a <strong>fixed contact point</strong> — typically at or near the weld surface as specified in the PWHT WPS. The data logger creates a continuous time-at-temperature record, which is the primary evidence for the QA file.</p>
+
+      <p>However, thermocouples cannot cover every surface area of a complex component — particularly in fittings, thick flanges, nozzle reinforcement pads, and recessed geometries. Tempilstik® fills these gaps:</p>
+
+      <ul>
+        <li><strong>Spot-check at thermocouple-free locations:</strong> Mark the flange face, nozzle base, or fitting corner — if the crayon melts, that location has reached the required temperature.</li>
+        <li><strong>Rapid confirmation before starting the soaking time clock:</strong> Before the inspector begins the soaking time count, a quick Tempilstik® sweep of the points furthest from the heat source confirms that the entire component is uniformly at temperature.</li>
+        <li><strong>Supplementary evidence when thermocouple data is in question:</strong> When the data logger shows anomalous readings or a thermocouple has become detached during heating, a melted Tempilstik® mark on the surface provides physical corroborative evidence for the QA record.</li>
+        <li><strong>Indirect heating rate monitoring:</strong> On large components, observing the sequence in which Tempilstik® marks at different temperature ratings melt reveals whether heat is distributing uniformly through the assembly.</li>
+      </ul>
+
+      <figure class="blog-img-wrap">
+        <img src="/assets/images/tempilstik_cham_kiem_tra_nhiet_do_be_mat_kim_loai.webp" alt="Melted Tempilstik® mark on metal surface during PWHT — physical evidence for QA records" class="blog-img-full" loading="lazy" width="800" height="450">
+        <figcaption class="blog-img-caption">A melted Tempilstik® mark on the component surface is unambiguous physical evidence — photographed and included in the PWHT QA file as supplementary verification alongside the thermocouple record.</figcaption>
+      </figure>
+
+      <p>In the QA file: a photograph of a melted Tempilstik® mark on the component surface, with notation of the part number, location, and time, is accepted by third-party inspectors (TPI) as supplementary evidence to the thermocouple record. Some owner specifications — including Shell DEP — explicitly require spot-check verification using a temperature indicating crayon.</p>
+
+      <h2>Tempilstik® Part Numbers for PWHT Verification</h2>
+
+      <p>The PWHT temperature range (580–760°C) falls within the Tempilstik® product range. The selection principle is: choose the part number whose rated temperature is <strong>at or below the minimum PWHT soaking temperature</strong> — when this crayon melts, you have confirmed the surface has reached the required level.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Part Number</th><th>Temperature (°F / °C)</th><th>PWHT Application</th><th>Corresponding Steel Group</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-part"><a href="/en/tempilstik/28047-600f-316c/">#28047</a></td>
+              <td class="td-temp">600°F / 316°C</td>
+              <td>Verify initial temperature rise — low checkpoint for P1 cycle</td>
+              <td>P1 (carbon steel)</td>
+            </tr>
+            <tr>
+              <td class="td-part"><a href="/en/tempilstik/28057-1022f-550c/">#28057</a></td>
+              <td class="td-temp">1022°F / 550°C</td>
+              <td>Mid-cycle checkpoint for P4 and P5A heating</td>
+              <td>P4 (P11), P5A (P22)</td>
+            </tr>
+            <tr>
+              <td class="td-part"><a href="/en/tempilstik/28061-1200f-649c/">#28061</a></td>
+              <td class="td-temp">1200°F / 649°C</td>
+              <td>Spot-check confirming surface above 649°C before P1 soaking begins</td>
+              <td>P1 (uniform heating verification)</td>
+            </tr>
+            <tr>
+              <td class="td-part"><a href="/en/tempilstik/28065-1450f-788c/">#28065</a></td>
+              <td class="td-temp">1450°F / 788°C</td>
+              <td>Spot-check in P22 and P91 PWHT — confirm surface at ≥ 788°C before soaking</td>
+              <td>P5A (P22), P5B (P91)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Combined usage strategy for P91 PWHT</strong> (target 730–760°C): Apply Tempilstik® <a href="/en/tempilstik/28065-1450f-788c/">#28065</a> (788°C) at the spot-check locations. When this crayon melts at all points, the entire component mass is confirmed above 788°C — sufficient indication for the thermocouple system to continue monitoring the soaking temperature. Note that no Tempilstik® is available in the 730°C range — this is why thermocouple data logging remains the primary instrument; Tempilstik® serves as the supplementary verification tool.</p>
+
+      <hr class="section-divider">
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <p class="faq-q">Is PWHT mandatory for all welds, or only specific cases?</p>
+        <p class="faq-a">PWHT is not required for all welds. The requirement depends on three factors: material P-Number, base metal thickness, and the applicable code. P-No.1 carbon steel below certain thickness thresholds generally does not require PWHT under ASME B31.3. By contrast, P91 (P-No.15E) requires PWHT without any exception for thickness or joint size. Always verify against the applicable standard's PWHT table and the approved WPS.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">How critical are heating rate and cooling rate in PWHT?</p>
+        <p class="faq-a">Both are critical — especially for alloy steels. Excessively rapid heating creates large thermal gradients that can crack thick sections. Excessively rapid cooling after PWHT can re-introduce residual stress or form undesirable microstructural phases. ASME B31.1 specifies a maximum heating rate of approximately 220°C/hour (400°F/hr) divided by the thickness in inches — thicker components must heat more slowly. Thermocouples and data loggers are mandatory to monitor and document both parameters.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can PWHT be performed in the field rather than a furnace?</p>
+        <p class="faq-a">Yes — field PWHT is common practice in plant maintenance and pipeline installation. The most frequent methods are electric resistance heating (resistance heating elements wrapped around the weld zone) and induction heating. The requirements are identical: thermocouples, data logger, controlled heating and cooling rates, and documented soaking time. Tempilstik® is particularly practical for field PWHT because it requires no power supply and can be applied to any accessible surface area.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">What documentation is required to close a PWHT QA record?</p>
+        <p class="faq-a">A complete PWHT record typically includes: (1) chart recorder or data logger output showing temperature versus time with inspector signature; (2) thermocouple count and positions per the WPS; (3) confirmation that soaking time met the minimum requirement; (4) heating and cooling rates within specified limits; (5) field photographs with weld identification numbers. Tempilstik® spot-check photographs provide useful supplementary documentation but do not replace the thermocouple time-at-temperature record.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Can Tempilstik® verify the actual soaking temperature at 600°C in PWHT?</p>
+        <p class="faq-a">Tempilstik® has product ratings extending to approximately 650°C (1200°F) in standard range. In practical PWHT operations at 580–760°C, Tempilstik® is used as a mid-cycle spot-check — confirming the component has passed through intermediate temperature thresholds during the heating phase. For precise confirmation that soaking temperature of 600–760°C is being maintained, thermocouples are the mandatory primary instrument and cannot be substituted.</p>
+      </div>
+
+      <div class="cta-block">
+        <p>Need Tempilstik® for a PWHT project or welding temperature control application? tempil.vn is the authorized Tempil® distributor in Vietnam — C/O, C/Q, and VAT invoice available. Sold by box of 10 or individually.</p>
+        <a href="/en/quote/" class="btn-primary-red">Request a Quote</a>
+        <a href="tel:0938888958" class="btn-outline-dark">0938 888 958</a>
+      </div>
+
+    </div><!-- /blog-body -->
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__col footer__about">
+          <a href="/en/" class="d-block mb-3">
+            <img src="/assets/images/logo.png" alt="Tempil Vietnam" width="160" height="40">
+          </a>
+          <p class="footer__desc">Fast Group Engineering is the authorized Tempil® distributor in Vietnam — Tempilstik®, Tempilaq®, Tempilabel® and the complete Tempil temperature measurement product range.</p>
+          <ul class="footer__contact" style="list-style:none;padding:0;margin:0">
+            <li>▶ Office 1: 150/41 Nguyen Cu Trinh St., Cau Ong Lanh Ward, Ho Chi Minh City</li>
+            <li>▶ Office 2: 41 Le Van Loc St., Vung Tau City</li>
+            <li>▶ Tel: <a href="tel:+84938888958">0938 888 958</a> | Email: <a href="mailto:sales@tempil.vn">sales@tempil.vn</a></li>
+            <li>▶ Order online: <a href="https://tempil.vn" target="_blank">tempil.vn</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Tempil Products</h4>
+          <ul>
+            <li><a href="/en/tempilstik/">Tempilstik®</a></li>
+            <li><a href="/en/tempilaq/">Tempilaq® Advanced</a></li>
+            <li><a href="/en/tempilabel/">Tempilabel®</a></li>
+            <li><a href="/en/thermomelt/">Thermomelt®</a></li>
+            <li><a href="/en/#san-pham">View all products →</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Technical Blog</h4>
+          <ul>
+            <li><a href="/en/blog/pwht-post-weld-heat-treatment/">PWHT Post Weld Heat Treatment</a></li>
+            <li><a href="/en/blog/p91-steel-welding-temperature/">P91 Steel Welding Temperature</a></li>
+            <li><a href="/en/blog/stress-relieving-190-210c/">Stress Relieving at 190–210°C</a></li>
+            <li><a href="/en/blog/">View all articles →</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="https://tempil.vn" target="_blank">🛒 tempil.vn (Order online)</a></li>
+            <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+            <li><a href="/en/contact/">Contact &amp; Quote</a></li>
+            <li><a href="/en/blog/">Technical Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Fast Group Co., Ltd. (Fast Group Engineering) | Tax ID: 0315555189 | Est. 08/03/2019</p>
+      </div>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    if(hamburger){
+      hamburger.addEventListener('click', () => {
+        const open = sidebar.classList.toggle('sidebar--open');
+        hamburger.setAttribute('aria-expanded', open);
+        overlay.style.display = open ? 'block' : 'none';
+      });
+      overlay.addEventListener('click', () => {
+        sidebar.classList.remove('sidebar--open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        overlay.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+</html>

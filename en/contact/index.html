@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <meta name="theme-color" content="#cc0000">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | Tempil® Authorized Export Partner | Fast Group — Vietnam</title>
+  <meta name="description" content="Contact Fast Group Engineering — authorized Tempil® distributor in Vietnam. Export worldwide: Tempilstik, Tempilaq, Thermomelt. Email: sales@tempil.vn | WhatsApp: +84 938 888 958.">
+
+  <link rel="canonical" href="https://tempil.vn/en/contact/">
+  <link rel="alternate" hreflang="vi" href="https://tempil.vn/contact/">
+  <link rel="alternate" hreflang="en" href="https://tempil.vn/en/contact/">
+  <link rel="alternate" hreflang="x-default" href="https://tempil.vn/en/contact/">
+
+  <meta property="og:title" content="Contact Tempil® Vietnam — Export Partner">
+  <meta property="og:description" content="Fast Group Engineering — authorized Tempil® distributor, export worldwide. Email: sales@tempil.vn">
+  <meta property="og:url" content="https://tempil.vn/en/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <style>
+    /* ── Trust bar ── */
+    .trust-bar{background:#1a0a0a;padding:0.75rem 2rem;display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;border-bottom:1px solid rgba(200,16,46,0.3);}
+    .trust-item{display:flex;align-items:center;gap:0.5rem;color:#F4F1DE;font-size:0.82rem;font-weight:600;font-family:var(--font-body);}
+    .trust-item .dot{width:6px;height:6px;background:#c8102e;border-radius:50%;flex-shrink:0;}
+
+    /* ── Hero ── */
+    .contact-hero{
+      background:#0e0606;
+      padding:clamp(3rem,6vw,5rem) clamp(2rem,5vw,4rem) clamp(2.5rem,5vw,4rem);
+      position:relative;overflow:hidden;
+    }
+    .contact-hero::before{
+      content:'';position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(200,16,46,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(200,16,46,0.07) 0%, transparent 60%);
+      pointer-events:none;
+    }
+    /* grid texture */
+    .contact-hero::after{
+      content:'';position:absolute;inset:0;
+      background-image:
+        linear-gradient(rgba(200,16,46,0.06) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(200,16,46,0.06) 1px,transparent 1px);
+      background-size:48px 48px;
+      pointer-events:none;opacity:0.5;
+    }
+    .hero-inner{position:relative;z-index:1;}
+    .hero-eyebrow{
+      display:inline-flex;align-items:center;gap:0.5rem;
+      font-family:var(--font-body);font-size:0.72rem;font-weight:700;letter-spacing:0.12em;
+      text-transform:uppercase;color:#c8102e;margin-bottom:1.25rem;
+    }
+    .hero-eyebrow::before,.hero-eyebrow::after{content:'';width:20px;height:1px;background:#c8102e;opacity:0.6;}
+    .contact-hero h1{
+      font-family:var(--font-heading);
+      font-size:clamp(2rem,5vw,3.2rem);
+      color:#F4F1DE;line-height:1.15;margin-bottom:1rem;
+    }
+    .contact-hero h1 em{color:#c8102e;font-style:normal;}
+    .hero-sub{
+      color:rgba(244,241,222,0.6);font-size:0.92rem;
+      max-width:520px;line-height:1.7;margin-bottom:0;
+    }
+    .hero-badge{
+      display:inline-flex;align-items:center;gap:0.4rem;
+      background:rgba(200,16,46,0.15);border:1px solid rgba(200,16,46,0.35);
+      border-radius:4px;padding:0.3rem 0.75rem;
+      font-size:0.72rem;font-weight:700;color:#F4F1DE;
+      font-family:var(--font-body);letter-spacing:0.06em;text-transform:uppercase;
+      margin-bottom:1.5rem;
+    }
+
+    /* ── Section layout ── */
+    .contact-body{padding:clamp(2.5rem,5vw,4rem) clamp(2rem,5vw,4rem);}
+
+    /* ── Channel cards ── */
+    .channel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-bottom:3rem;}
+    .channel-card{
+      background:#fff;border:1px solid #ececec;border-radius:16px;
+      padding:1.75rem 1.5rem;
+      display:flex;flex-direction:column;align-items:flex-start;
+      transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s;
+      text-decoration:none;color:inherit;
+    }
+    .channel-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(200,16,46,0.09);border-color:rgba(200,16,46,0.25);color:inherit;text-decoration:none;}
+    .channel-icon{
+      width:46px;height:46px;border-radius:12px;
+      background:rgba(200,16,46,0.08);border:1.5px solid rgba(200,16,46,0.18);
+      display:flex;align-items:center;justify-content:center;
+      margin-bottom:1.1rem;flex-shrink:0;
+    }
+    .channel-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#999;margin-bottom:0.25rem;font-family:var(--font-body);}
+    .channel-value{font-size:1rem;font-weight:700;color:#1a0a0a;margin-bottom:0.35rem;font-family:var(--font-body);}
+    .channel-note{font-size:0.78rem;color:#888;line-height:1.4;}
+    .channel-card--primary{border-color:rgba(200,16,46,0.3);background:linear-gradient(135deg,#fff 70%,rgba(200,16,46,0.03));}
+
+    /* ── Export CTA strip ── */
+    .export-strip{
+      background:linear-gradient(135deg,#1a0a0a 0%,#2d1010 100%);
+      border-radius:16px;padding:2rem 2.25rem;
+      display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem;
+      margin-bottom:3rem;position:relative;overflow:hidden;
+    }
+    .export-strip::before{
+      content:'';position:absolute;right:-60px;top:-60px;
+      width:220px;height:220px;border-radius:50%;
+      background:rgba(200,16,46,0.1);
+    }
+    .export-strip-text{flex:1;min-width:200px;position:relative;z-index:1;}
+    .export-strip-text h3{font-family:var(--font-heading);color:#F4F1DE;font-size:1.15rem;margin-bottom:0.35rem;}
+    .export-strip-text p{color:rgba(244,241,222,0.6);font-size:0.83rem;margin:0;}
+    .export-strip-actions{display:flex;gap:0.75rem;flex-wrap:wrap;position:relative;z-index:1;}
+    .btn-export-primary{
+      background:#c8102e;color:#fff;border:none;
+      padding:0.65rem 1.4rem;border-radius:8px;
+      font-family:var(--font-body);font-weight:700;font-size:0.85rem;
+      text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;
+      transition:background 0.2s,transform 0.15s;
+    }
+    .btn-export-primary:hover{background:#a50d25;color:#fff;text-decoration:none;transform:translateY(-1px);}
+    .btn-export-secondary{
+      background:transparent;color:#F4F1DE;
+      border:1.5px solid rgba(244,241,222,0.25);
+      padding:0.65rem 1.4rem;border-radius:8px;
+      font-family:var(--font-body);font-weight:600;font-size:0.85rem;
+      text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;
+      transition:border-color 0.2s,background 0.2s;
+    }
+    .btn-export-secondary:hover{border-color:rgba(244,241,222,0.5);background:rgba(244,241,222,0.06);color:#F4F1DE;text-decoration:none;}
+
+    /* ── Office cards ── */
+    .section-label{
+      font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+      color:#c8102e;margin-bottom:0.5rem;font-family:var(--font-body);
+    }
+    .section-title{font-family:var(--font-heading);font-size:1.35rem;color:#1a0a0a;margin-bottom:1.5rem;}
+
+    .office-card{
+      background:#fff;border:1px solid #ececec;border-radius:16px;
+      padding:1.75rem;height:100%;
+      transition:box-shadow 0.2s;
+    }
+    .office-card:hover{box-shadow:0 6px 24px rgba(0,0,0,0.06);}
+    .office-tag{
+      display:inline-block;
+      background:#f5f5f5;border-radius:4px;padding:0.2rem 0.55rem;
+      font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+      color:#888;margin-bottom:1rem;font-family:var(--font-body);
+    }
+    .office-card h3{font-family:var(--font-heading);font-size:1.05rem;color:#1a0a0a;margin-bottom:1rem;}
+    .office-detail{display:flex;gap:0.6rem;margin-bottom:0.6rem;align-items:flex-start;}
+    .office-detail .od-icon{width:16px;height:16px;flex-shrink:0;margin-top:2px;opacity:0.45;}
+    .office-detail p{font-size:0.84rem;color:#555;margin:0;line-height:1.55;}
+    .office-detail strong{color:#3D405B;}
+    .office-map-link{
+      display:inline-flex;align-items:center;gap:0.35rem;
+      margin-top:1.25rem;color:#c8102e;font-weight:700;font-size:0.82rem;
+      text-decoration:none;border-bottom:1.5px solid rgba(200,16,46,0.2);padding-bottom:1px;
+      transition:border-color 0.2s;
+    }
+    .office-map-link:hover{border-color:#c8102e;color:#c8102e;text-decoration:none;}
+
+    /* ── Export docs table ── */
+    .docs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:3rem;}
+    .doc-item{
+      background:#f8f8f8;border-radius:10px;padding:1rem 1.1rem;
+      display:flex;align-items:center;gap:0.75rem;
+    }
+    .doc-item .di-icon{
+      width:34px;height:34px;border-radius:8px;
+      background:rgba(200,16,46,0.1);display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;
+    }
+    .doc-item p{margin:0;font-size:0.82rem;font-weight:600;color:#3D405B;line-height:1.3;}
+    .doc-item span{font-size:0.72rem;color:#888;font-weight:400;}
+
+    /* ── Company strip ── */
+    .company-strip{
+      background:#f0f0f0;border-radius:12px;padding:1.25rem 1.75rem;
+      font-size:0.83rem;color:#666;
+      display:flex;flex-wrap:wrap;gap:1rem;align-items:center;
+    }
+    .company-strip strong{color:#1a0a0a;}
+    .company-strip .cs-sep{color:#ccc;}
+
+    /* ── Float CTA ── */
+    .float-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:#1a0a0a;padding:0.75rem 1rem;gap:0.5rem;border-top:2px solid #c8102e;}
+    .float-cta a{flex:1;text-align:center;padding:0.65rem;border-radius:6px;font-size:0.82rem;font-weight:700;text-decoration:none;font-family:var(--font-body);}
+    @media(max-width:1024px){.float-cta{display:flex;}}
+
+    /* ── Breadcrumb ── */
+    .breadcrumb-nav{font-size:0.75rem;color:rgba(244,241,222,0.4);margin-bottom:1.5rem;}
+    .breadcrumb-nav a{color:rgba(244,241,222,0.4);text-decoration:none;}
+    .breadcrumb-nav a:hover{color:rgba(244,241,222,0.7);}
+    .breadcrumb-nav span{color:rgba(244,241,222,0.25);margin:0 0.4rem;}
+
+    /* ── Animations ── */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+    .anim-1{animation:fadeUp 0.55s 0.05s both ease-out;}
+    .anim-2{animation:fadeUp 0.55s 0.15s both ease-out;}
+    .anim-3{animation:fadeUp 0.55s 0.25s both ease-out;}
+    .anim-4{animation:fadeUp 0.55s 0.35s both ease-out;}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact — Fast Group Engineering / Tempil Vietnam",
+    "url": "https://tempil.vn/en/contact/",
+    "inLanguage": "en",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Fast Group Engineering",
+      "legalName": "Công ty TNHH Fast Group",
+      "taxID": "0315555189",
+      "telephone": "+84938888958",
+      "email": "sales@tempil.vn",
+      "url": "https://tempil.vn",
+      "logo": "https://tempil.vn/assets/images/logo.png",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "150 Nguyen Cu Trinh, Cau Ong Lanh Ward, District 1",
+          "addressLocality": "Ho Chi Minh City",
+          "addressCountry": "VN"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "51 Le Van Loc, Vung Tau Ward",
+          "addressLocality": "Ba Ria – Vung Tau",
+          "addressCountry": "VN"
+        }
+      ],
+      "openingHours": "Mo-Fr 08:00-17:30",
+      "areaServed": "Worldwide"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<button class="hamburger" id="hamburger" aria-label="Menu">
+  <div class="hamburger__lines"><span></span><span></span><span></span></div>
+</button>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar__brand">
+    <a href="/en/"><img src="/assets/logo.png" alt="Tempil Vietnam" class="logo" style="height:40px;width:auto;"></a>
+    <p class="sidebar__tagline" style="margin-top:0.5rem">Authorized distributor</p>
+    <p class="sidebar__tagline" style="color:#c8102e;font-weight:700">Made in USA</p>
+  </div>
+  <nav class="sidebar__nav">
+    <ul>
+      <li><a href="/en/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Home</a></li>
+      <li><a href="/en/tempilstik/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></span> Tempilstik®</a></li>
+      <li><a href="/en/tempilaq/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></span> Tempilaq® Advanced</a></li>
+      <li><a href="/en/thermomelt/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/><circle cx="12" cy="19" r="2"/></svg></span> Thermomelt®</a></li>
+      <li><a href="/en/tempilabel/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> Tempilabel®</a></li>
+      <li><a href="/en/quote/" style="background:rgba(200,16,46,0.15);border-left:3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Get a Quote</a></li>
+      <li><a href="/en/contact/" class="active"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> Contact</a></li>
+      <li><a href="/en/blog/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> Technical Blog</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar__footer">
+    <div class="sidebar__hours">
+      <strong>WhatsApp / Email</strong><br>
+      <a href="https://wa.me/84938888958" target="_blank" style="color:#c8102e;font-weight:700;font-size:0.85rem;">+84 938 888 958</a>
+    </div>
+  </div>
+
+  <script id="en-map" type="application/json">{"/": "/en/", "/tempilstik/": "/en/tempilstik/", "/tempilaq/": "/en/tempilaq/", "/tempilabel/": "/en/tempilabel/", "/thermomelt/": "/en/thermomelt/", "/contact.html": "/en/contact/", "/bao-gia/": "/en/quote/"}</script>
+  <div class="lang-switcher" style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(244,241,222,0.15);text-align:center;">
+    <a id="lang-vi" href="/contact.html" style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;color:rgba(244,241,222,0.9);text-decoration:none;">VI</a>
+    <span style="color:rgba(244,241,222,0.3);margin:0 4px;">|</span>
+    <span style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;background:#c8102e;color:#fff;" aria-current="true">EN</span>
+  </div>
+</aside>
+
+<main class="main">
+
+  <!-- Trust bar -->
+  <div class="trust-bar">
+    <div class="trust-item"><div class="dot"></div> Authorized Tempil® Distributor</div>
+    <div class="trust-item"><div class="dot"></div> C/O + Mill Certificate</div>
+    <div class="trust-item"><div class="dot"></div> In stock — ships worldwide</div>
+    <div class="trust-item"><div class="dot"></div> Same-day response</div>
+  </div>
+
+  <!-- Hero -->
+  <div class="contact-hero">
+    <div class="hero-inner">
+      <div class="breadcrumb-nav anim-1">
+        <a href="/en/">Home</a><span>&rsaquo;</span> Contact
+      </div>
+      <div class="hero-eyebrow anim-1">Export Enquiries Welcome</div>
+      <div class="hero-badge anim-2">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Mon – Fri &nbsp;·&nbsp; 08:00 – 17:30 ICT (UTC+7)
+      </div>
+      <h1 class="anim-2">Get in touch with<br><em>Tempil® Vietnam</em></h1>
+      <p class="hero-sub anim-3">Fast Group Engineering is the authorized Tempil® distributor in Vietnam — exporting Tempilstik®, Tempilaq®, Thermomelt® and the full Tempil range worldwide. We respond the same business day.</p>
+    </div>
+  </div>
+
+  <div class="contact-body">
+
+    <!-- Channel cards -->
+    <div class="channel-grid anim-4">
+
+      <a href="mailto:sales@tempil.vn" class="channel-card channel-card--primary">
+        <div class="channel-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="channel-label">Email — preferred</div>
+        <div class="channel-value">sales@tempil.vn</div>
+        <div class="channel-note">Best for quotes, TDS requests,<br>C/O &amp; export documentation</div>
+      </a>
+
+      <a href="https://wa.me/84938888958" target="_blank" class="channel-card">
+        <div class="channel-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <div class="channel-label">WhatsApp</div>
+        <div class="channel-value">+84 938 888 958</div>
+        <div class="channel-note">Quick questions, product<br>availability, urgent orders</div>
+      </a>
+
+      <a href="tel:+84938888958" class="channel-card">
+        <div class="channel-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="channel-label">Phone</div>
+        <div class="channel-value">+84 938 888 958</div>
+        <div class="channel-note">Mon – Fri<br>08:00 – 17:30 ICT</div>
+      </a>
+
+      <a href="/en/quote/" class="channel-card">
+        <div class="channel-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="channel-label">Quote Request</div>
+        <div class="channel-value">Online Form</div>
+        <div class="channel-note">Enter part numbers &amp; qty —<br>same-business-day response</div>
+      </a>
+
+    </div>
+
+    <!-- Export CTA strip -->
+    <div class="export-strip">
+      <div class="export-strip-text">
+        <h3>Ready to place an export order?</h3>
+        <p>Send part numbers and quantities — we'll reply with pricing, lead time, and full export documentation the same business day.</p>
+      </div>
+      <div class="export-strip-actions">
+        <a href="mailto:sales@tempil.vn?subject=Export%20enquiry%20—%20Tempil%20products&body=Hi%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20the%20following%20Tempil%20products%3A%0A%0APart%20number%3A%0AQuantity%3A%0AShipping%20destination%3A%0A%0APlease%20include%20pricing%2C%20lead%20time%2C%20and%20available%20export%20documentation.%0A%0AThank%20you" class="btn-export-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email us now
+        </a>
+        <a href="https://wa.me/84938888958?text=Hi%2C%20I%27d%20like%20to%20request%20a%20quote%20for%20Tempil%20products.%20Part%20numbers%3A" target="_blank" class="btn-export-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Export docs -->
+    <div class="section-label">What we provide with every export order</div>
+    <div class="docs-grid">
+      <div class="doc-item">
+        <div class="di-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+        </div>
+        <p>Certificate of Origin<br><span>USA — Form E / standard</span></p>
+      </div>
+      <div class="doc-item">
+        <div class="di-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <p>Mill Certificate (C/Q)<br><span>Lot-traceable quality cert</span></p>
+      </div>
+      <div class="doc-item">
+        <div class="di-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <p>Technical Data Sheet<br><span>Full Tempil® TDS</span></p>
+      </div>
+      <div class="doc-item">
+        <div class="di-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+        </div>
+        <p>NIST Traceable Cert<br><span>Thermomelt® Certified series</span></p>
+      </div>
+      <div class="doc-item">
+        <div class="di-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <p>Commercial Invoice<br><span>For customs clearance</span></p>
+      </div>
+      <div class="doc-item">
+        <div class="di-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        </div>
+        <p>Packing List<br><span>Lot &amp; batch details</span></p>
+      </div>
+    </div>
+
+    <!-- Offices -->
+    <div class="section-label">Our offices</div>
+    <div class="section-title">Two locations — serving all of Vietnam and export markets</div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-md-6">
+        <div class="office-card">
+          <div class="office-tag">HQ &amp; Main Warehouse</div>
+          <h3>Ho Chi Minh City</h3>
+          <div class="office-detail">
+            <svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p><strong>Office:</strong> 150 Nguyen Cu Trinh St., Cau Ong Lanh Ward, District 1, HCMC</p>
+          </div>
+          <div class="office-detail">
+            <svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+            <p><strong>Warehouse:</strong> 41 Tran Van Giau St., Sao Mai – Ben Dinh Urban Area, HCMC</p>
+          </div>
+          <div class="office-detail">
+            <svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p>Mon – Fri, 08:00 – 17:30 ICT</p>
+          </div>
+          <a href="https://maps.google.com/?q=150+Nguyen+Cu+Trinh,+Ho+Chi+Minh+City" target="_blank" rel="noopener" class="office-map-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            View on Google Maps
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="office-card">
+          <div class="office-tag">O&amp;G &amp; Offshore Hub</div>
+          <h3>Vung Tau</h3>
+          <div class="office-detail">
+            <svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p><strong>Office:</strong> 51 Le Van Loc St., Vung Tau Ward, Ba Ria – Vung Tau Province</p>
+          </div>
+          <div class="office-detail">
+            <svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+            <p>Dedicated to oil &amp; gas, shipbuilding and offshore clients in the Vung Tau region</p>
+          </div>
+          <div class="office-detail">
+            <svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p>Mon – Fri, 08:00 – 17:30 ICT</p>
+          </div>
+          <a href="https://maps.google.com/?q=51+Le+Van+Loc,+Vung+Tau" target="_blank" rel="noopener" class="office-map-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            View on Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company strip -->
+    <div class="company-strip">
+      <div><strong>Fast Group Engineering</strong> (Công ty TNHH Fast Group)</div>
+      <div class="cs-sep">·</div>
+      <div>Tax ID: 0315555189</div>
+      <div class="cs-sep">·</div>
+      <div>Est. 08 March 2019</div>
+      <div class="cs-sep">·</div>
+      <div><a href="https://tempil.vn" style="color:#c8102e;font-weight:600;">tempil.vn</a></div>
+    </div>
+
+  </div><!-- /contact-body -->
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__col footer__about">
+        <a href="/en/" class="d-block mb-3">
+          <img src="/assets/images/logo.png" alt="Tempil Vietnam" width="160" height="40">
+        </a>
+        <p class="footer__desc">Fast Group Engineering is the authorized Tempil distributor in Vietnam, exporting Tempilstik®, Tempilaq®, Tempilabel® and the full Tempil temperature-indicator range worldwide.</p>
+        <ul class="footer__contact" style="list-style:none;padding:0;margin:0">
+          <li>▶ Office 1: 150 Nguyen Cu Trinh St., Cau Ong Lanh Ward, HCMC, Vietnam</li>
+          <li>▶ Office 2: 51 Le Van Loc St., Vung Tau Ward, HCMC, Vietnam</li>
+          <li>▶ Warehouse: 41 Tran Van Giau St., Sao Mai – Ben Dinh, HCMC, Vietnam</li>
+          <li>▶ WhatsApp: <a href="https://wa.me/84938888958">+84 938 888 958</a> | Email: <a href="mailto:sales@tempil.vn">sales@tempil.vn</a></li>
+          <li>▶ Website: <a href="https://tempil.vn" target="_blank">tempil.vn</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Tempil Products</h4>
+        <ul>
+          <li><a href="/en/tempilstik/">Tempilstik®</a></li>
+          <li><a href="/en/tempilaq/">Tempilaq® Advanced</a></li>
+          <li><a href="/en/tempilabel/">Tempilabel®</a></li>
+          <li><a href="/en/thermomelt/">Thermomelt®</a></li>
+          <li><a href="/en/#products">View all →</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Technical Blog</h4>
+        <ul>
+          <li><a href="/en/blog/what-is-tempilstik/">What is a Tempilstik?</a></li>
+          <li><a href="/en/blog/asme-b31-3-preheat-process-piping/">ASME B31.3 preheat</a></li>
+          <li><a href="/en/blog/interpass-temperature-welding/">Interpass temperature</a></li>
+          <li><a href="/en/blog/">View all articles →</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://tempil.vn" target="_blank">🛒 tempil.vn (Vietnam store)</a></li>
+          <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+          <li><a href="/en/contact/">Contact &amp; Quote</a></li>
+          <li><a href="/en/blog/">Blog &amp; Knowledge</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Công ty TNHH Fast Group (Fast Group Engineering) | MST: 0315555189 | Est. 08/03/2019</p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Float CTA -->
+<div class="float-cta">
+  <a href="https://wa.me/84938888958" target="_blank" style="background:#25d366;color:#fff;">WhatsApp</a>
+  <a href="mailto:sales@tempil.vn" style="background:#c8102e;color:#fff;">Email</a>
+  <a href="/en/quote/" style="background:#2d2d2d;color:#fff;">Quote</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const hamburger=document.getElementById('hamburger'),sidebar=document.getElementById('sidebar'),overlay=document.getElementById('sidebarOverlay');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('is-active');sidebar.classList.toggle('is-open');overlay.style.display=sidebar.classList.contains('is-open')?'block':'none';setTimeout(()=>overlay.classList.toggle('is-visible',sidebar.classList.contains('is-open')),10);});
+overlay.addEventListener('click',()=>{hamburger.classList.remove('is-active');sidebar.classList.remove('is-open');overlay.classList.remove('is-visible');setTimeout(()=>overlay.style.display='none',300);});
+</script>
+</body>
+</html>

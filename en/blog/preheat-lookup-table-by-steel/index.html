@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <meta name="theme-color" content="#cc0000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preheat Temperature Lookup Table by Steel Type — AWS D1.1, ASME B31.3, API 1104 | tempil.vn</title>
+  <meta name="description" content="Comprehensive preheat temperature lookup table covering AWS D1.1 (structural steel), ASME B31.3 (process piping), and API 1104 (pipeline welding) with Tempilstik® part numbers and maximum interpass temperature reference.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tempil.vn/en/blog/preheat-lookup-table-by-steel/">
+  <meta property="og:title" content="Preheat Temperature Lookup Table by Steel Type — AWS D1.1, ASME B31.3, API 1104">
+  <meta property="og:description" content="Complete preheat lookup tables for structural steel (AWS D1.1), process piping (ASME B31.3), and transmission pipelines (API 1104) with interpass temperature limits and Tempilstik® field verification part numbers.">
+  <meta property="og:image" content="https://tempil.vn/assets/images/tempilstik_que_chi_thi_nhiet_do_han_1.webp">
+  <meta property="og:url" content="https://tempil.vn/en/blog/preheat-lookup-table-by-steel/">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-03-17T08:00:00+07:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="en" href="https://tempil.vn/en/blog/preheat-lookup-table-by-steel/">
+  <link rel="alternate" hreflang="vi" href="https://tempil.vn/blog/preheat-lookup-table-by-steel/">
+  <link rel="alternate" hreflang="x-default" href="https://tempil.vn/en/blog/preheat-lookup-table-by-steel/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://tempil.vn/en/"},{"@type":"ListItem","position":2,"name":"Technical Blog","item":"https://tempil.vn/en/blog/"},{"@type":"ListItem","position":3,"name":"Preheat Lookup Table by Steel Type","item":"https://tempil.vn/en/blog/preheat-lookup-table-by-steel/"}]}
+  </script>
+  <style>
+    .blog-hero{background:linear-gradient(135deg,#1a0a0a 0%,#8b1a1a 100%);padding:60px 0 40px;color:#fff}
+    .blog-hero h1{font-size:clamp(1.4rem,3vw,2.1rem);font-weight:600;line-height:1.35;margin-bottom:12px}
+    .blog-meta{font-size:13px;opacity:.75}
+    .breadcrumb-blog{font-size:13px;padding:10px 0 0;color:rgba(255,255,255,.7)}
+    .breadcrumb-blog a{color:rgba(255,255,255,.85);text-decoration:none}
+    .blog-body{max-width:800px;margin:0 auto;padding:48px 20px}
+    .blog-body h2{font-size:1.35rem;font-weight:600;margin:2.5rem 0 1rem;color:#1a0a0a;border-left:4px solid #c8102e;padding-left:14px}
+    .blog-body h3{font-size:1.1rem;font-weight:600;margin:1.8rem 0 .8rem;color:#c8102e}
+    .blog-body p{font-size:1rem;line-height:1.85;color:#333;margin-bottom:1rem}
+    .blog-body ul,.blog-body ol{padding-left:1.4rem;margin-bottom:1.2rem}
+    .blog-body li{font-size:1rem;line-height:1.85;color:#333;margin-bottom:6px}
+    .blog-body a{color:#c8102e;text-decoration:none;border-bottom:1px solid rgba(200,16,46,.3);transition:border-color .2s}
+    .blog-body a:hover{color:#a50e26;border-color:#c8102e}
+    .blog-img-full{width:100%;border-radius:10px;margin:1.5rem 0;object-fit:cover;max-height:360px;display:block}
+    .blog-img-caption{font-size:13px;color:#888;text-align:center;margin-top:-10px;margin-bottom:1.5rem}
+    .blog-img-wrap{margin:1.8rem 0}
+    .blog-img-wrap figcaption{font-size:13px;color:#888;text-align:center;margin-top:6px}
+    .callout{background:#fff0f0;border-left:4px solid #c8102e;border-radius:0 8px 8px 0;padding:18px 22px;margin:1.8rem 0}
+    .callout p{margin:0;font-size:.95rem}
+    .callout strong{color:#c8102e}
+    .callout--info{background:#f0f4ff;border-left-color:#3a5bd9}
+    .callout--info strong{color:#3a5bd9}
+    .callout--warn{background:#fffbf0;border-left-color:#e0a800}
+    .callout--warn strong{color:#b07800}
+    .warning-box{background:#fffbf0;border:1px solid #f0c040;border-left:4px solid #e0a800;border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1.5rem 0}
+    .warning-box strong{color:#b07800}
+    .table-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+    .table-wrap table{width:100%;border-collapse:collapse;font-size:.88rem}
+    .table-wrap table th{background:#1a0a0a;color:#fff;padding:9px 12px;text-align:left;font-weight:600;white-space:nowrap;font-size:.79rem;letter-spacing:.03em}
+    .table-wrap table td{padding:9px 12px;border-bottom:1px solid #e5e5e5;color:#333;vertical-align:middle}
+    .table-wrap table tr:nth-child(even) td{background:#fff8f8}
+    .table-wrap table tr:hover td{background:#fff0f2}
+    td.td-part{font-family:'Courier New',monospace;color:#c8102e;font-weight:700;font-size:.82rem}
+    td.td-temp{font-weight:700;color:#1a0a0a}
+    td.td-ok{color:#176b3a;font-weight:600}
+    td.td-na{color:#999}
+    .formula-box{background:#f8f9fb;border:1px solid #e5e8f0;border-radius:8px;padding:16px 20px;margin:1.5rem 0;font-family:'Courier New',monospace;font-size:.92rem;color:#1a0a0a;overflow-x:auto}
+    .bilingual-note{background:#f8f9fb;border:1px solid #e5e8f0;border-radius:8px;padding:14px 18px;margin:1.2rem 0;font-size:.88rem}
+    .bilingual-note__en{font-style:italic;color:#555;margin-bottom:4px}
+    .bilingual-note__vi{color:#1a0a0a;font-weight:500}
+    .cta-block{background:#1a0a0a;color:#fff;border-radius:12px;padding:32px 28px;text-align:center;margin:2.5rem 0}
+    .cta-block p{color:rgba(255,255,255,.8);margin:0 0 18px;font-size:.95rem}
+    .btn-primary-red{display:inline-block;background:#c8102e;color:#fff;font-weight:600;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:.95rem;margin:4px;transition:background .2s}
+    .btn-primary-red:hover{background:#8b1a1a;color:#fff}
+    .btn-outline-dark{display:inline-block;background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.5);padding:12px 24px;border-radius:8px;text-decoration:none;font-size:.95rem;margin:4px;transition:border-color .2s}
+    .btn-outline-dark:hover{border-color:#fff;color:#fff}
+    .product-card{display:flex;align-items:center;gap:1rem;background:#f9f8f5;border:1px solid #eee;border-left:3px solid #c8102e;border-radius:0 8px 8px 0;padding:.85rem 1.1rem;margin:.65rem 0;text-decoration:none}
+    .product-card:hover{background:#fff0f2;border-color:#c8102e}
+    .product-card__part{font-family:'Courier New',monospace;font-size:.85rem;font-weight:700;color:#c8102e;white-space:nowrap;min-width:60px}
+    .product-card__info{flex:1}
+    .product-card__name{font-weight:600;color:#1a0a0a;font-size:.9rem}
+    .product-card__desc{font-size:.78rem;color:#575A78}
+    .product-card__arrow{color:#c8102e;font-weight:700;font-size:.85rem}
+    .table-label{font-size:.78rem;color:#888;margin:-.5rem 0 .5rem;font-style:italic}
+  </style>
+</head>
+<body>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="hamburger__lines"><span></span><span></span><span></span></div>
+  </button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="sidebar__brand">
+      <a href="/en/" class="navbar-brand d-flex align-items-center">
+        <img src="/assets/logo.png" alt="Tempil Vietnam" class="logo" style="max-height:40px;width:auto" width="160" height="40">
+      </a>
+      <div class="sidebar__tagline">TEMPIL VIET NAM</div>
+      <div class="sidebar__tagline">Fast Group Engineering</div>
+    </div>
+    <nav class="sidebar__nav">
+      <ul>
+        <li><a href="/en/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Home</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Products</li>
+        <li><a href="/en/tempilstik/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></span> Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></span> Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0c0-6-6-8-6-14z"/></svg></span> Thermomelt®</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Resources</li>
+        <li><a href="/en/blog/" style="background:rgba(200,16,46,0.15);border-left:3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> Technical Blog</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Contact</li>
+        <li><a href="/en/quote/" style="background:rgba(200,16,46,0.15);border-left:3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> Request a Quote</a></li>
+        <li><a href="/en/contact/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switcher" style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(244,241,222,0.15);text-align:center;">
+      <a href="/blog/bang-tra-nhiet-do-preheat-theo-loai-thep/" style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;color:rgba(244,241,222,0.9);text-decoration:none;">VI</a>
+      <span style="color:rgba(244,241,222,0.3);margin:0 4px;">|</span>
+      <span style="display:inline-block;padding:4px 10px;border-radius:4px;font-size:0.8rem;font-weight:700;background:#c8102e;color:#fff;cursor:default;" aria-current="true">EN</span>
+    </div>
+  </aside>
+  <main class="main">
+    <section class="blog-hero">
+      <div class="container">
+        <div class="breadcrumb-blog">
+          <a href="/en/">Home</a> / <a href="/en/blog/">Technical Blog</a> / <span>Preheat Lookup Table by Steel Type</span>
+        </div>
+        <div style="max-width:760px;margin-top:20px">
+          <h1>Preheat Temperature Lookup Table by Steel Type — AWS D1.1, ASME B31.3, API 1104</h1>
+          <p class="blog-meta">Published 17 March 2025 · Fast Group Engineering · 10 min read</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="blog-body">
+
+      <p>This page consolidates minimum preheat temperatures from the three most widely applied international welding standards in Vietnam's industrial sector: <strong>AWS D1.1</strong> (structural steel welding), <strong>ASME B31.3</strong> (process piping), and <strong>API 1104</strong> (oil and gas pipeline welding). Data is presented bilingual English with corresponding <a href="/en/tempilstik/">Tempilstik®</a> part numbers for rapid field look-up at the work site.</p>
+
+      <div class="callout">
+        <strong>How to use this page:</strong> Identify the applicable standard from your WPS &rarr; find the steel category or P-Number &rarr; read the minimum preheat temperature &rarr; select the matching Tempilstik&reg; part number. If your WPS specifies a value that differs from this table, <strong>always use the WPS value</strong> — this table is a technical reference document, not a project specification.
+      </div>
+
+      <figure class="blog-img-wrap">
+        <img src="/assets/images/tempilstik_que_chi_thi_nhiet_do_han_1.webp" alt="Tempilstik® temperature indicating crayons for preheat verification against AWS D1.1, ASME B31.3, and API 1104 requirements" class="blog-img-full" loading="lazy" width="800" height="450">
+        <figcaption class="blog-img-caption">Identify the required preheat from the standard and steel type, then select the matching Tempilstik® part number to verify directly in the field.</figcaption>
+      </figure>
+
+      <h2>Bilingual Technical Glossary</h2>
+
+      <div class="bilingual-note"><div class="bilingual-note__en">Minimum preheat temperature</div><div class="bilingual-note__vi">Nhiệt độ preheat tối thiểu — the floor that must be reached before arc strike</div></div>
+      <div class="bilingual-note"><div class="bilingual-note__en">Nominal thickness / Base metal thickness</div><div class="bilingual-note__vi">Chiều dày danh nghĩa — governs preheat category in AWS D1.1</div></div>
+      <div class="bilingual-note"><div class="bilingual-note__en">Carbon Equivalent (CE)</div><div class="bilingual-note__vi">Chỉ số tương đương carbon — calculated from MTC/MTR values; determines AWS D1.1 steel category</div></div>
+      <div class="bilingual-note"><div class="bilingual-note__en">Heat Affected Zone (HAZ)</div><div class="bilingual-note__vi">Vùng ảnh hưởng nhiệt — the metallurgically altered zone adjacent to the weld fusion line</div></div>
+      <div class="bilingual-note"><div class="bilingual-note__en">Maximum interpass temperature</div><div class="bilingual-note__vi">Nhiệt độ liên hàn tối đa — the ceiling that must not be exceeded between weld passes</div></div>
+      <div class="bilingual-note"><div class="bilingual-note__en">Post Weld Heat Treatment (PWHT)</div><div class="bilingual-note__vi">Xử lý nhiệt sau hàn — separate thermal cycle applied after welding is complete</div></div>
+
+      <h2>Table 1 — AWS D1.1: Structural Steel Welding</h2>
+      <p>Applied to: bridges, industrial buildings, offshore structures, module topsides, jackets.<br>
+      <em>Apply to: structural steel welding — bridges, buildings, offshore structures, jackets.</em></p>
+
+      <p>Carbon Equivalent formula (CE) — AWS D1.1:</p>
+      <div class="formula-box">CE = C + Mn/6 + (Cr+Mo+V)/5 + (Ni+Cu)/15</div>
+      <p>All element values (C, Mn, Cr, Mo, V, Ni, Cu) are taken from the Mill Test Certificate (MTC) / Material Test Report (MTR) supplied with the steel lot. CE values must come from the actual material documentation — not assumed from the grade alone.</p>
+
+      <p class="table-label">AWS D1.1 Table 4.5 (2020 Edition) — Minimum Preheat Temperature</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Steel Category / Category</th>
+              <th>CE</th>
+              <th>Typical Grades / EN equiv.</th>
+              <th>≤20 mm (≤¾″)</th>
+              <th>20–38 mm (¾″–1½″)</th>
+              <th>38–65 mm (1½″–2½″)</th>
+              <th>&gt;65 mm (&gt;2½″)</th>
+              <th>Tempilstik®</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Category I</strong><br><small>CE ≤ 0.40</small></td>
+              <td>≤0.40</td>
+              <td>SS400, A36, SM400<br><small>S235, S275</small></td>
+              <td class="td-ok">Not required*</td>
+              <td class="td-ok">Not required*</td>
+              <td class="td-temp">66°C / 150°F</td>
+              <td class="td-temp">110°C / 230°F</td>
+              <td class="td-part">#28006 / #28312</td>
+            </tr>
+            <tr>
+              <td><strong>Category II</strong><br><small>CE 0.41–0.45</small></td>
+              <td>0.41–0.45</td>
+              <td>SM490, A572 Gr.50<br><small>S355</small></td>
+              <td class="td-ok">Not required*</td>
+              <td class="td-temp">66°C / 150°F</td>
+              <td class="td-temp">110°C / 230°F</td>
+              <td class="td-temp">150°C / 302°F</td>
+              <td class="td-part">#28006 / #28312 / #28318</td>
+            </tr>
+            <tr>
+              <td><strong>Category III</strong><br><small>CE 0.46–0.60</small></td>
+              <td>0.46–0.60</td>
+              <td>SM520, A572 Gr.65<br><small>S420, S460</small></td>
+              <td class="td-temp">66°C / 150°F</td>
+              <td class="td-temp">110°C / 230°F</td>
+              <td class="td-temp">150°C / 302°F</td>
+              <td class="td-temp">200°C / 392°F</td>
+              <td class="td-part">#28006 / #28312 / #28318 / #28327</td>
+            </tr>
+            <tr>
+              <td><strong>Category IV</strong><br><small>CE &gt;0.60</small></td>
+              <td>&gt;0.60</td>
+              <td>HY-80, A514<br><small>High-strength alloy</small></td>
+              <td class="td-temp">110°C / 230°F</td>
+              <td class="td-temp">150°C / 302°F</td>
+              <td class="td-temp">200°C / 392°F</td>
+              <td class="td-temp">230°C / 446°F</td>
+              <td class="td-part">#28312 / #28318 / #28327 / #28332</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.83rem;color:#666;">* Not required per standard — preheat to minimum 10°C (50°F) recommended when ambient is below 5°C or surface carries moisture.<br>
+      <em>* Not required per standard — but AWS recommends preheat to 10°C minimum when ambient temperature is below 5°C or surface has moisture.</em></p>
+
+      <div class="callout--warn callout">
+        <strong>Important — AWS D1.1:</strong> The values above are minimums only. For high-restraint joints (fillet welds into thick flanges, corner joints in heavy plate), the WPS typically specifies 20–30°C above the table minimum. Always check the WPS first and use this table for cross-reference only.
+      </div>
+
+      <h2>Table 2 — ASME B31.3: Process Piping</h2>
+      <p>Applied to: process piping in refineries, chemical plants, power generation, and industrial gas facilities. Classified by P-Number — not by Carbon Equivalent.</p>
+
+      <p><strong>What is a P-Number?</strong> ASME assigns a P-Number to weld base materials based on chemical composition and mechanical properties. The P-Number for a specific pipe is found in the approved WPS or on the Mill Certificate supplied with the pipe.</p>
+
+      <p class="table-label">ASME B31.3 Table 330.1.1 — Minimum Preheat by P-Number and Wall Thickness</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>P-Number</th>
+              <th>Material Group</th>
+              <th>Common ASTM Grades</th>
+              <th>Thickness &lt;25 mm (&lt;1″)</th>
+              <th>Thickness ≥25 mm (≥1″)</th>
+              <th>Tempilstik®</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-part">P-No.1 Gr.1,2,3</td>
+              <td>Carbon steel</td>
+              <td>A53 Gr.B, A106 Gr.B, A333 Gr.6</td>
+              <td class="td-temp">10°C / 50°F</td>
+              <td class="td-temp">79°C / 175°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+            </tr>
+            <tr>
+              <td class="td-part">P-No.1 Gr.4,5</td>
+              <td>High-carbon steel</td>
+              <td>A106 Gr.C</td>
+              <td class="td-temp">79°C / 175°F</td>
+              <td class="td-temp">79°C / 175°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+            </tr>
+            <tr>
+              <td class="td-part">P-No.3</td>
+              <td>Low-alloy steel</td>
+              <td>A335 P1, A335 P2, A161 T1</td>
+              <td class="td-temp">79°C / 175°F</td>
+              <td class="td-temp">79°C / 175°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+            </tr>
+            <tr>
+              <td class="td-part">P-No.4</td>
+              <td>1¼Cr–½Mo steel</td>
+              <td>A335 P11, A335 P12, A161 T11</td>
+              <td class="td-temp">150°C / 302°F</td>
+              <td class="td-temp">150°C / 302°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28318-302f-150c/">#28318</a></td>
+            </tr>
+            <tr>
+              <td class="td-part">P-No.5A</td>
+              <td>2¼Cr–1Mo steel</td>
+              <td>A335 P22, A213 T22</td>
+              <td class="td-temp">200°C / 392°F</td>
+              <td class="td-temp">200°C / 392°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td>
+            </tr>
+            <tr>
+              <td class="td-part">P-No.5B Gr.1</td>
+              <td>5Cr–½Mo steel</td>
+              <td>A335 P5, A213 T5</td>
+              <td class="td-temp">200°C / 392°F</td>
+              <td class="td-temp">200°C / 392°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td>
+            </tr>
+            <tr>
+              <td class="td-part">P-No.15E</td>
+              <td>9Cr–1Mo-V (P91)</td>
+              <td>A335 P91, A213 T91</td>
+              <td class="td-temp">200°C / 392°F</td>
+              <td class="td-temp">200°C / 392°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td>
+            </tr>
+            <tr>
+              <td class="td-part">P-No.8</td>
+              <td>Austenitic stainless</td>
+              <td>A312 TP304, TP316, A358 TP304L</td>
+              <td class="td-ok">Not required</td>
+              <td class="td-ok">Not required</td>
+              <td class="td-na">—</td>
+            </tr>
+            <tr>
+              <td class="td-part">P-No.10H</td>
+              <td>Duplex stainless</td>
+              <td>A790 UNS S31803, A928 UNS S32750</td>
+              <td class="td-ok">Not required*</td>
+              <td class="td-ok">Not required*</td>
+              <td class="td-na">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.83rem;color:#666;">* Duplex stainless: preheat generally not required — but <strong>maximum interpass temperature ≤ 150°C (302°F)</strong> is mandatory to maintain austenite/ferrite phase balance. Use <a href="/en/tempilstik/28318-302f-150c/" style="color:#c8102e">#28318</a> to verify interpass ceiling is not exceeded.</p>
+
+      <h2>Table 3 — API 1104: Oil &amp; Gas Transmission Pipeline Welding</h2>
+      <p>Applied to: transmission pipelines carrying oil, natural gas, and condensate. Classified by API 5L pipe grade.</p>
+
+      <p class="table-label">API 1104 Section 5.3 — Minimum Preheat by Pipe Grade and Wall Thickness</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Pipe Grade (API 5L)</th>
+              <th>Yield Strength</th>
+              <th>CE (IIW formula)</th>
+              <th>Wall ≤25.4 mm (≤1″)</th>
+              <th>Wall &gt;25.4 mm (&gt;1″)</th>
+              <th>Tempilstik®</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>API 5L Gr.B</strong></td>
+              <td>241 MPa (35 ksi)</td>
+              <td>CE ≤ 0.43</td>
+              <td class="td-ok">Not required*</td>
+              <td class="td-temp">50°C / 122°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28002-109f-43c/">#28002</a></td>
+            </tr>
+            <tr>
+              <td><strong>API 5L X42</strong></td>
+              <td>290 MPa (42 ksi)</td>
+              <td>CE ≤ 0.43</td>
+              <td class="td-ok">Not required*</td>
+              <td class="td-temp">50°C / 122°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28002-109f-43c/">#28002</a></td>
+            </tr>
+            <tr>
+              <td><strong>API 5L X52</strong></td>
+              <td>359 MPa (52 ksi)</td>
+              <td>CE 0.40–0.43</td>
+              <td class="td-temp">50°C / 122°F</td>
+              <td class="td-temp">80°C / 176°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28002-109f-43c/">#28002</a> / <a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+            </tr>
+            <tr>
+              <td><strong>API 5L X60</strong></td>
+              <td>414 MPa (60 ksi)</td>
+              <td>CE 0.42–0.46</td>
+              <td class="td-temp">80°C / 176°F</td>
+              <td class="td-temp">100°C / 212°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a> / <a href="/en/tempilstik/28016-225f-107c/">#28016</a></td>
+            </tr>
+            <tr>
+              <td><strong>API 5L X65</strong></td>
+              <td>448 MPa (65 ksi)</td>
+              <td>CE 0.43–0.47</td>
+              <td class="td-temp">100°C / 212°F</td>
+              <td class="td-temp">120°C / 248°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28016-225f-107c/">#28016</a> / <a href="/en/tempilstik/28019-250f-121c/">#28019</a></td>
+            </tr>
+            <tr>
+              <td><strong>API 5L X70</strong></td>
+              <td>483 MPa (70 ksi)</td>
+              <td>CE 0.43–0.47</td>
+              <td class="td-temp">100°C / 212°F</td>
+              <td class="td-temp">120°C / 248°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28016-225f-107c/">#28016</a> / <a href="/en/tempilstik/28019-250f-121c/">#28019</a></td>
+            </tr>
+            <tr>
+              <td><strong>API 5L X80</strong></td>
+              <td>552 MPa (80 ksi)</td>
+              <td>CE 0.46–0.50</td>
+              <td class="td-temp">120°C / 248°F</td>
+              <td class="td-temp">150°C / 302°F</td>
+              <td class="td-part"><a href="/en/tempilstik/28019-250f-121c/">#28019</a> / <a href="/en/tempilstik/28318-302f-150c/">#28318</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.83rem;color:#666;">* API 1104 does not require preheat but recommends 50°C minimum when ambient is below 0°C or the surface is wet or carries moisture.</p>
+
+      <div class="warning-box">
+        <strong>&#9888; Note for Vietnam offshore and field conditions:</strong> For oil and gas pipeline welding in Vietnam, WPS preheat temperatures are typically 20–30°C above the API 1104 table minimums to account for high humidity, sea wind, wet pipe surfaces, and offshore site exposure. Always apply the WPS project value — do not use the table minimum directly in offshore applications.
+      </div>
+
+      <h2>Table 4 — Maximum Interpass Temperature Reference</h2>
+      <p>Controlling interpass temperature is equally important as preheat. Exceeding the maximum interpass limit promotes excessive grain growth in the HAZ and reduces impact toughness — especially critical for alloy steels and stainless grades.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>Max. Interpass Temperature</th>
+              <th>Standard</th>
+              <th>Notes</th>
+              <th>Tempilstik® for Ceiling Check</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Carbon steel</td>
+              <td class="td-temp">≤250–300°C (≤482–572°F)</td>
+              <td>AWS D1.1</td>
+              <td>Check WPS — typically 250°C for structural steel</td>
+              <td class="td-part"><a href="/en/tempilstik/28039-450f-232c/">#28039</a> or <a href="/en/tempilstik/28053-900f-482c/">#28053</a></td>
+            </tr>
+            <tr>
+              <td>P11 (1¼Cr–½Mo)</td>
+              <td class="td-temp">≤300°C (≤572°F)</td>
+              <td>ASME B31.3</td>
+              <td>Strictly controlled — affects HAZ toughness</td>
+              <td class="td-part"><a href="/en/tempilstik/28053-900f-482c/">#28053</a></td>
+            </tr>
+            <tr>
+              <td>P22 (2¼Cr–1Mo)</td>
+              <td class="td-temp">≤300°C (≤572°F)</td>
+              <td>ASME B31.3</td>
+              <td>Combined with mandatory PWHT after welding</td>
+              <td class="td-part"><a href="/en/tempilstik/28053-900f-482c/">#28053</a></td>
+            </tr>
+            <tr>
+              <td>P91 (9Cr–1Mo-V)</td>
+              <td class="td-temp">≤300°C (≤572°F)</td>
+              <td>ASME B31.3 / EN 1011-2</td>
+              <td>Mandatory strict control — exceeding degrades carbide structure and long-term creep strength</td>
+              <td class="td-part"><a href="/en/tempilstik/28053-900f-482c/">#28053</a></td>
+            </tr>
+            <tr>
+              <td>Duplex stainless 2205</td>
+              <td class="td-temp">≤150°C (≤302°F)</td>
+              <td>API / NORSOK</td>
+              <td>Maintain austenite/ferrite balance — overheating causes sigma phase embrittlement</td>
+              <td class="td-part"><a href="/en/tempilstik/28318-302f-150c/">#28318</a></td>
+            </tr>
+            <tr>
+              <td>Austenitic stainless 304/316</td>
+              <td class="td-temp">≤175°C (≤347°F)</td>
+              <td>ASME</td>
+              <td>Reduces sensitization risk (carbide precipitation at HAZ)</td>
+              <td class="td-part"><a href="/en/tempilstik/28025-294f-146c/">#28025</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Quick °C / °F Conversion &amp; Tempilstik® Part Number Reference</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>°C</th><th>°F</th><th>Part Number</th><th>°C</th><th>°F</th><th>Part Number</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="td-temp">38°C</td><td>100°F</td><td class="td-part"><a href="/en/tempilstik/28000-100f-38c/">#28000</a></td><td class="td-temp">177°C</td><td>350°F</td><td class="td-part"><a href="/en/tempilstik/28031-350f-177c/">#28031</a></td></tr>
+            <tr><td class="td-temp">50°C</td><td>122°F</td><td class="td-part"><a href="/en/tempilstik/28002-109f-43c/">#28002</a></td><td class="td-temp">200°C</td><td>392°F</td><td class="td-part"><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td></tr>
+            <tr><td class="td-temp">66°C</td><td>150°F</td><td class="td-part"><a href="/en/tempilstik/28006-150f-66c/">#28006</a></td><td class="td-temp">232°C</td><td>450°F</td><td class="td-part"><a href="/en/tempilstik/28039-450f-232c/">#28039</a></td></tr>
+            <tr><td class="td-temp">79°C</td><td>175°F</td><td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td><td class="td-temp">260°C</td><td>500°F</td><td class="td-part"><a href="/en/tempilstik/28043-500f-260c/">#28043</a></td></tr>
+            <tr><td class="td-temp">100°C</td><td>212°F</td><td class="td-part"><a href="/en/tempilstik/28016-225f-107c/">#28016</a></td><td class="td-temp">300°C</td><td>572°F</td><td class="td-part"><a href="/en/tempilstik/28053-900f-482c/">#28053</a></td></tr>
+            <tr><td class="td-temp">110°C</td><td>230°F</td><td class="td-part"><a href="/en/tempilstik/28312-230f-110c/">#28312</a></td><td class="td-temp">316°C</td><td>600°F</td><td class="td-part"><a href="/en/tempilstik/28047-600f-316c/">#28047</a></td></tr>
+            <tr><td class="td-temp">121°C</td><td>250°F</td><td class="td-part"><a href="/en/tempilstik/28019-250f-121c/">#28019</a></td><td class="td-temp">371°C</td><td>700°F</td><td class="td-part"><a href="/en/tempilstik/28057-1022f-550c/">#28057</a></td></tr>
+            <tr><td class="td-temp">150°C</td><td>302°F</td><td class="td-part"><a href="/en/tempilstik/28318-302f-150c/">#28318</a></td><td class="td-temp">399°C</td><td>750°F</td><td class="td-part"><a href="/en/tempilstik/28061-1200f-649c/">#28061</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>View the full 116-rating range at <a href="/en/tempilstik/">tempil.vn/en/tempilstik/</a> — searchable from 100°F (38°C) to 2000°F (1093°C).</p>
+
+      <a href="/en/tempilstik/" class="product-card">
+        <div class="product-card__part">#28000–28075</div>
+        <div class="product-card__info">
+          <div class="product-card__name">Tempilstik® — Complete 116-Rating Range</div>
+          <div class="product-card__desc">100°F (38°C) to 2000°F (1093°C) · NIST-traceable · Made in USA · Stock in HCMC and Vung Tau</div>
+        </div>
+        <div class="product-card__arrow">→</div>
+      </a>
+
+      <div class="cta-block">
+        <p>Need a multi-rating Tempilstik® kit covering your WPS preheat requirements across AWS D1.1, ASME B31.3, or API 1104? Fast Group Engineering is the authorized Tempil® distributor in Vietnam — C/O, C/Q, and full VAT invoice available.</p>
+        <a href="/en/quote/" class="btn-primary-red">Request a Quote</a>
+        <a href="tel:0938888958" class="btn-outline-dark">0938 888 958</a>
+      </div>
+
+    </div><!-- /blog-body -->
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__col footer__about">
+          <a href="/en/" class="d-block mb-3">
+            <img src="/assets/images/logo.png" alt="Tempil Vietnam" width="160" height="40">
+          </a>
+          <p class="footer__desc">Fast Group Engineering is the authorized Tempil® distributor in Vietnam — Tempilstik®, Tempilaq®, Tempilabel® and the complete Tempil temperature measurement product range.</p>
+          <ul class="footer__contact" style="list-style:none;padding:0;margin:0">
+            <li>▶ Office 1: 150/41 Nguyen Cu Trinh St., Cau Ong Lanh Ward, Ho Chi Minh City</li>
+            <li>▶ Office 2: 41 Le Van Loc St., Vung Tau City</li>
+            <li>▶ Tel: <a href="tel:+84938888958">0938 888 958</a> | Email: <a href="mailto:sales@tempil.vn">sales@tempil.vn</a></li>
+            <li>▶ Order online: <a href="https://tempil.vn" target="_blank">tempil.vn</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Tempil Products</h4>
+          <ul>
+            <li><a href="/en/tempilstik/">Tempilstik®</a></li>
+            <li><a href="/en/tempilaq/">Tempilaq® Advanced</a></li>
+            <li><a href="/en/tempilabel/">Tempilabel®</a></li>
+            <li><a href="/en/thermomelt/">Thermomelt®</a></li>
+            <li><a href="/en/#san-pham">View all products →</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Technical Blog</h4>
+          <ul>
+            <li><a href="/en/blog/preheat-carbon-steel/">Preheat — Carbon Steel</a></li>
+            <li><a href="/en/blog/aws-d1-1-preheat-requirements/">AWS D1.1 Preheat Requirements</a></li>
+            <li><a href="/en/blog/what-is-pwht/">What Is PWHT?</a></li>
+            <li><a href="/en/blog/">View all articles →</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="https://tempil.vn" target="_blank">🛒 tempil.vn (Order online)</a></li>
+            <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+            <li><a href="/en/contact/">Contact &amp; Quote</a></li>
+            <li><a href="/en/blog/">Technical Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Fast Group Co., Ltd. (Fast Group Engineering) | Tax ID: 0315555189 | Est. 08/03/2019</p>
+      </div>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    if(hamburger){
+      hamburger.addEventListener('click', () => {
+        const open = sidebar.classList.toggle('sidebar--open');
+        hamburger.setAttribute('aria-expanded', open);
+        overlay.style.display = open ? 'block' : 'none';
+      });
+      overlay.addEventListener('click', () => {
+        sidebar.classList.remove('sidebar--open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        overlay.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+</html>

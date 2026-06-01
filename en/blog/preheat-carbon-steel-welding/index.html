@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <meta name="theme-color" content="#cc0000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preheat Temperature for Carbon Steel Welding — AWS D1.1 &amp; ASME B31.3 Guide | tempil.vn</title>
+  <meta name="description" content="Why preheat is mandatory for carbon steel welding, minimum preheat temperatures per AWS D1.1 and ASME B31.3, how to verify with Tempilstik® on site, and common field mistakes to avoid.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tempil.vn/en/blog/preheat-carbon-steel-welding/">
+  <link rel="alternate" hreflang="vi" href="https://tempil.vn/blog/preheat-carbon-steel-welding/">
+  <link rel="alternate" hreflang="en" href="https://tempil.vn/en/blog/preheat-carbon-steel-welding/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <meta property="og:title" content="Preheat Temperature for Carbon Steel Welding — AWS D1.1 &amp; ASME B31.3 Guide">
+  <meta property="og:description" content="Complete guide: why preheat is mandatory for carbon steel, minimum temperatures per AWS D1.1 and ASME B31.3, field verification with Tempilstik®, and common mistakes.">
+  <meta property="og:image" content="https://tempil.vn/assets/images/tempilstik_kiem_soat_nhiet_do_preheat_han_cong_truong.webp">
+  <meta property="og:url" content="https://tempil.vn/en/blog/preheat-carbon-steel-welding/">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-01-06T08:00:00+07:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "If no standard specifies preheat, what minimum temperature should be used for carbon steel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When drawings or specifications do not explicitly specify preheat, industry practice is to use 50–65°C as a minimum for plain carbon steel under normal conditions. This is sufficient to remove surface moisture and reduce initial thermal shock to the arc, and is typically included in a contractor's self-developed WPS. Some project specifications require this to be documented regardless."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Tempilstik® accepted by AWS D1.1 for preheat temperature verification?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The temperature indicating crayon method is recognized by AWS and ASME as a valid direct-contact temperature measurement method. Tempilstik® achieves ±1% Fahrenheit accuracy, requires no periodic calibration, and satisfies AWS D1.1, ASME Section I, III, VIII, B31.1, and B31.3."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does preheat differ from PWHT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Preheat is performed before and during welding at 60–250°C to prevent hydrogen-induced cold cracking. PWHT (post weld heat treatment) is performed after welding is complete at 600–750°C to relieve residual stress and improve HAZ properties. The two steps are completely independent — preheat does not substitute for PWHT and vice versa."
+      }
+    }
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tempil.vn/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Technical Blog", "item": "https://tempil.vn/en/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "Preheat for Carbon Steel Welding", "item": "https://tempil.vn/en/blog/preheat-carbon-steel-welding/"}
+  ]
+}
+</script>
+</head>
+<body>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="hamburger__lines"><span></span><span></span><span></span></div>
+  </button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__header">
+      <a href="/en/" class="sidebar__logo">
+        <img src="/assets/images/logo.png" alt="Tempil Vietnam — Fast Group Engineering" width="140" height="35" loading="lazy">
+      </a>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/en/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Home</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Products</li>
+        <li><a href="/en/tempilstik/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></span> Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></span> Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0c0-6-6-8-6-14z"/></svg></span> Thermomelt®</a></li>
+        <li><a href="/en/#products"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span> All Products</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Resources</li>
+        <li><a href="/en/blog/" style="background:rgba(200,16,46,0.15);border-left:3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> Technical Blog</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Contact</li>
+        <li><a href="/en/quote/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> Request a Quote</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar__lang">
+      <a href="/en/blog/preheat-carbon-steel-welding/">VI</a>
+      <span aria-current="true">EN</span>
+    </div>
+  </aside>
+
+<main class="blog-post container py-5" style="max-width:860px;">
+  <nav aria-label="Breadcrumb" class="mb-3">
+    <ol class="breadcrumb" style="font-size:0.82rem;">
+      <li class="breadcrumb-item"><a href="/en/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/en/blog/">Technical Blog</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Preheat for Carbon Steel Welding</li>
+    </ol>
+  </nav>
+
+  <header class="mb-4">
+    <h1 class="blog-post__title">Preheat Temperature for Carbon Steel Welding — Complete Guide per AWS D1.1 &amp; ASME</h1>
+    <p class="blog-post__meta text-muted" style="font-size:0.85rem;">Published 06 January 2025 · Fast Group Engineering · 8 min read</p>
+    <p class="lead mt-3">
+      Skipping preheat when welding carbon steel can cause hydrogen-induced cold cracking — a metallurgical defect that is not visible immediately after welding but causes joint failure or accelerated degradation over time. In pressure vessel fabrication, pipeline construction, and heavy industrial structures, preheat is a mandatory technical requirement defined by specific parameters in the approved WPS.
+    </p>
+  </header>
+
+  <figure class="mb-4">
+    <img src="/assets/images/tempilstik_kiem_soat_nhiet_do_preheat_han_cong_truong.webp"
+         alt="Field preheat temperature verification on carbon steel pipe using Tempilstik temperature indicating crayon"
+         class="img-fluid rounded" width="860" height="480" loading="lazy">
+    <figcaption class="text-muted mt-1" style="font-size:0.8rem;">Verifying preheat temperature directly on a carbon steel pipe weld using Tempilstik® — quick field check, result can be photographed into the QC record.</figcaption>
+  </figure>
+
+  <nav class="toc card p-3 mb-4" aria-label="Table of contents" style="background:#f8f8f6;border-left:4px solid #c8102e;">
+    <p class="fw-bold mb-2" style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Contents</p>
+    <ol style="font-size:0.88rem;margin:0;padding-left:1.2rem;">
+      <li><a href="#what-is-preheat">What is Preheat and Why is it Mandatory?</a></li>
+      <li><a href="#aws-table">AWS D1.1 Preheat Table — Quick Lookup</a></li>
+      <li><a href="#asme-table">ASME B31.3 Preheat Table — Process Piping</a></li>
+      <li><a href="#field-verification">Field Verification with Tempilstik®</a></li>
+      <li><a href="#common-mistakes">Common Field Mistakes</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </nav>
+
+  <section id="what-is-preheat">
+    <h2>What is Preheat and Why is it Mandatory?</h2>
+    <p>Preheat is the process of heating the base metal surrounding the weld zone to a specified minimum temperature before striking the arc. It is a direct intervention in the metallurgical behavior of the heat-affected zone (HAZ) — not an optional precaution.</p>
+
+    <div class="table-responsive mb-3">
+      <table class="table table-bordered" style="font-size:0.88rem;">
+        <thead class="table-dark"><tr><th>Technical Purpose</th><th>Mechanism</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Prevents hydrogen-induced cold cracking (HIC)</strong></td><td>Removes surface moisture and slows cooling — eliminating the primary hydrogen source that diffuses into the weld pool and causes HAZ cracking</td></tr>
+          <tr><td><strong>Reduces HAZ cooling rate</strong></td><td>Higher base temperature slows post-weld cooling, preventing brittle martensite formation in the HAZ and maintaining joint toughness</td></tr>
+          <tr><td><strong>Promotes hydrogen diffusion</strong></td><td>Slower cooling gives residual hydrogen sufficient time to diffuse out of the weld metal before solidification is complete</td></tr>
+          <tr><td><strong>Reduces residual stress and distortion</strong></td><td>Reducing the thermal gradient between the weld pool and the surrounding base metal limits shrinkage and warping</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert" style="background:#fff3cd;border-left:4px solid #ffc107;font-size:0.88rem;">
+      <strong>Key distinction:</strong> Preheat is performed before and during welding. PWHT (Post Weld Heat Treatment) is a completely separate thermal cycle applied after the weld is complete — typically at 600–750°C to relieve residual stress. Preheat does not substitute for PWHT, and PWHT does not eliminate the need for correct preheat.
+    </div>
+  </section>
+
+  <section id="aws-table" class="mt-5">
+    <h2>AWS D1.1 Preheat Table — Quick Lookup</h2>
+    <p>AWS D1.1 (Structural Welding Code — Steel) is widely applied in Vietnam for bridges, industrial buildings, and steel structures. Minimum preheat temperature depends on material thickness and Carbon Equivalent (CE).</p>
+
+    <div class="table-responsive mb-3">
+      <table class="table table-bordered table-hover" style="font-size:0.87rem;">
+        <thead class="table-dark">
+          <tr>
+            <th>Steel Category (AWS D1.1)</th>
+            <th>Carbon Equivalent (CE)</th>
+            <th>t ≤ 20 mm</th>
+            <th>t 20–38 mm</th>
+            <th>t 38–65 mm</th>
+            <th>t &gt; 65 mm</th>
+            <th>Tempilstik® Part No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Category I</strong><br><small>SS400, A36, SM400</small></td>
+            <td>CE ≤ 0.40</td>
+            <td>Not required*</td>
+            <td>Not required*</td>
+            <td>66°C (150°F)</td>
+            <td>110°C (230°F)</td>
+            <td><a href="/en/tempilstik/28006-150f-66c/">#28006</a> / <a href="/en/tempilstik/28312-230f-110c/">#28312</a></td>
+          </tr>
+          <tr>
+            <td><strong>Category II</strong><br><small>SM490, A572 Gr.50</small></td>
+            <td>CE 0.41–0.45</td>
+            <td>Not required*</td>
+            <td>66°C (150°F)</td>
+            <td>110°C (230°F)</td>
+            <td>150°C (302°F)</td>
+            <td><a href="/en/tempilstik/28006-150f-66c/">#28006</a> / <a href="/en/tempilstik/28312-230f-110c/">#28312</a> / <a href="/en/tempilstik/28318-302f-150c/">#28318</a></td>
+          </tr>
+          <tr>
+            <td><strong>Category III</strong><br><small>SM520, A572 Gr.65</small></td>
+            <td>CE 0.46–0.60</td>
+            <td>66°C (150°F)</td>
+            <td>110°C (230°F)</td>
+            <td>150°C (302°F)</td>
+            <td>200°C (392°F)</td>
+            <td><a href="/en/tempilstik/28006-150f-66c/">#28006</a> / <a href="/en/tempilstik/28312-230f-110c/">#28312</a> / <a href="/en/tempilstik/28318-302f-150c/">#28318</a> / <a href="/en/tempilstik/28327-392f-200c/">#28327</a></td>
+          </tr>
+          <tr>
+            <td><strong>Category IV</strong><br><small>HY-80 and equivalent</small></td>
+            <td>CE &gt; 0.60</td>
+            <td>110°C (230°F)</td>
+            <td>150°C (302°F)</td>
+            <td>200°C (392°F)</td>
+            <td>230°C (446°F)</td>
+            <td><a href="/en/tempilstik/28312-230f-110c/">#28312</a> / <a href="/en/tempilstik/28318-302f-150c/">#28318</a> / <a href="/en/tempilstik/28327-392f-200c/">#28327</a> / <a href="/en/tempilstik/28332-446f-230c/">#28332</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.82rem;color:#666;">* Not required per standard — preheat to minimum 10°C recommended when ambient temperature is below 5°C.<br>
+    CE formula (IIW): CE = C + Mn/6 + (Cr+Mo+V)/5 + (Ni+Cu)/15. Obtain values from the steel Mill Test Certificate.</p>
+    <div class="alert" style="background:#d1ecf1;border-left:4px solid #17a2b8;font-size:0.88rem;">
+      <strong>Practical example:</strong> Welding SM490 plate (Category II) at 30 mm thickness → AWS D1.1 requires <strong>66°C</strong> → use Tempilstik® <strong>#28006</strong>. When the crayon melts on contact with the surface, welding may begin.
+    </div>
+  </section>
+
+  <section id="asme-table" class="mt-5">
+    <h2>ASME B31.3 Preheat Table — Process Piping</h2>
+    <p>ASME B31.3 applies to process piping systems in power plants, refineries, and chemical facilities. Unlike AWS, ASME classifies materials by P-Number — found in the approved WPS or the pipe Mill Certificate.</p>
+    <div class="table-responsive mb-3">
+      <table class="table table-bordered table-hover" style="font-size:0.87rem;">
+        <thead class="table-dark">
+          <tr>
+            <th>P-Number (ASME B31.3)</th>
+            <th>Typical Steel</th>
+            <th>Wall &lt; 25 mm</th>
+            <th>Wall ≥ 25 mm</th>
+            <th>Tempilstik® Part No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>P-No.1 (Gr.1,2,3)</strong></td>
+            <td>Carbon steel: A106 Gr.B, A53, A333 Gr.6</td>
+            <td>10°C (50°F)</td>
+            <td>79°C (175°F)</td>
+            <td><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.1 (Gr.4,5)</strong></td>
+            <td>High-carbon steel: A106 Gr.C</td>
+            <td>79°C (175°F)</td>
+            <td>79°C (175°F)</td>
+            <td><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.3</strong></td>
+            <td>Alloy steel: A335 P1, A335 P2</td>
+            <td>79°C (175°F)</td>
+            <td>79°C (175°F)</td>
+            <td><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.4</strong></td>
+            <td>1.25Cr–0.5Mo: A335 P11, P12</td>
+            <td>150°C (302°F)</td>
+            <td>150°C (302°F)</td>
+            <td><a href="/en/tempilstik/28318-302f-150c/">#28318</a></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.5A</strong></td>
+            <td>2.25Cr–1Mo: A335 P22</td>
+            <td>200°C (392°F)</td>
+            <td>200°C (392°F)</td>
+            <td><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td>
+          </tr>
+          <tr class="table-warning">
+            <td><strong>P-No.15E (P91)</strong></td>
+            <td>9Cr–1Mo-V: A335 P91</td>
+            <td>200°C (392°F)</td>
+            <td>200°C (392°F)</td>
+            <td><a href="/en/tempilstik/28327-392f-200c/">#28327</a> — PWHT mandatory</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.88rem;">For P91 full requirements see: <a href="/en/blog/p91-steel-welding-temperature/">P91 Steel Welding — Preheat 200°C &amp; Mandatory PWHT</a>.<br>
+    For complete P-Number guide see: <a href="/en/blog/asme-b31-3-preheat-process-piping/">ASME B31.3 Preheat — Process Piping</a>.</p>
+  </section>
+
+  <section id="field-verification" class="mt-5">
+    <h2>Field Verification with Tempilstik®</h2>
+    <p>Infrared thermometers (IR guns) frequently give erroneous readings on heated steel surfaces because the emissivity coefficient changes continuously with temperature — compounded by the effects of mill scale, rust, and weld spatter. The physical crayon method provides significantly higher reliability in field conditions.</p>
+
+    <p>Tempilstik® operates on a simple principle: mark the crayon on the steel surface — if it melts immediately to a clear liquid, the surface has reached or exceeded that rated temperature. If the chalk-like mark stays solid, that zone has not yet reached the required temperature. No calibration required. No emissivity errors. Instant result.</p>
+
+    <div class="table-responsive mb-3">
+      <table class="table table-bordered" style="font-size:0.88rem;">
+        <thead class="table-dark">
+          <tr><th>Preheat Minimum</th><th>Tempilstik® Part No.</th><th>Typical Application</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>66°C / 150°F</td><td><a href="/en/tempilstik/28006-150f-66c/">#28006</a></td><td>AWS Cat. I structural steel — best-selling SKU in Vietnam</td></tr>
+          <tr><td>79°C / 175°F</td><td><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td><td>ASME P-No.1 pipe wall ≥ 25 mm (A106 Gr.B)</td></tr>
+          <tr><td>110°C / 230°F</td><td><a href="/en/tempilstik/28312-230f-110c/">#28312</a></td><td>AWS Cat. I heavy section, Cat. II–III thick plate</td></tr>
+          <tr><td>150°C / 302°F</td><td><a href="/en/tempilstik/28318-302f-150c/">#28318</a></td><td>AWS Cat. III–IV, ASME P-No.4 (P11)</td></tr>
+          <tr><td>200°C / 392°F</td><td><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td><td>ASME P-No.5A (P22), P91 — mandatory minimum</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Tempilstik® (Made in USA) meets ±1% Fahrenheit (±3% Celsius) accuracy and is recognized by AWS D1.1, ASME Section I, III, VIII, B31.1, and B31.3 as a valid direct-contact temperature measurement method. Full 116-SKU range: <a href="/en/tempilstik/">Tempilstik® product page</a>.</p>
+  </section>
+
+  <section id="common-mistakes" class="mt-5">
+    <h2>Common Field Mistakes</h2>
+    <div class="accordion" id="mistakesAccordion">
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m1">Measuring at only one point</button></h3>
+        <div id="m1" class="accordion-collapse collapse" data-bs-parent="#mistakesAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">The standard requires checking the full HAZ — extending at least 75 mm on each side of the weld centerline. A single measurement near the heat source is not representative of the actual weld zone temperature.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m2">Measuring directly at the heat source tip</button></h3>
+        <div id="m2" class="accordion-collapse collapse" data-bs-parent="#mistakesAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">The correct measurement position is 50–75 mm from the weld edge. This confirms that heat has penetrated through the full section thickness — not just the surface immediately exposed to the torch.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3">Assuming hot weather eliminates the need for preheat</button></h3>
+        <div id="m3" class="accordion-collapse collapse" data-bs-parent="#mistakesAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">An ambient temperature of 35–40°C does not substitute for preheat. Preheat requirements are metallurgical limits — independent of how the weather feels. The base metal must reach the specified temperature at the weld zone regardless of ambient conditions.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m4">Ignoring interpass temperature between passes</button></h3>
+        <div id="m4" class="accordion-collapse collapse" data-bs-parent="#mistakesAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">After the first pass, interpass temperature must also be monitored — it must not exceed the WPS maximum. Skipping this step can destroy the microstructure of already-deposited weld metal.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m5">Insufficient soak time for thick sections</button></h3>
+        <div id="m5" class="accordion-collapse collapse" data-bs-parent="#mistakesAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">For thick plate, the surface reaching the preheat threshold does not mean the core has heated through. Starting welding too early allows the cold core to draw heat back, negating the preheat effect. Allow adequate soak time — typically 2–5 minutes after the surface reaches the target for sections over 50 mm thick.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="mt-5">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">If no standard specifies preheat, what minimum temperature should be used?</button></h3>
+        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">When drawings or specifications do not explicitly specify preheat, the industry norm is 50–65°C as a minimum for plain carbon steel under standard conditions. This removes surface moisture and reduces initial thermal shock to the arc, and is typically included in a contractor's own WPS.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Is Tempilstik® accepted by AWS D1.1 for preheat verification?</button></h3>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">Yes. The temperature indicating crayon method is recognized by AWS and ASME as a valid direct-contact temperature measurement method. Tempilstik® achieves ±1% Fahrenheit accuracy, requires no periodic calibration, and satisfies AWS D1.1, ASME Section I, III, VIII, B31.1, and B31.3.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">How does preheat differ from PWHT?</button></h3>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">Preheat is performed before and during welding at 60–250°C to prevent hydrogen-induced cold cracking. PWHT (post weld heat treatment) is performed after welding at 600–750°C to relieve residual stress and improve HAZ properties. The two steps are completely independent — neither substitutes for the other.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="card mt-5 p-4 text-center" style="background:#1a1a1a;color:#f4f1de;border:none;border-radius:8px;">
+    <h3 style="color:#f4f1de;margin-bottom:0.5rem;">Need Tempilstik® for carbon steel preheat verification?</h3>
+    <p style="color:rgba(244,241,222,0.75);font-size:0.92rem;margin-bottom:1.2rem;">Fast Group Engineering — authorized Tempil® distributor in Vietnam. C/O + C/Q + VAT invoice. Stock in HCMC and Vung Tau.</p>
+    <div class="d-flex flex-wrap gap-2 justify-content-center">
+      <a href="/en/quote/" class="btn btn-danger px-4">Request a Quote</a>
+      <a href="/en/tempilstik/" class="btn btn-outline-light px-4">Browse All Part Numbers</a>
+    </div>
+    <p class="mt-3 mb-0" style="font-size:0.85rem;color:rgba(244,241,222,0.5);">📞 +84 938 888 958 &nbsp;|&nbsp; ✉ <a href="mailto:sales@tempil.vn" style="color:rgba(244,241,222,0.6);">sales@tempil.vn</a></p>
+  </div>
+
+  <section class="mt-5">
+    <h3 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Related Articles</h3>
+    <div class="row g-3 mt-1">
+      <div class="col-md-6">
+        <a href="/en/blog/aws-d1-1-preheat-requirements/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>AWS D1.1 &amp; ASME Preheat Quick Reference</strong>
+            <p class="text-muted mt-1 mb-0">Quick-reference table for A36, SS400, P11, P22, P91, Duplex 2205.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="/en/blog/interpass-temperature-welding/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>Interpass Temperature Control</strong>
+            <p class="text-muted mt-1 mb-0">Maximum limits by material and the two-crayon field technique.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="/en/blog/e7018-electrode-preheat-rod-oven/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>E7018 Electrode — Preheat &amp; Rod Oven Verification</strong>
+            <p class="text-muted mt-1 mb-0">Low-hydrogen electrode handling and Tempilstik® oven checks.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="/en/blog/preheat-temperature-reference-table/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>Preheat Reference Table — AWS, ASME, API 1104</strong>
+            <p class="text-muted mt-1 mb-0">Complete lookup with all part numbers, °C and °F.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer__top">
+    <div class="footer__col footer__about">
+      <a href="/en/" class="d-block mb-3"><img src="/assets/images/logo.png" alt="Tempil Vietnam" width="160" height="40"></a>
+      <p class="footer__desc">Fast Group Engineering is the authorized Tempil® distributor in Vietnam — Tempilstik®, Tempilaq®, Tempilabel®, Thermomelt® and the full Tempil temperature indicating product range.</p>
+      <ul class="footer__contact" style="list-style:none;padding:0;margin:0">
+        <li>▶ HQ: 150 Nguyen Cu Trinh, Cau Ong Lanh Ward, Ho Chi Minh City</li>
+        <li>▶ Branch: 51 Le Van Loc, Vung Tau City</li>
+        <li>▶ Tel: <a href="tel:+84938888958">+84 938 888 958</a> | Email: <a href="mailto:sales@tempil.vn">sales@tempil.vn</a></li>
+        <li>▶ Website: <a href="https://tempil.vn" target="_blank">tempil.vn</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Tempil® Products</h4>
+      <ul>
+        <li><a href="/en/tempilstik/">Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/">Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/">Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/">Thermomelt®</a></li>
+        <li><a href="/en/#products">View all →</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Technical Blog</h4>
+      <ul>
+        <li><a href="/en/blog/what-is-tempilstik/">What is Tempilstik®?</a></li>
+        <li><a href="/en/blog/interpass-temperature-welding/">Interpass Temperature</a></li>
+        <li><a href="/en/blog/pwht-post-weld-heat-treatment/">PWHT Guide</a></li>
+        <li><a href="/en/blog/">View all →</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/en/quote/">Request a Quote</a></li>
+        <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+        <li><a href="/en/contact/">Contact</a></li>
+        <li><a href="/en/blog/">Blog &amp; Resources</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 Fast Group Co., Ltd (Fast Group Engineering) | Tax ID: 0315555189 | Est. 08/03/2019</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.getElementById('sidebar');
+  if (hamburger && sidebar) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = sidebar.classList.toggle('sidebar--open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+  }
+</script>
+</body>
+</html>

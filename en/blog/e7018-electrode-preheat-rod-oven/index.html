@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <meta name="theme-color" content="#cc0000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E7018 Electrode — Preheat Requirements, Storage at 120–150°C &amp; Rod Oven Verification | tempil.vn</title>
+  <meta name="description" content="E7018 low-hydrogen electrode: when preheat is still required, correct rod oven storage at 120–150°C, rebaking procedure, and how to verify oven temperature with Tempilstik® #28312 and #28318.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tempil.vn/en/blog/e7018-electrode-preheat-rod-oven/">
+  <link rel="alternate" hreflang="vi" href="https://tempil.vn/blog/e7018-electrode-preheat-rod-oven/">
+  <link rel="alternate" hreflang="en" href="https://tempil.vn/en/blog/e7018-electrode-preheat-rod-oven/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <meta property="og:title" content="E7018 Electrode — Preheat Requirements, Storage at 120–150°C &amp; Rod Oven Verification">
+  <meta property="og:description" content="Low-hydrogen does not mean zero-hydrogen. E7018 still requires preheat in specific cases. Correct oven storage at 120–150°C and how to verify oven temperature with Tempilstik® crayons.">
+  <meta property="og:image" content="https://tempil.vn/assets/images/tempilstik_test_kit_chinh_hang_tempil_brand_5.webp">
+  <meta property="og:url" content="https://tempil.vn/en/blog/e7018-electrode-preheat-rod-oven/">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-03-24T08:00:00+07:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can E7018 electrodes left out of the oven for 6 hours still be used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per AWS D1.1, the maximum permitted atmospheric exposure time for E7018 electrodes is 4 hours. After 6 hours, the electrode must be rebaked per the manufacturer's specification before use on any critical weld. Electrodes not correctly rebaked may have hydrogen content exceeding the H8 (≤ 8 ml/100g) limit — losing the low-hydrogen advantage entirely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If the WPS specifies E7018 H4, can preheat be reduced further?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. AWS D1.1 permits further preheat reduction when using H4 versus H8, particularly for Category III and IV steels at intermediate thicknesses. However, E7018 H4 requires more rigorous storage conditions than H8 — stricter oven temperature, ambient humidity limits, and shorter atmospheric exposure time. Any storage violation can cause an H4 electrode to perform as H8 or H16 in practice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should Tempilstik® #28312 and #28318 be placed inside the rod oven?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Place the crayons at the electrode basket or tray position — the location where the electrodes actually sit — not near the heating element or directly at the oven door. Procedure: place the Tempilstik® crayon in the tray alongside the electrodes, close the oven door, wait 15–20 minutes for temperature to stabilize, then check whether the crayon has melted. Record the result in the oven temperature log."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does E6013 differ from E7018 in preheat requirements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "E6013 is a rutile-type electrode — not low-hydrogen. Hydrogen from E6013 can reach 15–30 ml/100g (H16 or higher). For steels with high CE or significant wall thickness, E6013 requires substantially higher preheat than E7018 H8. E6013 is suitable for thin-section, light-duty carbon steel work — it should not be used for structural members under load, pressure piping, or any application requiring hydrogen control per WPS."
+      }
+    }
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tempil.vn/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Technical Blog", "item": "https://tempil.vn/en/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "E7018 Electrode — Preheat &amp; Rod Oven Verification", "item": "https://tempil.vn/en/blog/e7018-electrode-preheat-rod-oven/"}
+  ]
+}
+</script>
+</head>
+<body>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="hamburger__lines"><span></span><span></span><span></span></div>
+  </button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__header">
+      <a href="/en/" class="sidebar__logo">
+        <img src="/assets/images/logo.png" alt="Tempil Vietnam — Fast Group Engineering" width="140" height="35" loading="lazy">
+      </a>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/en/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Home</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Products</li>
+        <li><a href="/en/tempilstik/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></span> Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></span> Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0c0-6-6-8-6-14z"/></svg></span> Thermomelt®</a></li>
+        <li><a href="/en/#products"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span> All Products</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Resources</li>
+        <li><a href="/en/blog/" style="background:rgba(200,16,46,0.15);border-left:3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> Technical Blog</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Contact</li>
+        <li><a href="/en/quote/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> Request a Quote</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar__lang">
+      <a href="/en/blog/e7018-electrode-preheat-rod-oven/">VI</a>
+      <span aria-current="true">EN</span>
+    </div>
+  </aside>
+
+<main class="blog-post container py-5" style="max-width:860px;">
+  <nav aria-label="Breadcrumb" class="mb-3">
+    <ol class="breadcrumb" style="font-size:0.82rem;">
+      <li class="breadcrumb-item"><a href="/en/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/en/blog/">Technical Blog</a></li>
+      <li class="breadcrumb-item active" aria-current="page">E7018 — Preheat &amp; Rod Oven</li>
+    </ol>
+  </nav>
+
+  <header class="mb-4">
+    <h1 class="blog-post__title">E7018 Electrode — Preheat Requirements, Correct Storage at 120–150°C &amp; Rod Oven Verification with Tempilstik®</h1>
+    <p class="blog-post__meta text-muted" style="font-size:0.85rem;">Published 24 March 2025 · Fast Group Engineering · 6 min read</p>
+    <p class="lead mt-3">
+      E7018 is the most widely used SMAW electrode for structural and pipeline welding in Vietnam. Its low-hydrogen designation (≤ 8 ml/100g deposited weld metal) makes it the preferred choice for critical structural applications, pressure piping, and alloy steel welding. But <em>low-hydrogen does not mean zero-hydrogen</em> — and this is where many welders and even some engineers make a costly assumption: E7018 still requires preheat in specific cases, and critically, requires correct rod oven storage to actually deliver its low-hydrogen performance.
+    </p>
+  </header>
+
+  <figure class="mb-4">
+    <img src="/assets/images/tempilstik_test_kit_chinh_hang_tempil_brand_5.webp"
+         alt="Tempilstik temperature indicating crayons used to verify rod oven temperature for E7018 electrode storage"
+         class="img-fluid rounded" width="860" height="480" loading="lazy">
+    <figcaption class="text-muted mt-1" style="font-size:0.8rem;">Applying Tempilabel® Series 21 inside the E7018 holding oven to continuously monitor the 120–150°C storage range — the label records the maximum temperature reached without requiring the oven to be opened.</figcaption>
+  </figure>
+
+  <nav class="toc card p-3 mb-4" aria-label="Table of contents" style="background:#f8f8f6;border-left:4px solid #c8102e;">
+    <p class="fw-bold mb-2" style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Contents</p>
+    <ol style="font-size:0.88rem;margin:0;padding-left:1.2rem;">
+      <li><a href="#why-preheat">Why E7018 Still Requires Preheat — Technical Explanation</a></li>
+      <li><a href="#preheat-table">Preheat Requirements for E7018 per AWS D1.1</a></li>
+      <li><a href="#storage">Rod Oven Storage: 120–150°C</a></li>
+      <li><a href="#oven-verification">Verifying Rod Oven Temperature with Tempilstik®</a></li>
+      <li><a href="#key-points">Three Key Points to Remember</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </nav>
+
+  <section id="why-preheat">
+    <h2>Why E7018 Still Requires Preheat — Technical Explanation</h2>
+    <p>The most common misconception: <em>"low-hydrogen electrode means no preheat needed."</em> This is technically incorrect. Per AWS D1.1 and ASME, preheat requirements are governed by <strong>steel type and wall thickness</strong> — not by electrode classification.</p>
+    <p>E7018 reduces the hydrogen content introduced by the electrode (≤ 8 ml/100g versus ≥ 20 ml/100g for E6010), which allows preheat to be reduced in some borderline cases. It does not eliminate the preheat requirement entirely.</p>
+    <p>Hydrogen-induced cold cracking (HIC) occurs when three conditions coincide: hydrogen in the weld metal, tensile stress in the HAZ, and a susceptible microstructure (hard martensite in steel with high CE). Preheat addresses the first factor: by slowing cooling it gives hydrogen time to diffuse out before being trapped in the hardened martensite microstructure. With thick steel or high CE, the remaining hydrogen from E7018 is still sufficient to cause cracking without preheat.</p>
+    <div class="alert" style="background:#fff3cd;border-left:4px solid #ffc107;font-size:0.9rem;">
+      <strong>Core rule:</strong> Preheat per AWS D1.1 is looked up by steel category and thickness — <em>not</em> by electrode type. Using E7018 instead of E6010 does not automatically reduce preheat to zero. It only permits a lower preheat under specific borderline conditions where CE and thickness are at the threshold between requirements.
+    </div>
+  </section>
+
+  <section id="preheat-table" class="mt-5">
+    <h2>Preheat Requirements for E7018 per AWS D1.1</h2>
+    <p>AWS D1.1 Table 3.2 classifies steel by category and specifies preheat based on CE, thickness, and electrode hydrogen classification (H4 / H8 / H16). E7018 standard grade is classified as H8 (≤ 8 ml/100g).</p>
+    <div class="table-responsive mb-3">
+      <table class="table table-bordered table-hover" style="font-size:0.87rem;">
+        <thead class="table-dark">
+          <tr>
+            <th>AWS Category</th>
+            <th>CE</th>
+            <th>Thickness</th>
+            <th>Preheat with H16 (E6010)</th>
+            <th>Preheat with H8 (E7018)</th>
+            <th>Tempilstik®</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2"><strong>Category I</strong><br><small>SS400, A36</small></td>
+            <td rowspan="2">≤ 0.40</td>
+            <td>t ≤ 38 mm</td>
+            <td>66°C (150°F)</td>
+            <td class="table-success">Not required (or 10°C)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>38 &lt; t ≤ 65 mm</td>
+            <td>66°C (150°F)</td>
+            <td>66°C (150°F)</td>
+            <td><a href="/en/tempilstik/28006-150f-66c/">#28006</a></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><strong>Category II</strong><br><small>SM490, A572</small></td>
+            <td rowspan="2">0.41–0.45</td>
+            <td>t ≤ 20 mm</td>
+            <td>66°C (150°F)</td>
+            <td class="table-success">Not required (or 10°C)</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>20 &lt; t ≤ 38 mm</td>
+            <td>66°C (150°F)</td>
+            <td>66°C (150°F)</td>
+            <td><a href="/en/tempilstik/28006-150f-66c/">#28006</a></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><strong>Category III</strong></td>
+            <td rowspan="2">0.46–0.60</td>
+            <td>t ≤ 20 mm</td>
+            <td>110°C (230°F)</td>
+            <td>66°C (150°F)</td>
+            <td><a href="/en/tempilstik/28006-150f-66c/">#28006</a> / <a href="/en/tempilstik/28312-230f-110c/">#28312</a></td>
+          </tr>
+          <tr>
+            <td>20 &lt; t ≤ 38 mm</td>
+            <td>150°C (302°F)</td>
+            <td>110°C (230°F)</td>
+            <td><a href="/en/tempilstik/28312-230f-110c/">#28312</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.82rem;color:#666;">For full preheat tables by material and thickness see: <a href="/en/blog/preheat-temperature-reference-table/">Preheat Temperature Reference Table</a>.</p>
+  </section>
+
+  <section id="storage" class="mt-5">
+    <h2>Rod Oven Storage: Why 120–150°C is Critical</h2>
+    <p>The E7018 electrode flux coating contains calcium carbonate (CaCO₃) and calcium fluoride — the alkaline flux system that creates the slag, generates CO₂ arc shielding, and absorbs hydrogen. Calcium carbonate absorbs moisture aggressively from ambient air. When moisture in the flux coating decomposes at arc temperature, it releases hydrogen directly into the weld pool — instantly destroying the low-hydrogen performance of the electrode.</p>
+
+    <h3 style="font-size:1rem;" class="mt-3">Standard storage procedure to maintain H8 performance (≤ 8 ml/100g)</h3>
+    <div class="table-responsive mb-3">
+      <table class="table table-bordered" style="font-size:0.88rem;">
+        <thead class="table-dark"><tr><th>Stage</th><th>Action</th><th>Temperature</th><th>Time Limit</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>After opening the hermetic can</td>
+            <td>Transfer immediately to a holding oven</td>
+            <td>120–150°C (248–302°F)</td>
+            <td>Store continuously until use</td>
+          </tr>
+          <tr>
+            <td>Atmospheric exposure</td>
+            <td>Per AWS D1.1 D.2.2: maximum permitted exposure before rebaking</td>
+            <td>Ambient</td>
+            <td><strong>Maximum 4 hours</strong></td>
+          </tr>
+          <tr>
+            <td>Rebaking (if exposed or moisture suspected)</td>
+            <td>Rebake per manufacturer's specification</td>
+            <td>250–350°C (482–662°F)</td>
+            <td>1–2 hours (per manufacturer)</td>
+          </tr>
+          <tr>
+            <td>Rebaking cycle limit</td>
+            <td>Flux coating cracks and degrades with repeated thermal cycling</td>
+            <td>—</td>
+            <td>Maximum 2–3 rebake cycles total</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert" style="background:#f8d7da;border-left:4px solid #dc3545;font-size:0.88rem;">
+      <strong>Critical point:</strong> The 120–150°C oven temperature is the <em>holding temperature</em> — the temperature at which correctly dried electrodes are maintained. It is not a rebaking temperature. If electrodes have already absorbed moisture, rebaking at 250–350°C is required before they can be placed back in the holding oven.
+    </div>
+  </section>
+
+  <section id="oven-verification" class="mt-5">
+    <h2>Verifying Rod Oven Temperature with Tempilstik®</h2>
+    <p>Electrode holding ovens and rebaking ovens must be verified periodically — the set temperature on the controller may diverge from the actual temperature inside the oven, particularly in older ovens or when thermostats have drifted. Tempilstik® resolves this by confirming the actual temperature at the electrode tray location.</p>
+
+    <div class="table-responsive mb-3">
+      <table class="table table-bordered table-hover" style="font-size:0.87rem;">
+        <thead class="table-dark">
+          <tr>
+            <th>Verification Purpose</th>
+            <th>Target Temperature</th>
+            <th>Tempilstik® Part No.</th>
+            <th>How to Interpret</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Holding oven — lower bound</strong></td>
+            <td>110°C / 230°F</td>
+            <td><a href="/en/tempilstik/28312-230f-110c/"><strong>#28312</strong></a></td>
+            <td>Crayon melts → oven is ≥ 110°C ✓ — adequate holding temperature</td>
+          </tr>
+          <tr>
+            <td><strong>Holding oven — upper bound</strong></td>
+            <td>150°C / 302°F</td>
+            <td><a href="/en/tempilstik/28318-302f-150c/"><strong>#28318</strong></a></td>
+            <td>Crayon does NOT melt → oven is still below 150°C ✓ — within safe range</td>
+          </tr>
+          <tr>
+            <td><strong>Rebaking oven — minimum temperature</strong></td>
+            <td>177°C / 350°F</td>
+            <td><a href="/en/tempilstik/28025-294f-146c/">#28025</a></td>
+            <td>Crayon melts → oven has reached sufficient temperature to initiate rebaking cycle</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert" style="background:#d1ecf1;border-left:4px solid #17a2b8;font-size:0.9rem;">
+      <strong>Two-crayon verification method for the holding oven:</strong>
+      <ul class="mb-0 mt-2">
+        <li>Place <strong>#28312 (110°C)</strong> in the electrode tray — it must melt to confirm the oven is adequately hot.</li>
+        <li>Place <strong>#28318 (150°C)</strong> alongside — it must <em>not</em> melt to confirm the oven is not overheating.</li>
+        <li>If both crayons have melted, the oven is running above 150°C — prolonged exposure at this temperature may damage the flux coating. Investigate the thermostat.</li>
+      </ul>
+    </div>
+
+    <p class="mt-3">Measurement procedure: place the Tempilstik® crayons in the electrode basket or tray, close the oven door, wait 15–20 minutes for the temperature to stabilize, then open and check whether each crayon has melted. Record the result in the oven temperature inspection log.</p>
+
+    <p>For continuous monitoring without opening the oven, <a href="/en/tempilabel/">Tempilabel® Series 21</a> adhesive temperature indicators can be affixed inside the oven — they record the maximum temperature reached irreversibly, providing a permanent record without requiring manual inspection.</p>
+  </section>
+
+  <section id="key-points" class="mt-5">
+    <h2>Three Key Points to Remember — E7018 and Preheat</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card h-100 p-3" style="border-top:4px solid #c8102e;font-size:0.88rem;">
+          <strong>1. Preheat is determined by steel, not electrode</strong>
+          <p class="mt-1 mb-0">Always look up preheat by steel category and wall thickness. E7018 (H8) may allow reduced preheat versus E6010 (H16) in borderline cases — it does not universally eliminate preheat.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" style="border-top:4px solid #c8102e;font-size:0.88rem;">
+          <strong>2. Correct oven storage is what makes E7018 low-hydrogen</strong>
+          <p class="mt-1 mb-0">An E7018 electrode left in ambient air for more than 4 hours may perform as H16 or worse. The 120–150°C holding oven is not optional — it is the mechanism that maintains H8 performance.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" style="border-top:4px solid #c8102e;font-size:0.88rem;">
+          <strong>3. Verify the oven — do not trust the controller display</strong>
+          <p class="mt-1 mb-0">Use Tempilstik® #28312 and #28318 to confirm actual temperature at the electrode location. Controller setpoint and actual internal temperature can diverge significantly in ageing ovens.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="mt-5">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Can E7018 electrodes left out of the oven for 6 hours still be used?</button></h3>
+        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">Per AWS D1.1, the maximum permitted atmospheric exposure time for E7018 is 4 hours. After 6 hours the electrode must be rebaked per the manufacturer's specification before use on any critical weld. Electrodes not correctly rebaked may have hydrogen content exceeding H8 — losing the low-hydrogen advantage.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">If the WPS specifies E7018 H4, can preheat be reduced further?</button></h3>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">Yes. AWS D1.1 permits further preheat reduction when using H4 versus H8, particularly for Category III and IV steels at intermediate thicknesses. However, H4 requires stricter storage — lower ambient humidity limits and shorter atmospheric exposure time. Any storage violation can cause an H4 electrode to perform as H8 or H16 in practice.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Where should Tempilstik® crayons be placed inside the rod oven?</button></h3>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">Place crayons at the electrode basket or tray — the location where electrodes actually sit. Not near the heating element or the oven door. Procedure: place Tempilstik® in the tray alongside electrodes, close the oven door, wait 15–20 minutes for temperature to stabilize, then check whether the crayon has melted. Record in the oven temperature inspection log.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">How does E6013 differ from E7018 in preheat requirements?</button></h3>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">E6013 is a rutile-type electrode — not low-hydrogen. Hydrogen from E6013 can reach 15–30 ml/100g (H16 or higher). For steels with high CE or significant wall thickness, E6013 requires substantially higher preheat than E7018 H8. E6013 is suitable for thin-section, light-duty carbon steel — it should not be used for structural members under load, pressure piping, or any application with hydrogen control requirements in the WPS.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="card mt-5 p-4 text-center" style="background:#1a1a1a;color:#f4f1de;border:none;border-radius:8px;">
+    <h3 style="color:#f4f1de;margin-bottom:0.5rem;">Need Tempilstik® #28312 or #28318 for rod oven verification?</h3>
+    <p style="color:rgba(244,241,222,0.75);font-size:0.92rem;margin-bottom:1.2rem;">Fast Group Engineering — authorized Tempil® distributor in Vietnam. Available individually or as a box of 10. C/O + C/Q + VAT invoice. Stock in HCMC and Vung Tau.</p>
+    <div class="d-flex flex-wrap gap-2 justify-content-center">
+      <a href="/en/quote/" class="btn btn-danger px-4">Request a Quote</a>
+      <a href="/en/tempilstik/" class="btn btn-outline-light px-4">Browse All Part Numbers</a>
+    </div>
+    <p class="mt-3 mb-0" style="font-size:0.85rem;color:rgba(244,241,222,0.5);">📞 +84 938 888 958 &nbsp;|&nbsp; ✉ <a href="mailto:sales@tempil.vn" style="color:rgba(244,241,222,0.6);">sales@tempil.vn</a></p>
+  </div>
+
+  <section class="mt-5">
+    <h3 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Related Articles</h3>
+    <div class="row g-3 mt-1">
+      <div class="col-md-6">
+        <a href="/en/blog/preheat-carbon-steel-welding/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>Preheat for Carbon Steel Welding</strong>
+            <p class="text-muted mt-1 mb-0">Full AWS D1.1 and ASME B31.3 preheat guide with field procedure.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="/en/blog/what-is-tempilstik/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>What is Tempilstik®? — Complete Field Guide</strong>
+            <p class="text-muted mt-1 mb-0">How temperature indicating crayons work, field procedure, accepted standards.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="/en/blog/interpass-temperature-welding/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>Interpass Temperature Control</strong>
+            <p class="text-muted mt-1 mb-0">Maximum limits by material and the two-crayon field technique.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="/en/blog/preheat-temperature-reference-table/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>Preheat Reference Table — AWS, ASME, API 1104</strong>
+            <p class="text-muted mt-1 mb-0">Complete lookup with all Tempilstik® part numbers.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer__top">
+    <div class="footer__col footer__about">
+      <a href="/en/" class="d-block mb-3"><img src="/assets/images/logo.png" alt="Tempil Vietnam" width="160" height="40"></a>
+      <p class="footer__desc">Fast Group Engineering is the authorized Tempil® distributor in Vietnam — Tempilstik®, Tempilaq®, Tempilabel®, Thermomelt® and the full Tempil temperature indicating product range.</p>
+      <ul class="footer__contact" style="list-style:none;padding:0;margin:0">
+        <li>▶ HQ: 150 Nguyen Cu Trinh, Cau Ong Lanh Ward, Ho Chi Minh City</li>
+        <li>▶ Branch: 51 Le Van Loc, Vung Tau City</li>
+        <li>▶ Tel: <a href="tel:+84938888958">+84 938 888 958</a> | Email: <a href="mailto:sales@tempil.vn">sales@tempil.vn</a></li>
+        <li>▶ Website: <a href="https://tempil.vn" target="_blank">tempil.vn</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Tempil® Products</h4>
+      <ul>
+        <li><a href="/en/tempilstik/">Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/">Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/">Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/">Thermomelt®</a></li>
+        <li><a href="/en/#products">View all →</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Technical Blog</h4>
+      <ul>
+        <li><a href="/en/blog/what-is-tempilstik/">What is Tempilstik®?</a></li>
+        <li><a href="/en/blog/interpass-temperature-welding/">Interpass Temperature</a></li>
+        <li><a href="/en/blog/pwht-post-weld-heat-treatment/">PWHT Guide</a></li>
+        <li><a href="/en/blog/">View all →</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/en/quote/">Request a Quote</a></li>
+        <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+        <li><a href="/en/contact/">Contact</a></li>
+        <li><a href="/en/blog/">Blog &amp; Resources</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 Fast Group Co., Ltd (Fast Group Engineering) | Tax ID: 0315555189 | Est. 08/03/2019</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.getElementById('sidebar');
+  if (hamburger && sidebar) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = sidebar.classList.toggle('sidebar--open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+  }
+</script>
+</body>
+</html>

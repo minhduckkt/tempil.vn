@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+  <meta name="theme-color" content="#cc0000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preheat Temperature Reference Table — AWS D1.1, ASME B31.3, API 1104 | tempil.vn</title>
+  <meta name="description" content="Complete preheat temperature lookup table for welding: AWS D1.1 structural steel, ASME B31.3 process piping by P-Number, API 1104 pipeline by grade, maximum interpass limits, and Tempilstik® part numbers. °C and °F.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tempil.vn/en/blog/preheat-temperature-reference-table/">
+  <link rel="alternate" hreflang="vi" href="https://tempil.vn/blog/preheat-lookup-table-by-steel/">
+  <link rel="alternate" hreflang="en" href="https://tempil.vn/en/blog/preheat-temperature-reference-table/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <meta property="og:title" content="Preheat Temperature Reference Table — AWS D1.1, ASME B31.3, API 1104">
+  <meta property="og:description" content="Complete preheat lookup with Tempilstik® part numbers: AWS D1.1 structural steel, ASME B31.3 P-Number piping, API 1104 pipelines, maximum interpass limits, °C ↔ °F quick conversion.">
+  <meta property="og:url" content="https://tempil.vn/en/blog/preheat-temperature-reference-table/">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-03-17T08:00:00+07:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .td-temp { background:#fff8e8; font-weight:600; text-align:center; }
+    .td-na   { background:#f5f5f5; color:#999; text-align:center; font-style:italic; }
+    .td-part { text-align:center; font-family:monospace; font-size:0.85rem; }
+    .preheat-table th { font-size:0.82rem; vertical-align:middle; }
+    .preheat-table td { font-size:0.82rem; vertical-align:middle; }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When a WPS specifies a preheat temperature range (e.g. 100–200°C), which Tempilstik® should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use two crayons: one rated at the minimum temperature (100°C) to confirm the preheat minimum has been reached, and one rated at the maximum (200°C) for interpass monitoring to confirm the upper limit has not been exceeded. This two-crayon practice is standard on pipeline and pressure piping projects — the inspector carries both for each measurement point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When a project applies multiple codes simultaneously, which takes precedence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Priority order: (1) project contract and Purchase Order specification, (2) the approved WPS as reviewed by the client or third-party inspector, (3) the standard referenced in the WPS. When codes conflict, the more stringent requirement always governs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ambient temperature affect preheat requirements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Low ambient temperature causes steel surfaces to lose heat faster after heating — requiring longer heating time to reach and hold the required temperature. When ambient temperature is below 5°C, both AWS D1.1 and ASME recommend a minimum preheat to 20°C even when the standard does not formally require it. For offshore projects in Vung Tau, ambient temperature is typically 25–35°C, so this is rarely a concern — but strong winds during the dry season accelerate surface heat loss significantly."
+      }
+    }
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tempil.vn/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Technical Blog", "item": "https://tempil.vn/en/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "Preheat Temperature Reference Table", "item": "https://tempil.vn/en/blog/preheat-temperature-reference-table/"}
+  ]
+}
+</script>
+</head>
+<body>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <div class="hamburger__lines"><span></span><span></span><span></span></div>
+  </button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__header">
+      <a href="/en/" class="sidebar__logo">
+        <img src="/assets/images/logo.png" alt="Tempil Vietnam — Fast Group Engineering" width="140" height="35" loading="lazy">
+      </a>
+    </div>
+    <nav class="sidebar__nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="/en/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span> Home</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Products</li>
+        <li><a href="/en/tempilstik/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg></span> Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L5.5 9.5a7 7 0 1011 0z"/></svg></span> Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span> Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 6-6 8-6 14a6 6 0 0012 0c0-6-6-8-6-14z"/></svg></span> Thermomelt®</a></li>
+        <li><a href="/en/#products"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span> All Products</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Resources</li>
+        <li><a href="/en/blog/" style="background:rgba(200,16,46,0.15);border-left:3px solid #c8102e;"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> Technical Blog</a></li>
+        <li style="padding:0.5rem 1.5rem;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,241,222,0.3);">Contact</li>
+        <li><a href="/en/quote/"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span> Request a Quote</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar__lang">
+      <a href="/en/blog/preheat-lookup-table-by-steel/">VI</a>
+      <span aria-current="true">EN</span>
+    </div>
+  </aside>
+
+<main class="blog-post container py-5" style="max-width:960px;">
+  <nav aria-label="Breadcrumb" class="mb-3">
+    <ol class="breadcrumb" style="font-size:0.82rem;">
+      <li class="breadcrumb-item"><a href="/en/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/en/blog/">Technical Blog</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Preheat Reference Table</li>
+    </ol>
+  </nav>
+
+  <header class="mb-4">
+    <h1 class="blog-post__title">Preheat Temperature Reference Table — AWS D1.1, ASME B31.3, API 1104</h1>
+    <p class="blog-post__meta text-muted" style="font-size:0.85rem;">Published 17 March 2025 · Fast Group Engineering · 10 min read</p>
+    <p class="lead mt-3">
+      This page consolidates minimum preheat temperatures from the three most widely applied international welding standards in industrial projects in Vietnam and Southeast Asia: AWS D1.1 (structural steel welding), ASME B31.3 (process piping), and API 1104 (oil &amp; gas transmission pipelines). Each table includes the corresponding Tempilstik® part number for direct field use, in both °C and °F.
+    </p>
+    <div class="alert" style="background:#fff3cd;border-left:4px solid #ffc107;font-size:0.88rem;margin-top:1rem;">
+      <strong>Important:</strong> All values are reference figures from the respective standards. Actual preheat requirements depend on specific chemical composition from the Mill Test Certificate, wall thickness, ambient conditions, and the approved WPS. Always verify against the original standard and the project WPS. When requirements from different sources conflict, the more stringent requirement governs.
+    </div>
+  </header>
+
+  <nav class="toc card p-3 mb-4" aria-label="Table of contents" style="background:#f8f8f6;border-left:4px solid #c8102e;">
+    <p class="fw-bold mb-2" style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Contents</p>
+    <ol style="font-size:0.88rem;margin:0;padding-left:1.2rem;">
+      <li><a href="#glossary">Bilingual Glossary</a></li>
+      <li><a href="#aws-d1-1">Table 1 — AWS D1.1: Structural Steel Welding</a></li>
+      <li><a href="#asme-b31-3">Table 2 — ASME B31.3: Process Piping (P-Number)</a></li>
+      <li><a href="#api-1104">Table 3 — API 1104: Oil &amp; Gas Transmission Pipelines</a></li>
+      <li><a href="#interpass">Table 4 — Maximum Interpass Temperature</a></li>
+      <li><a href="#conversion">Table 5 — °C ↔ °F Quick Conversion</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </nav>
+
+  <!-- Glossary -->
+  <section id="glossary">
+    <h2>Bilingual Glossary</h2>
+    <p style="font-size:0.88rem;">Technical terms used throughout all tables below, with Vietnamese equivalents for cross-referencing with local WPS documents:</p>
+    <div class="table-responsive mb-3">
+      <table class="table table-bordered table-sm" style="font-size:0.85rem;">
+        <thead class="table-dark"><tr><th>English Term</th><th>Vietnamese</th><th>Definition</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Preheat temperature</strong></td><td>Nhiệt độ tiền hàn / nung sơ bộ</td><td>Minimum base metal temperature before welding begins</td></tr>
+          <tr><td><strong>Interpass temperature</strong></td><td>Nhiệt độ liên hàn</td><td>Base metal temperature between passes — expressed as a maximum limit</td></tr>
+          <tr><td><strong>PWHT</strong></td><td>Xử lý nhiệt sau hàn</td><td>Post Weld Heat Treatment — independent thermal cycle after weld completion</td></tr>
+          <tr><td><strong>Carbon Equivalent (CE)</strong></td><td>Carbon tương đương</td><td>Formula combining C, Mn, Cr, Mo, V — governs hardenability and preheat requirement</td></tr>
+          <tr><td><strong>HAZ</strong></td><td>Vùng ảnh hưởng nhiệt</td><td>Heat-affected zone — base metal adjacent to weld altered by welding heat</td></tr>
+          <tr><td><strong>WPS</strong></td><td>Quy trình hàn</td><td>Welding Procedure Specification — approved document defining welding parameters</td></tr>
+          <tr><td><strong>P-Number</strong></td><td>P-Number (ASME)</td><td>ASME material group number — basis for WPS qualification and PWHT requirements</td></tr>
+          <tr><td><strong>Wall thickness / t</strong></td><td>Chiều dày thành</td><td>Component thickness at the weld joint — governs preheat threshold selection</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Table 1: AWS D1.1 -->
+  <section id="aws-d1-1" class="mt-5">
+    <h2>Table 1 — AWS D1.1: Structural Steel Welding</h2>
+    <p style="font-size:0.88rem;">Applicable to: bridge structures, industrial buildings, offshore structural steel, topside modules, jackets, and general structural fabrication.</p>
+    <p style="font-size:0.85rem;color:#666;">Source: AWS D1.1 Structural Welding Code — Steel, Table 3.2 (Prequalified preheat and interpass temperature minimums). Classification by Steel Category based on Carbon Equivalent (CE) and thickness.</p>
+    <div class="table-responsive mb-2">
+      <table class="table table-bordered preheat-table">
+        <thead class="table-dark">
+          <tr>
+            <th>Steel Category</th>
+            <th>Carbon Equivalent (CE)</th>
+            <th>Typical Grades</th>
+            <th>≤ 20 mm<br><small>≤ ¾"</small></th>
+            <th>20–38 mm<br><small>¾"–1½"</small></th>
+            <th>38–65 mm<br><small>1½"–2½"</small></th>
+            <th>&gt; 65 mm<br><small>&gt; 2½"</small></th>
+            <th>Tempilstik® Part No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Category I</strong></td>
+            <td>CE ≤ 0.40</td>
+            <td>SS400, A36, SM400<br><small>S235, S275 (EN equiv.)</small></td>
+            <td class="td-na">Not required*</td>
+            <td class="td-na">Not required*</td>
+            <td class="td-temp">66°C / 150°F</td>
+            <td class="td-temp">110°C / 230°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28006-150f-66c/">#28006</a><br><a href="/en/tempilstik/28312-230f-110c/">#28312</a></td>
+          </tr>
+          <tr>
+            <td><strong>Category II</strong></td>
+            <td>CE 0.41–0.45</td>
+            <td>SM490, A572 Gr.50<br><small>S355 (EN equiv.)</small></td>
+            <td class="td-na">Not required*</td>
+            <td class="td-temp">66°C / 150°F</td>
+            <td class="td-temp">110°C / 230°F</td>
+            <td class="td-temp">150°C / 302°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28006-150f-66c/">#28006</a><br><a href="/en/tempilstik/28312-230f-110c/">#28312</a><br><a href="/en/tempilstik/28318-302f-150c/">#28318</a></td>
+          </tr>
+          <tr>
+            <td><strong>Category III</strong></td>
+            <td>CE 0.46–0.60</td>
+            <td>SM520, A572 Gr.65<br><small>S420, S460 (EN equiv.)</small></td>
+            <td class="td-temp">66°C / 150°F</td>
+            <td class="td-temp">110°C / 230°F</td>
+            <td class="td-temp">150°C / 302°F</td>
+            <td class="td-temp">200°C / 392°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28006-150f-66c/">#28006</a><br><a href="/en/tempilstik/28312-230f-110c/">#28312</a><br><a href="/en/tempilstik/28318-302f-150c/">#28318</a><br><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td>
+          </tr>
+          <tr>
+            <td><strong>Category IV</strong></td>
+            <td>CE &gt; 0.60</td>
+            <td>HY-80, A514<br><small>High-strength alloy</small></td>
+            <td class="td-temp">110°C / 230°F</td>
+            <td class="td-temp">150°C / 302°F</td>
+            <td class="td-temp">200°C / 392°F</td>
+            <td class="td-temp">230°C / 446°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28312-230f-110c/">#28312</a><br><a href="/en/tempilstik/28318-302f-150c/">#28318</a><br><a href="/en/tempilstik/28327-392f-200c/">#28327</a><br><a href="/en/tempilstik/28332-446f-230c/">#28332</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.82rem;color:#666;">* Not required per standard — but preheat to minimum 10°C is recommended when ambient temperature is below 5°C or the surface has moisture.</p>
+  </section>
+
+  <!-- Table 2: ASME B31.3 -->
+  <section id="asme-b31-3" class="mt-5">
+    <h2>Table 2 — ASME B31.3: Process Piping (P-Number Classification)</h2>
+    <p style="font-size:0.88rem;">Applicable to: refineries, chemical plants, gas processing facilities, LNG terminals, and industrial process piping systems.</p>
+    <p style="font-size:0.85rem;color:#666;">Source: ASME B31.3 Table 330.1.1. P-Number classification per ASME Section IX. Preheat depends on wall thickness at the weld joint — use the greater thickness when two components of different thickness are joined.</p>
+    <div class="table-responsive mb-2">
+      <table class="table table-bordered preheat-table">
+        <thead class="table-dark">
+          <tr>
+            <th>P-Number<br><small>Material Group</small></th>
+            <th>Typical Material</th>
+            <th>Common ASTM Grades</th>
+            <th>Thickness &lt; 25 mm<br><small>&lt; 1"</small></th>
+            <th>Thickness ≥ 25 mm<br><small>≥ 1"</small></th>
+            <th>Tempilstik® Part No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>P-No.1 Gr.1,2,3</strong></td>
+            <td>Carbon steel</td>
+            <td>A53 Gr.B, A106 Gr.B<br>A333 Gr.6</td>
+            <td class="td-temp">10°C / 50°F</td>
+            <td class="td-temp">79°C / 175°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.1 Gr.4,5</strong></td>
+            <td>High-carbon steel</td>
+            <td>A106 Gr.C<br>A53 Gr.B (high-C)</td>
+            <td class="td-temp">79°C / 175°F</td>
+            <td class="td-temp">79°C / 175°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.3</strong></td>
+            <td>Low alloy steel (0.5Mo)</td>
+            <td>A335 P1, A335 P2<br>A161 T1</td>
+            <td class="td-temp">79°C / 175°F</td>
+            <td class="td-temp">79°C / 175°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.4</strong></td>
+            <td>1¼Cr–½Mo steel</td>
+            <td>A335 P11, A335 P12<br>A161 T11</td>
+            <td class="td-temp">150°C / 302°F</td>
+            <td class="td-temp">150°C / 302°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28318-302f-150c/">#28318</a></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.5A</strong></td>
+            <td>2¼Cr–1Mo steel (P22)</td>
+            <td>A335 P22<br>A213 T22</td>
+            <td class="td-temp">200°C / 392°F</td>
+            <td class="td-temp">200°C / 392°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.5B Gr.1</strong></td>
+            <td>5Cr–½Mo steel</td>
+            <td>A335 P5<br>A213 T5</td>
+            <td class="td-temp">200°C / 392°F</td>
+            <td class="td-temp">200°C / 392°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td>
+          </tr>
+          <tr class="table-warning">
+            <td><strong>P-No.15E</strong></td>
+            <td>9Cr–1Mo-V (P91)</td>
+            <td>A335 P91<br>A213 T91</td>
+            <td class="td-temp">200°C / 392°F</td>
+            <td class="td-temp">200°C / 392°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28327-392f-200c/">#28327</a><br><small>PWHT mandatory</small></td>
+          </tr>
+          <tr>
+            <td><strong>P-No.8</strong></td>
+            <td>Austenitic stainless steel</td>
+            <td>A312 TP304, TP316<br>A358 TP304L</td>
+            <td class="td-na">Not required</td>
+            <td class="td-na">Not required</td>
+            <td class="td-na">—</td>
+          </tr>
+          <tr>
+            <td><strong>P-No.10H</strong></td>
+            <td>Duplex stainless steel</td>
+            <td>A790 UNS S31803<br>A928 UNS S32750</td>
+            <td class="td-na">Not required*</td>
+            <td class="td-na">Not required*</td>
+            <td class="td-na">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.82rem;color:#666;">* No preheat required — but control maximum interpass temperature strictly: ≤ 150°C for duplex (see Table 4).</p>
+    <p style="font-size:0.88rem;">For P91 full welding requirements see: <a href="/en/blog/p91-steel-welding-temperature/">P91 Steel Welding — Preheat 200°C &amp; Mandatory PWHT</a>.<br>
+    For B31.3 case study (pipe to flange) see: <a href="/en/blog/asme-b31-3-preheat-process-piping/">ASME B31.3 Preheat — Process Piping Guide</a>.</p>
+  </section>
+
+  <!-- Table 3: API 1104 -->
+  <section id="api-1104" class="mt-5">
+    <h2>Table 3 — API 1104: Oil &amp; Gas Transmission Pipelines</h2>
+    <p style="font-size:0.88rem;">Applicable to: onshore and offshore transmission pipelines, gathering lines, and distribution systems. Preheat requirement depends on pipe grade and wall thickness.</p>
+    <p style="font-size:0.85rem;color:#666;">Source: API 1104 Welding of Pipelines and Related Facilities. CE per IIW formula: CE = C + Mn/6 + (Cr+Mo+V)/5 + (Ni+Cu)/15.</p>
+    <div class="table-responsive mb-2">
+      <table class="table table-bordered preheat-table">
+        <thead class="table-dark">
+          <tr>
+            <th>Pipe Grade (API 5L)</th>
+            <th>Yield Strength</th>
+            <th>Carbon Equivalent<br><small>CE (IIW formula)</small></th>
+            <th>Wall ≤ 25.4 mm<br><small>≤ 1"</small></th>
+            <th>Wall &gt; 25.4 mm<br><small>&gt; 1"</small></th>
+            <th>Tempilstik® Part No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>API 5L Gr.B</strong></td>
+            <td>241 MPa (35 ksi)</td>
+            <td>CE ≤ 0.43</td>
+            <td class="td-na">Not required*</td>
+            <td class="td-temp">50°C / 122°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28002-109f-43c/">#28002</a></td>
+          </tr>
+          <tr>
+            <td><strong>API 5L X42</strong></td>
+            <td>290 MPa (42 ksi)</td>
+            <td>CE ≤ 0.43</td>
+            <td class="td-na">Not required*</td>
+            <td class="td-temp">50°C / 122°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28002-109f-43c/">#28002</a></td>
+          </tr>
+          <tr>
+            <td><strong>API 5L X52</strong></td>
+            <td>359 MPa (52 ksi)</td>
+            <td>CE 0.40–0.43</td>
+            <td class="td-temp">50°C / 122°F</td>
+            <td class="td-temp">80°C / 176°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28002-109f-43c/">#28002</a><br><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td>
+          </tr>
+          <tr>
+            <td><strong>API 5L X60</strong></td>
+            <td>414 MPa (60 ksi)</td>
+            <td>CE 0.42–0.46</td>
+            <td class="td-temp">80°C / 176°F</td>
+            <td class="td-temp">100°C / 212°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a><br><a href="/en/tempilstik/28016-225f-107c/">#28016</a></td>
+          </tr>
+          <tr>
+            <td><strong>API 5L X65</strong></td>
+            <td>448 MPa (65 ksi)</td>
+            <td>CE 0.43–0.47</td>
+            <td class="td-temp">100°C / 212°F</td>
+            <td class="td-temp">120°C / 248°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28016-225f-107c/">#28016</a><br><a href="/en/tempilstik/28019-250f-121c/">#28019</a></td>
+          </tr>
+          <tr>
+            <td><strong>API 5L X70</strong></td>
+            <td>483 MPa (70 ksi)</td>
+            <td>CE 0.43–0.47</td>
+            <td class="td-temp">100°C / 212°F</td>
+            <td class="td-temp">120°C / 248°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28016-225f-107c/">#28016</a><br><a href="/en/tempilstik/28019-250f-121c/">#28019</a></td>
+          </tr>
+          <tr>
+            <td><strong>API 5L X80</strong></td>
+            <td>552 MPa (80 ksi)</td>
+            <td>CE 0.46–0.50</td>
+            <td class="td-temp">120°C / 248°F</td>
+            <td class="td-temp">150°C / 302°F</td>
+            <td class="td-part"><a href="/en/tempilstik/28019-250f-121c/">#28019</a><br><a href="/en/tempilstik/28318-302f-150c/">#28318</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.82rem;color:#666;">* Not required per standard at this thickness — verify against project WPS and any supplementary specification. CE values are indicative; use actual MTC data for final selection.</p>
+  </section>
+
+  <!-- Table 4: Interpass -->
+  <section id="interpass" class="mt-5">
+    <h2>Table 4 — Maximum Interpass Temperature</h2>
+    <p style="font-size:0.88rem;">Interpass temperature is a <strong>maximum limit</strong> — must not be exceeded between weld passes. The values below are typical; always confirm against the approved WPS for the specific material and project.</p>
+    <div class="table-responsive mb-2">
+      <table class="table table-bordered preheat-table">
+        <thead class="table-dark">
+          <tr>
+            <th>Material</th>
+            <th>Maximum Interpass Temp.</th>
+            <th>Standard</th>
+            <th>Notes</th>
+            <th>Tempilstik® Part No. for Limit Check</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Carbon steel</td>
+            <td class="td-temp">≤ 250–300°C<br><small>≤ 482–572°F</small></td>
+            <td>AWS D1.1</td>
+            <td>Verify in WPS — typically 250°C for structural steel</td>
+            <td class="td-part"><a href="/en/tempilstik/28039-450f-232c/">#28039</a> (450°F/232°C)<br><a href="/en/tempilstik/28053-900f-482c/">#28053</a> (900°F/482°C)</td>
+          </tr>
+          <tr>
+            <td>P11 (1¼Cr–½Mo)</td>
+            <td class="td-temp">≤ 300°C<br><small>≤ 572°F</small></td>
+            <td>ASME B31.3</td>
+            <td>Strict control — overheating reduces HAZ toughness</td>
+            <td class="td-part"><a href="/en/tempilstik/28053-900f-482c/">#28053</a> (900°F/482°C)</td>
+          </tr>
+          <tr>
+            <td>P22 (2¼Cr–1Mo)</td>
+            <td class="td-temp">≤ 300°C<br><small>≤ 572°F</small></td>
+            <td>ASME B31.3</td>
+            <td>Combined with mandatory PWHT after welding</td>
+            <td class="td-part"><a href="/en/tempilstik/28053-900f-482c/">#28053</a> (900°F/482°C)</td>
+          </tr>
+          <tr class="table-warning">
+            <td><strong>P91 (9Cr–1Mo-V)</strong></td>
+            <td class="td-temp"><strong>≤ 300°C</strong><br><small>≤ 572°F</small></td>
+            <td>ASME B31.3<br>EN 1011-2</td>
+            <td><strong>Mandatory strict control</strong> — exceeding limit causes carbide dissolution, reduces creep strength</td>
+            <td class="td-part"><a href="/en/tempilstik/28053-900f-482c/">#28053</a> (900°F/482°C)</td>
+          </tr>
+          <tr class="table-danger">
+            <td><strong>Duplex stainless</strong></td>
+            <td class="td-temp"><strong>≤ 150°C</strong><br><small>≤ 302°F</small></td>
+            <td>API, NORSOK</td>
+            <td>Maintain γ/α phase balance — overheating causes sigma phase precipitation</td>
+            <td class="td-part"><a href="/en/tempilstik/28318-302f-150c/">#28318</a> (302°F/150°C)</td>
+          </tr>
+          <tr>
+            <td>Austenitic stainless 304/316</td>
+            <td class="td-temp">≤ 175°C<br><small>≤ 347°F</small></td>
+            <td>ASME</td>
+            <td>Reduces sensitization risk — chromium carbide precipitation at HAZ grain boundaries</td>
+            <td class="td-part"><a href="/en/tempilstik/28025-294f-146c/">#28025</a> (294°F/146°C)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.88rem;">For the two-crayon technique (simultaneous minimum preheat + maximum interpass control), see: <a href="/en/blog/interpass-temperature-welding/">Interpass Temperature Control — AWS &amp; ASME</a>.</p>
+  </section>
+
+  <!-- Table 5: Conversion -->
+  <section id="conversion" class="mt-5">
+    <h2>Table 5 — °C ↔ °F Quick Conversion with Tempilstik® Part Numbers</h2>
+    <p style="font-size:0.88rem;">Common preheat and interpass temperature checkpoints with their nearest Tempilstik® part number. Formula: T°F = T°C × 9/5 + 32.</p>
+    <div class="table-responsive mb-2">
+      <table class="table table-bordered preheat-table">
+        <thead class="table-dark">
+          <tr>
+            <th>°C</th><th>°F</th><th>Tempilstik® Part No.</th>
+            <th>°C</th><th>°F</th><th>Tempilstik® Part No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="td-temp">38°C</td><td class="td-temp">100°F</td><td class="td-part"><a href="/en/tempilstik/28000-100f-38c/">#28000</a></td><td class="td-temp">177°C</td><td class="td-temp">350°F</td><td class="td-part"><a href="/en/tempilstik/28025-294f-146c/">#28025</a></td></tr>
+          <tr><td class="td-temp">50°C</td><td class="td-temp">122°F</td><td class="td-part"><a href="/en/tempilstik/28002-109f-43c/">#28002</a></td><td class="td-temp">193°C</td><td class="td-temp">380°F</td><td class="td-part"><a href="/en/tempilstik/28030-344f-173c/">#28030</a></td></tr>
+          <tr><td class="td-temp">66°C</td><td class="td-temp">150°F</td><td class="td-part"><a href="/en/tempilstik/28006-150f-66c/">#28006</a></td><td class="td-temp">200°C</td><td class="td-temp">392°F</td><td class="td-part"><a href="/en/tempilstik/28327-392f-200c/">#28327</a></td></tr>
+          <tr><td class="td-temp">79°C</td><td class="td-temp">175°F</td><td class="td-part"><a href="/en/tempilstik/28009-175f-79c/">#28009</a></td><td class="td-temp">232°C</td><td class="td-temp">450°F</td><td class="td-part"><a href="/en/tempilstik/28039-450f-232c/">#28039</a></td></tr>
+          <tr><td class="td-temp">100°C</td><td class="td-temp">212°F</td><td class="td-part"><a href="/en/tempilstik/28016-225f-107c/">#28016</a></td><td class="td-temp">260°C</td><td class="td-temp">500°F</td><td class="td-part"><a href="/en/tempilstik/28043-500f-260c/">#28043</a></td></tr>
+          <tr><td class="td-temp">110°C</td><td class="td-temp">230°F</td><td class="td-part"><a href="/en/tempilstik/28312-230f-110c/">#28312</a></td><td class="td-temp">300°C</td><td class="td-temp">572°F</td><td class="td-part"><a href="/en/tempilstik/28053-900f-482c/">#28053</a></td></tr>
+          <tr><td class="td-temp">121°C</td><td class="td-temp">250°F</td><td class="td-part"><a href="/en/tempilstik/28019-250f-121c/">#28019</a></td><td class="td-temp">316°C</td><td class="td-temp">600°F</td><td class="td-part"><a href="/en/tempilstik/28047-600f-316c/">#28047</a></td></tr>
+          <tr><td class="td-temp">150°C</td><td class="td-temp">302°F</td><td class="td-part"><a href="/en/tempilstik/28318-302f-150c/">#28318</a></td><td class="td-temp">371°C</td><td class="td-temp">700°F</td><td class="td-part"><a href="/en/tempilstik/28057-1022f-550c/">#28057</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.88rem;">→ Full 116-SKU listing filterable by °C or °F: <a href="/en/tempilstik/"><strong>Tempilstik® product page</strong></a>.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mt-5">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            When a WPS specifies a preheat range (e.g. 100–200°C), which Tempilstik® should I use?
+          </button>
+        </h3>
+        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">
+            Use two crayons: one at the minimum temperature (100°C) to confirm preheat has been reached, and one at the maximum (200°C) for interpass monitoring to confirm the upper limit has not been exceeded. This two-crayon practice is standard on pipeline and pressure piping projects — the inspector carries both for each measurement point.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            When a project applies multiple codes simultaneously, which takes precedence?
+          </button>
+        </h3>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">
+            Priority order: (1) project contract and Purchase Order specification; (2) the approved WPS reviewed by the client or third-party inspector; (3) the standard referenced in the WPS. When codes conflict, the more stringent requirement always governs.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            How does ambient temperature affect preheat requirements?
+          </button>
+        </h3>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body" style="font-size:0.9rem;">
+            Low ambient temperature causes steel surfaces to lose heat faster after heating — requiring longer heating time to reach and maintain the required temperature. When ambient temperature is below 5°C, both AWS D1.1 and ASME recommend preheat to at least 20°C even when the standard does not formally require it. For offshore projects in Vung Tau, ambient temperature is typically 25–35°C, so this is rarely a factor — but strong dry-season winds significantly accelerate surface heat loss.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="card mt-5 p-4 text-center" style="background:#1a1a1a;color:#f4f1de;border:none;border-radius:8px;">
+    <h3 style="color:#f4f1de;margin-bottom:0.5rem;">Need Tempilstik® for your preheat or interpass verification?</h3>
+    <p style="color:rgba(244,241,222,0.75);font-size:0.92rem;margin-bottom:1.2rem;">
+      Fast Group Engineering — authorized Tempil® distributor in Vietnam. Free P-Number to part number consultation. C/O + C/Q + VAT invoice. Stock in HCMC and Vung Tau.
+    </p>
+    <div class="d-flex flex-wrap gap-2 justify-content-center">
+      <a href="/en/quote/" class="btn btn-danger px-4">Request a Quote</a>
+      <a href="/en/tempilstik/" class="btn btn-outline-light px-4">Browse All 116 Part Numbers</a>
+    </div>
+    <p class="mt-3 mb-0" style="font-size:0.85rem;color:rgba(244,241,222,0.5);">📞 +84 938 888 958 &nbsp;|&nbsp; ✉ <a href="mailto:sales@tempil.vn" style="color:rgba(244,241,222,0.6);">sales@tempil.vn</a></p>
+  </div>
+
+  <section class="mt-5">
+    <h3 style="font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">Related Articles</h3>
+    <div class="row g-3 mt-1">
+      <div class="col-md-6">
+        <a href="/en/blog/asme-b31-3-preheat-process-piping/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>ASME B31.3 Preheat — Process Piping</strong>
+            <p class="text-muted mt-1 mb-0">P-Number guide and case study: welding pipe to a Class 600 flange.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="/en/blog/interpass-temperature-welding/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>Interpass Temperature Control — AWS &amp; ASME</strong>
+            <p class="text-muted mt-1 mb-0">Maximum limits, two-crayon technique, and field procedure.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="/en/blog/p91-steel-welding-temperature/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>P91 Steel Welding — Mandatory Preheat &amp; PWHT</strong>
+            <p class="text-muted mt-1 mb-0">Full requirements for 9Cr-1Mo-V alloy in power plant applications.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a href="/en/blog/pwht-post-weld-heat-treatment/" class="text-decoration-none">
+          <div class="card h-100 p-3" style="font-size:0.88rem;border-left:3px solid #c8102e;">
+            <strong>PWHT — Post Weld Heat Treatment</strong>
+            <p class="text-muted mt-1 mb-0">ASME temperature requirements and Tempilstik® PWHT verification.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer__top">
+    <div class="footer__col footer__about">
+      <a href="/en/" class="d-block mb-3"><img src="/assets/images/logo.png" alt="Tempil Vietnam" width="160" height="40"></a>
+      <p class="footer__desc">Fast Group Engineering is the authorized Tempil® distributor in Vietnam — Tempilstik®, Tempilaq®, Tempilabel®, Thermomelt® and the full Tempil temperature indicating product range.</p>
+      <ul class="footer__contact" style="list-style:none;padding:0;margin:0">
+        <li>▶ HQ: 150 Nguyen Cu Trinh, Cau Ong Lanh Ward, Ho Chi Minh City</li>
+        <li>▶ Branch: 51 Le Van Loc, Vung Tau City</li>
+        <li>▶ Tel: <a href="tel:+84938888958">+84 938 888 958</a> | Email: <a href="mailto:sales@tempil.vn">sales@tempil.vn</a></li>
+        <li>▶ Website: <a href="https://tempil.vn" target="_blank">tempil.vn</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Tempil® Products</h4>
+      <ul>
+        <li><a href="/en/tempilstik/">Tempilstik®</a></li>
+        <li><a href="/en/tempilaq/">Tempilaq® Advanced</a></li>
+        <li><a href="/en/tempilabel/">Tempilabel®</a></li>
+        <li><a href="/en/thermomelt/">Thermomelt®</a></li>
+        <li><a href="/en/#products">View all →</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Technical Blog</h4>
+      <ul>
+        <li><a href="/en/blog/what-is-tempilstik/">What is Tempilstik®?</a></li>
+        <li><a href="/en/blog/interpass-temperature-welding/">Interpass Temperature</a></li>
+        <li><a href="/en/blog/pwht-post-weld-heat-treatment/">PWHT Guide</a></li>
+        <li><a href="/en/blog/">View all →</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/en/quote/">Request a Quote</a></li>
+        <li><a href="https://markal.com.vn" target="_blank">markal.com.vn</a></li>
+        <li><a href="/en/contact/">Contact</a></li>
+        <li><a href="/en/blog/">Blog &amp; Resources</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 Fast Group Co., Ltd (Fast Group Engineering) | Tax ID: 0315555189 | Est. 08/03/2019</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const sidebar = document.getElementById('sidebar');
+  if (hamburger && sidebar) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = sidebar.classList.toggle('sidebar--open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+  }
+</script>
+</body>
+</html>
