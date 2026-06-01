@@ -280,7 +280,52 @@
         /* ── Three-col layout ── */
         .three-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1.5rem 0}
         .col-card{background:#f9f8f5;border:1px solid #eee;border-radius:10px;padding:16px 18px}
-    </style>
+    
+    /* ── Lang Switcher in Trust Bar ── */
+    .lang-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      margin-left: auto;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .lang-pill a,
+    .lang-pill span {
+      display: inline-block;
+      padding: 4px 11px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      line-height: 1.5;
+      font-family: var(--font-body, sans-serif);
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-pill a { color: rgba(244,241,222,0.7); }
+    .lang-pill a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+    .lang-pill .lang-active {
+      background: #c8102e;
+      color: #fff;
+      cursor: default;
+    }
+    .lang-pill-sep {
+      width: 1px;
+      background: rgba(255,255,255,0.15);
+      align-self: stretch;
+    }
+    /* For blog pages without trust-bar */
+    .lang-topbar {
+      background: #1a0a0a;
+      border-bottom: 1px solid rgba(200,16,46,0.25);
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 2rem;
+    }
+</style>
   <link rel="alternate" hreflang="vi" href="https://tempil.vn/blog/han-thep-p91-crmo-nhiet-do-270c/">
   <link rel="alternate" hreflang="en" href="https://tempil.vn/en/blog/p91-steel-welding-temperature/">
   <link rel="alternate" hreflang="x-default" href="https://tempil.vn/en/blog/p91-steel-welding-temperature/">
@@ -345,6 +390,25 @@
 
 </aside>
 <main class="main">
+  <div class="lang-topbar">
+  <div class="lang-pill" id="header-lang-pill" aria-label="Language selector">
+    <span class="lang-active" aria-current="true">VI</span>
+    <div class="lang-pill-sep"></div>
+    <a id="header-lang-en" href="#" aria-label="Switch to English">EN</a>
+  </div>
+  <script>
+  (function(){
+    var map=document.getElementById('en-map');
+    if(!map)return;
+    var m=JSON.parse(map.textContent);
+    var p=window.location.pathname.replace(/\/+$/,'')+'/';
+    if(p=='//')p='/';
+    var el=document.getElementById('header-lang-en');
+    var ep=m[p];
+    if(ep){el.href=ep;}else{el.style.opacity='0.35';el.style.pointerEvents='none';}
+  })();
+  </script>
+  </div>
 
 
         <section class="blog-hero">

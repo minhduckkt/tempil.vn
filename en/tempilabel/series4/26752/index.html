@@ -132,6 +132,51 @@
     .part-note__label{font-family:var(--font-body);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;white-space:nowrap}
     .part-note__range{font-family:var(--font-body);font-size:.82rem;color:#3D405B}
     .part-note__range a{color:#2563eb;font-weight:700;text-decoration:none}
+
+    /* ── Lang Switcher in Trust Bar ── */
+    .lang-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      margin-left: auto;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .lang-pill a,
+    .lang-pill span {
+      display: inline-block;
+      padding: 4px 11px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      line-height: 1.5;
+      font-family: var(--font-body, sans-serif);
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-pill a { color: rgba(244,241,222,0.7); }
+    .lang-pill a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+    .lang-pill .lang-active {
+      background: #c8102e;
+      color: #fff;
+      cursor: default;
+    }
+    .lang-pill-sep {
+      width: 1px;
+      background: rgba(255,255,255,0.15);
+      align-self: stretch;
+    }
+    /* For blog pages without trust-bar */
+    .lang-topbar {
+      background: #1a0a0a;
+      border-bottom: 1px solid rgba(200,16,46,0.25);
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 2rem;
+    }
 </style>
 </head>
 <body>
@@ -169,6 +214,20 @@
 <main class="main">
   <div class="trust-bar">
     <div class="trust-item"><div class="icon">✓</div>Genuine USA import</div><div class="trust-item"><div class="icon">✓</div>C/O &amp; C/Q included</div><div class="trust-item"><div class="icon">✓</div>Full VAT invoice</div><div class="trust-item"><div class="icon">✓</div>In stock HCMC &amp; Vung Tau</div><div class="trust-item"><div class="icon">✓</div>4 levels — 1 label</div>
+  <div class="lang-pill" id="header-lang-pill" aria-label="Language selector">
+    <a id="header-lang-vi" href="#" aria-label="Switch to Vietnamese">VI</a>
+    <div class="lang-pill-sep"></div>
+    <span class="lang-active" aria-current="true">EN</span>
+  </div>
+  <script>
+  (function(){
+    var p=window.location.pathname;
+    var vi=p.replace(/^\/en/,'');
+    if(!vi||vi==='/') vi='/';
+    var el=document.getElementById('header-lang-vi');
+    el.href=vi;
+  })();
+  </script>
   </div>
   <section class="page-hero">
     <p class="page-hero__breadcrumb"><a href="/en/">Home</a><span>/</span><a href="/en/tempilabel/">Tempilabel®</a><span>/</span><a href="/en/tempilabel/series4/">Series 4</a><span>/</span>Part #26752</p>

@@ -220,7 +220,52 @@
     .fb-widget__fallback-btn{display:inline-flex;align-items:center;gap:.4rem;background:#1877f2;color:#fff;font-family:var(--font-body);font-size:.78rem;font-weight:700;padding:.5rem 1rem;border-radius:6px;text-decoration:none;transition:background .2s}
     .fb-widget__fallback-btn:hover{background:#1558b0;color:#fff}
     .fb-widget__desc{font-family:var(--font-body);font-size:.72rem;color:rgba(244,241,222,.4);line-height:1.45;margin:0}
-  </style>
+  
+    /* ── Lang Switcher in Trust Bar ── */
+    .lang-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      margin-left: auto;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .lang-pill a,
+    .lang-pill span {
+      display: inline-block;
+      padding: 4px 11px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      line-height: 1.5;
+      font-family: var(--font-body, sans-serif);
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-pill a { color: rgba(244,241,222,0.7); }
+    .lang-pill a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+    .lang-pill .lang-active {
+      background: #c8102e;
+      color: #fff;
+      cursor: default;
+    }
+    .lang-pill-sep {
+      width: 1px;
+      background: rgba(255,255,255,0.15);
+      align-self: stretch;
+    }
+    /* For blog pages without trust-bar */
+    .lang-topbar {
+      background: #1a0a0a;
+      border-bottom: 1px solid rgba(200,16,46,0.25);
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 2rem;
+    }
+</style>
   <link rel="alternate" hreflang="vi" href="https://tempil.vn/tempilstik/28039-450f-232c/">
   <link rel="alternate" hreflang="en" href="https://tempil.vn/en/tempilstik/28039-450f-232c/">
   <link rel="alternate" hreflang="x-default" href="https://tempil.vn/en/tempilstik/28039-450f-232c/">
@@ -308,6 +353,23 @@
     <div class="trust-item"><div class="icon">✓</div>Xuất VAT đầy đủ</div>
     <div class="trust-item"><div class="icon">✓</div>Sẵn kho TPHCM &amp; Vũng Tàu</div>
     <div class="trust-item"><div class="icon">✓</div>Hỗ trợ kỹ thuật theo WPS</div>
+  <div class="lang-pill" id="header-lang-pill" aria-label="Language selector">
+    <span class="lang-active" aria-current="true">VI</span>
+    <div class="lang-pill-sep"></div>
+    <a id="header-lang-en" href="#" aria-label="Switch to English">EN</a>
+  </div>
+  <script>
+  (function(){
+    var map=document.getElementById('en-map');
+    if(!map)return;
+    var m=JSON.parse(map.textContent);
+    var p=window.location.pathname.replace(/\/+$/,'')+'/';
+    if(p=='//')p='/';
+    var el=document.getElementById('header-lang-en');
+    var ep=m[p];
+    if(ep){el.href=ep;}else{el.style.opacity='0.35';el.style.pointerEvents='none';}
+  })();
+  </script>
   </div>
 
   <section class="page-hero">

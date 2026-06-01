@@ -78,7 +78,52 @@
     .float-cta a{flex:1;text-align:center;padding:0.65rem;border-radius:6px;font-size:0.82rem;font-weight:700;text-decoration:none;font-family:var(--font-body);}
     @media(max-width:1024px){.float-cta{display:flex;}}
     .pkg-note{background:#f0f8ff;border:1px solid #d0e8ff;border-radius:8px;padding:1rem 1.25rem;margin-bottom:1.5rem;font-size:0.85rem;color:#3D405B;}
-  </style>
+  
+    /* ── Lang Switcher in Trust Bar ── */
+    .lang-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      margin-left: auto;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .lang-pill a,
+    .lang-pill span {
+      display: inline-block;
+      padding: 4px 11px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      line-height: 1.5;
+      font-family: var(--font-body, sans-serif);
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-pill a { color: rgba(244,241,222,0.7); }
+    .lang-pill a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+    .lang-pill .lang-active {
+      background: #c8102e;
+      color: #fff;
+      cursor: default;
+    }
+    .lang-pill-sep {
+      width: 1px;
+      background: rgba(255,255,255,0.15);
+      align-self: stretch;
+    }
+    /* For blog pages without trust-bar */
+    .lang-topbar {
+      background: #1a0a0a;
+      border-bottom: 1px solid rgba(200,16,46,0.25);
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 2rem;
+    }
+</style>
 
   <script type="application/ld+json">
   {
@@ -166,6 +211,20 @@
     <div class="trust-item"><div class="icon">✓</div> Full VAT</div>
     <div class="trust-item"><div class="icon">✓</div> In stock in HCMC &amp; Vung Tau</div>
     <div class="trust-item"><div class="icon">✓</div> Irreversible · ±2% °F</div>
+  <div class="lang-pill" id="header-lang-pill" aria-label="Language selector">
+    <a id="header-lang-vi" href="#" aria-label="Switch to Vietnamese">VI</a>
+    <div class="lang-pill-sep"></div>
+    <span class="lang-active" aria-current="true">EN</span>
+  </div>
+  <script>
+  (function(){
+    var p=window.location.pathname;
+    var vi=p.replace(/^\/en/,'');
+    if(!vi||vi==='/') vi='/';
+    var el=document.getElementById('header-lang-vi');
+    el.href=vi;
+  })();
+  </script>
   </div>
 
   <div class="page-hero">

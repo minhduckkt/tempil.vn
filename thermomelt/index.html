@@ -81,7 +81,52 @@
     .series-tab-btn{flex:1;padding:0.75rem 1rem;border:none;background:#f8f8f8;font-size:0.85rem;font-weight:700;font-family:var(--font-body);cursor:pointer;transition:all 0.2s;color:#666;text-align:center;}
     .series-tab-btn.active{background:#c8102e;color:#fff;}
     .cert-note{background:#eef4ff;border:1px solid #c0d4f8;border-radius:8px;padding:1rem 1.25rem;margin-bottom:1.5rem;font-size:0.85rem;color:#1a3a6b;}
-  </style>
+  
+    /* ── Lang Switcher in Trust Bar ── */
+    .lang-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      margin-left: auto;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .lang-pill a,
+    .lang-pill span {
+      display: inline-block;
+      padding: 4px 11px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      line-height: 1.5;
+      font-family: var(--font-body, sans-serif);
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-pill a { color: rgba(244,241,222,0.7); }
+    .lang-pill a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+    .lang-pill .lang-active {
+      background: #c8102e;
+      color: #fff;
+      cursor: default;
+    }
+    .lang-pill-sep {
+      width: 1px;
+      background: rgba(255,255,255,0.15);
+      align-self: stretch;
+    }
+    /* For blog pages without trust-bar */
+    .lang-topbar {
+      background: #1a0a0a;
+      border-bottom: 1px solid rgba(200,16,46,0.25);
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 2rem;
+    }
+</style>
 
   <script type="application/ld+json">
   {
@@ -198,6 +243,23 @@
     <div class="trust-item"><div class="icon">✓</div> VAT + C/O + C/Q</div>
     <div class="trust-item"><div class="icon">✓</div> AWS D1.1 · ASME</div>
     <div class="trust-item"><div class="icon">✓</div> Dài hơn 33% so với đối thủ</div>
+  <div class="lang-pill" id="header-lang-pill" aria-label="Language selector">
+    <span class="lang-active" aria-current="true">VI</span>
+    <div class="lang-pill-sep"></div>
+    <a id="header-lang-en" href="#" aria-label="Switch to English">EN</a>
+  </div>
+  <script>
+  (function(){
+    var map=document.getElementById('en-map');
+    if(!map)return;
+    var m=JSON.parse(map.textContent);
+    var p=window.location.pathname.replace(/\/+$/,'')+'/';
+    if(p=='//')p='/';
+    var el=document.getElementById('header-lang-en');
+    var ep=m[p];
+    if(ep){el.href=ep;}else{el.style.opacity='0.35';el.style.pointerEvents='none';}
+  })();
+  </script>
   </div>
 
   <div class="page-hero">

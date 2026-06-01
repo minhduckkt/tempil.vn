@@ -126,7 +126,25 @@
     .part-note__range{font-family:var(--font-body);font-size:.82rem;color:#3D405B}
     .part-note__range a{color:#2563eb;font-weight:700;text-decoration:none}
 </style></head><body>
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar-overlay" id="sidebarOverlay">
+  <div class="lang-pill" id="header-lang-pill" aria-label="Language selector">
+    <span class="lang-active" aria-current="true">VI</span>
+    <div class="lang-pill-sep"></div>
+    <a id="header-lang-en" href="#" aria-label="Switch to English">EN</a>
+  </div>
+  <script>
+  (function(){
+    var map=document.getElementById('en-map');
+    if(!map)return;
+    var m=JSON.parse(map.textContent);
+    var p=window.location.pathname.replace(/\/+$/, '')+'/';
+    if(p=='//')p='/';
+    var el=document.getElementById('header-lang-en');
+    var ep=m[p];
+    if(ep){el.href=ep;}else{el.style.opacity='0.35';el.style.pointerEvents='none';}
+  })();
+  </script>
+</div>
 <button class="hamburger" id="hamburger" aria-label="Menu"><div class="hamburger__lines"><span></span><span></span><span></span></div></button>
 <aside class="sidebar" id="sidebar">
   <div class="sidebar__brand">
