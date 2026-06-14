@@ -13,6 +13,17 @@
   <title>Báo Giá Tempilstik® | Yêu Cầu Đặt Hàng | tempil.vn</title>
   <meta name="description" content="Gửi yêu cầu báo giá Tempilstik®, Tempilaq®, Tempilabel® chính hãng. Phản hồi trong ngày làm việc. Có C/O, VAT. Hotline: 0938 888 958">
   <link rel="canonical" href="https://tempil.vn/bao-gia/">
+  <script>
+  (function(){
+    window.__quoteParams = new URLSearchParams(window.location.search);
+    if (!window.location.search) return;
+    var meta = document.createElement('meta');
+    meta.name = 'robots';
+    meta.content = 'noindex,follow';
+    document.head.appendChild(meta);
+    window.history.replaceState({}, document.title, window.location.pathname);
+  })();
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -450,8 +461,8 @@ function removeRow(id) {
 
 document.getElementById('addRowBtn').addEventListener('click', () => addRow());
 
-// Pre-fill from URL params
-const params = new URLSearchParams(window.location.search);
+// Pre-fill from legacy URL params, then keep the visible URL canonical.
+const params = window.__quoteParams || new URLSearchParams(window.location.search);
 const pPart = params.get('part') || '';
 const pTemp = params.get('temp') || '';
 addRow(pPart, pTemp);
