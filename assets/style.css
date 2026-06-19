@@ -130,6 +130,37 @@ button {
     border-bottom: 1px solid rgba(244, 241, 222, 0.1);
 }
 
+.sidebar__brand-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.sidebar__brand-copy {
+    margin-top: 0.65rem;
+    display: grid;
+    gap: 0.16rem;
+}
+
+.sidebar__brand-title {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cream);
+    line-height: 1.25;
+}
+
+.sidebar__brand-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: rgba(244, 241, 222, 0.62);
+    line-height: 1.35;
+}
+
 .sidebar__logo {
     font-size: 2rem;
     letter-spacing: -0.02em;
@@ -156,6 +187,12 @@ button {
     text-transform: uppercase;
     color: var(--sage-light);
     margin-top: 0.35rem;
+}
+
+.sidebar__tagline-company {
+    color: var(--cream);
+    font-weight: 800;
+    letter-spacing: 0.1em;
 }
 
 .sidebar__nav {
